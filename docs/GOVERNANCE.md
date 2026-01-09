@@ -282,7 +282,8 @@ This document establishes **operational governance** for the TRIZEL ecosystem, s
 
 **For constitutional questions**, refer to:
 ```
-trizel-epistemic-engine/constitution-v1.0.0
+Repository: trizel-epistemic-engine
+Document:   Constitution v1.0.0
 ```
 
 **For governance questions**, refer to this document or open an issue in `trizel-core`.
