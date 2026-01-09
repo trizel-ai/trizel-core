@@ -81,7 +81,7 @@ The following are **within governance scope** and may be amended through this re
 - Violation response protocols (non-punitive, corrective only)
 
 ### 2.5 Governance Process
-- Amendment procedures (see Section 3)
+- Amendment procedures (see Section 4)
 - Decision-making authority delegation
 - Versioning of this governance document
 
@@ -259,7 +259,7 @@ It can only:
 
 **Current Version:** v1.0.1  
 **Status:** Active  
-**Effective Date:** [Date of merge]
+**Effective Date:** 2026-01-09 (upon merge to main)
 
 ### Version History
 
