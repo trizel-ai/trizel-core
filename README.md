@@ -1,5 +1,4 @@
 # trizel-core
-
 ## Canonical Governance & Charter Repository
 
 **TRIZEL — Technology for Research, Inference, Zonal Evaluation & Learning**
