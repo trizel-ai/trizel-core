@@ -32,7 +32,8 @@ It is the **epistemic controller** of the research environment.
 
 ## 3. Epistemic Pipeline (Constitutional)
 
-All repositories governed by TRIZEL must map explicitly to the following pipeline:
+All repositories governed by TRIZEL **must** map explicitly to the following epistemic pipeline:
+
 Observation
 ↓
 Analysis
@@ -44,8 +45,12 @@ Interpretation
 Probabilistic Evaluation
 ↓
 Open Publication & Visualization
-This pipeline is **mandatory** and **non-optional**.  
-No repository may collapse or bypass layers.
+
+This pipeline is **mandatory** and **non-optional**.
+
+- No repository may collapse layers  
+- No repository may bypass layers  
+- No repository may mix epistemic roles  
 
 ---
 
@@ -73,28 +78,28 @@ No repository may collapse or bypass layers.
 Repositories under TRIZEL must fall into **one and only one** category:
 
 ### Governance & Charter
-- `trizel-core`
-- Governance policies, standards, and definitions
+- `trizel-core`  
+- Governance policies, standards, and definitions  
 
 ### Visualization & Interface
-- `trizel-visual` (or equivalent)
-- Public-facing, non-executive scientific visualization
+- `trizel-visual`  
+- Public-facing, non-executive scientific visualization  
 
 ### Data & Observation
-- `trizel-data-*`
-- Raw data and metadata only
+- `trizel-data-*`  
+- Raw data and metadata only  
 
 ### Analysis & Inference
-- `trizel-analysis-*`
-- Reproducible, model-agnostic analysis
+- `trizel-analysis-*`  
+- Reproducible, model-agnostic analysis  
 
 ### Exploratory / Non-Canonical Research
-- `trizel-x-*`
-- Hypothesis-driven, explicitly non-canonical
+- `trizel-x-*`  
+- Hypothesis-driven, explicitly non-canonical  
 
 ### Archive / Historical
-- `trizel-archive`
-- Legacy, philosophical, or superseded material
+- `trizel-archive`  
+- Legacy, philosophical, or superseded material  
 
 Mixed-role repositories are **not permitted**.
 
@@ -116,10 +121,10 @@ The TRIZEL website is a **mirror of this governance model**.
 
 - The website does not publish interpretations  
 - It publishes:
-  - Methodology
-  - Status
-  - Provenance
-  - Immutable evidence pointers (e.g., DOI)
+  - Methodology  
+  - Status  
+  - Provenance  
+  - Immutable evidence pointers (e.g., DOI)  
 
 TRIZEL is not linked *to* the site.  
 TRIZEL **is** the site’s epistemic backbone.
@@ -130,10 +135,10 @@ TRIZEL **is** the site’s epistemic backbone.
 
 Governance documents in this repository are intended to be:
 
-- Public
-- Versioned
-- Auditable
-- Citable
+- Public  
+- Versioned  
+- Auditable  
+- Citable  
 
 Changes must be explicit, reviewed, and historically traceable.
 
@@ -143,12 +148,12 @@ Changes must be explicit, reviewed, and historically traceable.
 
 This repository will **never** contain:
 
-- Scientific datasets
-- Algorithms or code
-- Analytical results
-- Performance metrics
-- Interpretive claims
-- Automated workflows
+- Scientific datasets  
+- Algorithms or executable code  
+- Analytical results  
+- Performance metrics  
+- Interpretive claims  
+- Automated workflows  
 
 ---
 
@@ -156,15 +161,15 @@ This repository will **never** contain:
 
 **Canonical • Governance • Non-Executable**
 
-This repository defines *how science is structured*,  
-not *what science concludes*.
+This repository defines **how science is structured**,  
+not **what science concludes**.
 
 ---
 
 ## TRIZEL System Map (Canonical Overview)
 
 The following diagram is a **static, non-executable visual map** of the TRIZEL epistemic pipeline and repository roles.  
-It is descriptive only and carries no analytical or interpretive function.
+It is **descriptive only** and carries **no analytical or interpretive function**.
 
 <!-- TRIZEL Canonical System Map : Static SVG | Phase-5 Compliant -->
 <svg
@@ -189,7 +194,6 @@ It is descriptive only and carries no analytical or interpretive function.
     </marker>
   </defs>
 
-  <!-- Title -->
   <text x="600" y="48" text-anchor="middle" class="title">
     TRIZEL — Canonical Epistemic System Map
   </text>
@@ -197,8 +201,6 @@ It is descriptive only and carries no analytical or interpretive function.
     Governance-first · Layered · Non-Executable · Descriptive Only
   </text>
 
-  <!-- Layers -->
-  <!-- Layer 1 -->
   <rect x="200" y="120" width="800" height="90" class="layer"/>
   <text x="600" y="150" text-anchor="middle" class="layerText">
     Governance & Canonical Control
@@ -207,10 +209,8 @@ It is descriptive only and carries no analytical or interpretive function.
     trizel-core · Charter · Epistemic Pipeline · Standards
   </text>
 
-  <!-- Arrow -->
   <line x1="600" y1="210" x2="600" y2="250" class="arrow"/>
 
-  <!-- Layer 2 -->
   <rect x="200" y="250" width="800" height="90" class="layer"/>
   <text x="600" y="280" text-anchor="middle" class="layerText">
     Observation & Data Acquisition
@@ -221,21 +221,19 @@ It is descriptive only and carries no analytical or interpretive function.
 
   <line x1="600" y1="340" x2="600" y2="380" class="arrow"/>
 
-  <!-- Layer 3 -->
   <rect x="200" y="380" width="800" height="90" class="layer"/>
   <text x="600" y="410" text-anchor="middle" class="layerText">
     Analysis & Inference (Non-Canonical)
   </text>
   <text x="600" y="435" text-anchor="middle" class="repoText">
-    trizel-analysis-* · Reproducible · Model-Agnostic
+    trizel-analysis-*
   </text>
 
   <line x1="600" y1="470" x2="600" y2="510" class="arrow"/>
 
-  <!-- Layer 4 -->
   <rect x="200" y="510" width="800" height="90" class="layer"/>
   <text x="600" y="540" text-anchor="middle" class="layerText">
-    Interpretation & Evaluation Isolation
+    Interpretation & Probabilistic Evaluation
   </text>
   <text x="600" y="565" text-anchor="middle" class="repoText">
     trizel-phase4-gateway · TCRL Boundary
@@ -243,13 +241,16 @@ It is descriptive only and carries no analytical or interpretive function.
 
   <line x1="600" y1="600" x2="600" y2="640" class="arrow"/>
 
-  <!-- Layer 5 -->
   <rect x="200" y="640" width="800" height="90" class="layer"/>
   <text x="600" y="670" text-anchor="middle" class="layerText">
-    Publication & Visualization (Descriptive)
+    Open Publication & Visualization
   </text>
   <text x="600" y="695" text-anchor="middle" class="repoText">
     trizel-visual · Website · Evidence Pointers (DOI)
   </text>
 
 </svg>
+
+> **License clarification**  
+> The MIT license applies to this repository as a distributable **governance and documentation text corpus**.  
+> It does **not** imply endorsement, validation, or authorization of any derived scientific interpretations.
