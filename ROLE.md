@@ -2,7 +2,7 @@
 
 ## Repository Identification
 
-**Repository**: `trizel-ai/trizel-core`  
+**Repository**: `trizel-ai/trizel-core` _(Update if moved or renamed)_  
 **Layer**: **0 — Governance & Charter**  
 **Status**: Canonical · Active · Root Authority  
 **Version**: 1.0.0

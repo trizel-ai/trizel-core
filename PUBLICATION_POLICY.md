@@ -114,10 +114,10 @@ The following are **explicitly forbidden** from website publication:
 The website must implement **strict allowlist validation**:
 
 ```yaml
-# website/config/allowlist.yml (example structure)
+# website/config/allowlist.yml (example structure - adapt repository name as needed)
 
 approved_sources:
-  - repository: trizel-ai/trizel-core
+  - repository: trizel-ai/trizel-core  # Update if repository is moved or renamed
     layer: 0
     schema_version: v1.0.0
     artifacts:

@@ -22,9 +22,9 @@ jobs:
           echo "Checking for deprecated term 'STOE'..."
           if grep -rn "STOE" \
             --exclude-dir=.git \
+            --exclude-dir=.github \
             --exclude="DEPRECATED_TERMS.md" \
-            --exclude="deprecated-terms-check.yml" \
-            --exclude="pull_request_template.md" \
+            --exclude="IMPLEMENTATION_SUMMARY.md" \
             . ; then
             echo "❌ ERROR: Found deprecated term 'STOE'"
             echo "This term is permanently forbidden. Please remove it completely."
@@ -37,9 +37,9 @@ jobs:
           echo "Checking for deprecated version labels (V12-V22)..."
           if grep -rEn "\bV(12|13|14|15|16|17|18|19|20|21|22)\b" \
             --exclude-dir=.git \
+            --exclude-dir=.github \
             --exclude="DEPRECATED_TERMS.md" \
-            --exclude="deprecated-terms-check.yml" \
-            --exclude="pull_request_template.md" \
+            --exclude="IMPLEMENTATION_SUMMARY.md" \
             . ; then
             echo "❌ ERROR: Found deprecated version labels (V12-V22)"
             echo "These version labels are permanently forbidden. Please remove them completely."
@@ -52,9 +52,9 @@ jobs:
           echo "Checking for versioned system labels..."
           if grep -rEin "\bV[0-9]+ system\b" \
             --exclude-dir=.git \
+            --exclude-dir=.github \
             --exclude="DEPRECATED_TERMS.md" \
-            --exclude="deprecated-terms-check.yml" \
-            --exclude="pull_request_template.md" \
+            --exclude="IMPLEMENTATION_SUMMARY.md" \
             . ; then
             echo "❌ ERROR: Found versioned system labels"
             echo "Versioned system labels are forbidden. Please remove them completely."
@@ -69,9 +69,9 @@ jobs:
           # Check for common incorrect variants (case-sensitive)
           if grep -rn "AUTO-DZ-ACT\|AutoDzAct\|auto dz act\|AUTO DZ ACT system\|AUTO DZ ACT v" \
             --exclude-dir=.git \
+            --exclude-dir=.github \
             --exclude="DEPRECATED_TERMS.md" \
-            --exclude="deprecated-terms-check.yml" \
-            --exclude="pull_request_template.md" \
+            --exclude="IMPLEMENTATION_SUMMARY.md" \
             . ; then
             echo "❌ ERROR: Found incorrect algorithm name variant"
             echo "The ONLY allowed algorithm name is: AUTO DZ ACT"

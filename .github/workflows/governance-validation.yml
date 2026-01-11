@@ -109,7 +109,7 @@ jobs:
             "if __name__"
             "import pandas"
             "import numpy"
-            "SELECT \* FROM"
+            "SELECT * FROM"
             "data analysis"
             "statistical test"
             "machine learning"

@@ -289,7 +289,7 @@ forbidden_content:
 Website must use **strict allowlist ingestion**:
 
 ```yaml
-source: trizel-ai/trizel-core
+source: trizel-ai/trizel-core  # Update if repository is moved or renamed
 approved_artifacts:
   - COPILOT_INSTRUCTIONS.md
   - ROLE.md
