@@ -188,7 +188,7 @@ All modifications must be:
 **ONLY Allowed**: AUTO DZ ACT
 
 **Forbidden Variants**:
-- ❌ STOE
+- ❌ [Deprecated 4-letter acronym - see DEPRECATED_TERMS.md]
 - ❌ AUTO DZ ACT system
 - ❌ AUTO DZ ACT v1
 - ❌ AUTO-DZ-ACT (wrong hyphenation)

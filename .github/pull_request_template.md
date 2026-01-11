@@ -214,12 +214,12 @@ This repository is the canonical governance and charter authority that defines e
 
 By submitting this PR, I confirm:
 
-- [x] I have read and understood the TRIZEL DIRECTIVE
-- [x] All changes comply with Layer 0 (Governance) boundaries
-- [x] No deprecated terminology has been introduced
-- [x] No cross-layer responsibility transfer has occurred
-- [x] This PR follows the minimal change principle
-- [x] All required checks have been completed
+- [ ] I have read and understood the TRIZEL DIRECTIVE
+- [ ] All changes comply with Layer 0 (Governance) boundaries
+- [ ] No deprecated terminology has been introduced
+- [ ] No cross-layer responsibility transfer has occurred
+- [ ] This PR follows the minimal change principle
+- [ ] All required checks have been completed
 
 ---
 
