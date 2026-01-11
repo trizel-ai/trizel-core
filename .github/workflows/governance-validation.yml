@@ -1,0 +1,145 @@
+name: Governance Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main, master, develop]
+
+jobs:
+  validate-governance:
+    runs-on: ubuntu-latest
+    name: Validate governance boundaries
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Verify Layer 0 boundaries
+        run: |
+          echo "Validating Layer 0 (Governance) boundaries..."
+          
+          # Check for executable code files (should not exist in governance repo)
+          echo "Checking for executable code files..."
+          if find . -type f \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.go" -o -name "*.rs" \) \
+            -not -path "./.git/*" | grep -q .; then
+            echo "❌ ERROR: Found executable code files"
+            echo "Layer 0 (Governance) must not contain executable code."
+            find . -type f \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.go" -o -name "*.rs" \) \
+              -not -path "./.git/*"
+            exit 1
+          fi
+          echo "✓ No executable code files found"
+      
+      - name: Check for data files
+        run: |
+          echo "Checking for data files..."
+          if find . -type f \( -name "*.csv" -o -name "*.json" -o -name "*.xml" -o -name "*.parquet" -o -name "*.db" -o -name "*.sqlite" \) \
+            -not -path "./.git/*" \
+            -not -path "./.github/*" | grep -q .; then
+            echo "❌ ERROR: Found data files"
+            echo "Layer 0 (Governance) must not contain data files."
+            find . -type f \( -name "*.csv" -o -name "*.json" -o -name "*.xml" -o -name "*.parquet" -o -name "*.db" -o -name "*.sqlite" \) \
+              -not -path "./.git/*" \
+              -not -path "./.github/*"
+            exit 1
+          fi
+          echo "✓ No data files found"
+      
+      - name: Check for Jupyter notebooks
+        run: |
+          echo "Checking for Jupyter notebooks..."
+          if find . -type f -name "*.ipynb" \
+            -not -path "./.git/*" | grep -q .; then
+            echo "❌ ERROR: Found Jupyter notebook files"
+            echo "Layer 0 (Governance) must not contain analysis notebooks."
+            find . -type f -name "*.ipynb" -not -path "./.git/*"
+            exit 1
+          fi
+          echo "✓ No Jupyter notebooks found"
+      
+      - name: Verify required governance files exist
+        run: |
+          echo "Checking for required governance files..."
+          
+          required_files=(
+            "COPILOT_INSTRUCTIONS.md"
+            "ROLE.md"
+            "OUTPUT_CONTRACT.md"
+            "PUBLICATION_POLICY.md"
+            "DEPRECATED_TERMS.md"
+            "README.md"
+            "LICENSE"
+          )
+          
+          missing_files=()
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              missing_files+=("$file")
+            fi
+          done
+          
+          if [ ${#missing_files[@]} -ne 0 ]; then
+            echo "❌ ERROR: Missing required governance files:"
+            printf '%s\n' "${missing_files[@]}"
+            exit 1
+          fi
+          echo "✓ All required governance files present"
+      
+      - name: Validate markdown files
+        run: |
+          echo "Validating markdown files..."
+          
+          # Check that all .md files are valid (basic check)
+          find . -type f -name "*.md" -not -path "./.git/*" | while read -r file; do
+            if [ ! -s "$file" ]; then
+              echo "❌ ERROR: Empty markdown file: $file"
+              exit 1
+            fi
+          done
+          echo "✓ All markdown files validated"
+      
+      - name: Check for cross-layer violations
+        run: |
+          echo "Checking for cross-layer violations..."
+          
+          # Search for phrases that indicate execution, analysis, or data content
+          forbidden_phrases=(
+            "def main"
+            "if __name__"
+            "import pandas"
+            "import numpy"
+            "SELECT \* FROM"
+            "data analysis"
+            "statistical test"
+            "machine learning"
+            "model training"
+          )
+          
+          violations_found=false
+          for phrase in "${forbidden_phrases[@]}"; do
+            if grep -rin "$phrase" \
+              --exclude-dir=.git \
+              --exclude="governance-validation.yml" \
+              --include="*.md" \
+              . ; then
+              echo "⚠ Warning: Found potentially forbidden phrase: '$phrase'"
+              violations_found=true
+            fi
+          done
+          
+          if [ "$violations_found" = true ]; then
+            echo "⚠ Review required: Potential cross-layer content detected"
+            echo "Please verify this is appropriate for Layer 0 (Governance)"
+          else
+            echo "✓ No cross-layer violations detected"
+          fi
+      
+      - name: Summary
+        if: success()
+        run: |
+          echo ""
+          echo "✓ All governance validation checks PASSED"
+          echo "✓ Repository maintains Layer 0 boundaries"
+          echo "✓ No executable code, data, or analysis content detected"
+          echo "✓ All required governance files present"
