@@ -6,6 +6,9 @@ on:
   push:
     branches: [main, master, develop]
 
+permissions:
+  contents: read
+
 jobs:
   validate-governance:
     runs-on: ubuntu-latest
