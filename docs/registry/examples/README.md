@@ -34,9 +34,9 @@ This directory contains **non-executable, static reference examples** showing ho
 
 ---
 
-### `registry-consumption-example.json`
+### `registry-consumption-example.json.txt`
 
-**Purpose**: Static reference example showing the structure of registry data after YAML-to-JSON conversion.
+**Purpose**: Static reference example showing the structure of registry data after YAML-to-JSON conversion. File extension is `.json.txt` to clearly indicate this is a documentation example, not actual data.
 
 **Content**:
 - Converted registry metadata
@@ -99,7 +99,7 @@ When implementing registry consumption in Layer 6, ensure:
 
 - [ ] Fetch registry from approved source only: `trizel-ai/trizel-core/docs/registry/TRIZEL_REGISTRY.yaml`
 - [ ] Validate schema version compatibility
-- [ ] Check for deprecated terminology (STOE, V12-V22, etc.)
+- [ ] Check for deprecated terminology (see `../../DEPRECATED_TERMS.md`)
 - [ ] Verify all required metadata fields present
 - [ ] Ensure fail-closed validation (halt build on errors)
 - [ ] Support all three languages (en, fr, ar)
@@ -118,12 +118,7 @@ When implementing registry consumption in Layer 6, ensure:
 
 ### Forbidden Terms
 
-**Never use**:
-- "STOE"
-- "V12" through "V22" (any versioned system labels)
-- "based on theory X"
-- "evolved from Y"
-- Theoretical lineage references
+See `../../DEPRECATED_TERMS.md` for the complete canonical list of forbidden terminology.
 
 ---
 

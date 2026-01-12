@@ -366,9 +366,9 @@ Le site Web **doit** prendre en charge les trois langues définies dans le regis
 **Step 3: Check Deprecated Terms**
 ```
 1. Scan entire registry content for forbidden terms
-2. Reject if "STOE" found
-3. Reject if "V12" through "V22" found
-4. Reject if versioned system labels found
+2. Check against list in trizel-core/DEPRECATED_TERMS.md
+3. Reject if any forbidden term found
+4. Log specific term and location if detected
 ```
 
 **Step 4: Validate Repository Entries**
@@ -410,9 +410,9 @@ Le site Web **doit** prendre en charge les trois langues définies dans le regis
 **Étape 3 : Vérifier les termes obsolètes**
 ```
 1. Scanner tout le contenu du registre pour les termes interdits
-2. Rejeter si "STOE" trouvé
-3. Rejeter si "V12" à "V22" trouvé
-4. Rejeter si des étiquettes de système versionnées trouvées
+2. Vérifier par rapport à la liste dans trizel-core/DEPRECATED_TERMS.md
+3. Rejeter si un terme interdit est trouvé
+4. Enregistrer le terme spécifique et l'emplacement si détecté
 ```
 
 **Étape 4 : Valider les entrées de référentiel**
@@ -454,9 +454,9 @@ Le site Web **doit** prendre en charge les trois langues définies dans le regis
 **الخطوة 3: التحقق من المصطلحات المهملة**
 ```
 1. مسح كامل محتوى السجل للمصطلحات المحظورة
-2. الرفض إذا تم العثور على "STOE"
-3. الرفض إذا تم العثور على "V12" إلى "V22"
-4. الرفض إذا تم العثور على تسميات نظام الإصدار
+2. التحقق من القائمة في trizel-core/DEPRECATED_TERMS.md
+3. الرفض إذا تم العثور على أي مصطلح محظور
+4. تسجيل المصطلح المحدد والموقع إذا تم الكشف عنه
 ```
 
 **الخطوة 4: التحقق من إدخالات المستودع**
@@ -554,6 +554,6 @@ Avant de déployer le site Web, vérifier :
 - `TRIZEL_REGISTRY.yaml` — Canonical registry
 - `SCHEMA.md` — Registry schema definition
 - `layer-boundaries.md` — Layer 0 vs Layer 6 boundaries
-- `examples/` — Non-executable examples
+- `examples/` — Non-executable examples (YAML and JSON.txt format)
 - `../../PUBLICATION_POLICY.md` — Publication rules
 - `../../DEPRECATED_TERMS.md` — Forbidden terminology

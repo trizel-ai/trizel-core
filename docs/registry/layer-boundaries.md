@@ -45,18 +45,14 @@ Layer 0 repositories must **never** contain:
 - Automated workflows or build scripts
 - Theory definitions or validation claims
 - Content belonging to other layers (1-6)
-- **Deprecated terminology**: STOE, V12-V22 version labels, versioned system labels
+- **Deprecated terminology**: See `../../DEPRECATED_TERMS.md` for forbidden terms
 
 ### Algorithm Name Standard
 
 Layer 0 documents must use **only**:
 - **"AUTO DZ ACT"** (exact spelling, no variants)
 
-**Never use**:
-- "STOE"
-- "AUTO DZ ACT system"
-- "AUTO DZ ACT v1"
-- Any versioned labels
+**Never use variants or deprecated names** (see `../../DEPRECATED_TERMS.md` for complete list)
 
 ---
 
@@ -97,7 +93,7 @@ Layer 6 repositories must **never** contain:
 - **Cross-layer content mixing**: Combining data, analysis, and visualization layers
 - **Execution of scientific logic**: Running algorithms, models, or computational workflows
 - **Theoretical content creation**: Generating interpretations or conclusions
-- **Deprecated terminology**: STOE, V12-V22 version labels, versioned system labels
+- **Deprecated terminology**: See `../../DEPRECATED_TERMS.md` for forbidden terms
 
 ### Publication Rules for Layer 6
 
@@ -161,7 +157,7 @@ Before merging changes to Layer 0:
 - [ ] Contains only governance, documentation, or metadata
 - [ ] No executable code, scripts, or workflows
 - [ ] No data, analysis results, or scientific content
-- [ ] No deprecated terminology (STOE, V12-V22, etc.)
+- [ ] No deprecated terminology (see `../../DEPRECATED_TERMS.md`)
 - [ ] Algorithm name is "AUTO DZ ACT" only (if mentioned)
 - [ ] Documentation is non-interpretive
 - [ ] All schemas are versioned
@@ -225,14 +221,13 @@ Before deploying Layer 6 website:
 
 ### Forbidden Terminology
 
-**Never use**:
-- "STOE"
-- "V12" through "V22" (any versioned system labels)
-- "based on theory X"
-- "evolved from Y"
-- "supersedes Z"
+See `../../DEPRECATED_TERMS.md` for the complete canonical list of forbidden terms including:
+- Legacy algorithm names
+- Versioned system labels  
 - Theoretical lineage references
 - Interpretive or analytical claims
+
+All governance documents must reference DEPRECATED_TERMS.md rather than duplicating the forbidden terms list.
 
 ---
 

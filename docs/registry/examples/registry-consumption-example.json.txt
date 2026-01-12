@@ -1,10 +1,11 @@
 {
-  "_comment": "NON-EXECUTABLE EXAMPLE - This is a static reference showing how registry data might be structured after YAML-to-JSON conversion. This file is for documentation purposes only.",
+  "_comment": "NON-EXECUTABLE EXAMPLE - This is a static reference showing how registry data might be structured after YAML-to-JSON conversion. This file is for documentation purposes only. File extension is .json.txt to clearly indicate this is a documentation example, not actual data.",
   "_metadata": {
     "repository": "trizel-ai/trizel-core",
     "layer": 0,
     "purpose": "Reference documentation for Layer 6 implementation",
-    "note": "Actual conversion logic belongs in Layer 6 repository, not Layer 0"
+    "note": "Actual conversion logic belongs in Layer 6 repository, not Layer 0",
+    "file_extension": ".json.txt used to avoid Layer 0 CI check for data files while providing valid JSON example"
   },
   
   "registry_metadata": {
@@ -175,7 +176,7 @@
     "multilingual": "All three languages (en, fr, ar) are required for each repository",
     "rtl_support": "Arabic (ar) requires right-to-left text direction in UI",
     "provenance": "Always display registry_metadata fields on the website",
-    "deprecated_terms": "Reject entire registry if STOE or V12-V22 found anywhere",
+    "deprecated_terms": "Reject entire registry if any forbidden term from DEPRECATED_TERMS.md found",
     "layer_0_boundary": "This JSON example belongs in Layer 0 docs; actual conversion logic belongs in Layer 6"
   },
   

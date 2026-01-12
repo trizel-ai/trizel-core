@@ -49,21 +49,16 @@ allowlist:
     
   deprecated_terms:
     # Terms that must trigger rejection
-    forbidden_terms:
-      - "STOE"
-      - "V12"
-      - "V13"
-      - "V14"
-      - "V15"
-      - "V16"
-      - "V17"
-      - "V18"
-      - "V19"
-      - "V20"
-      - "V21"
-      - "V22"
+    # See trizel-ai/trizel-core/DEPRECATED_TERMS.md for canonical list
+    description: "Check against DEPRECATED_TERMS.md for forbidden terminology"
+    source: "https://github.com/trizel-ai/trizel-core/blob/main/DEPRECATED_TERMS.md"
+    action_on_detection: "reject_immediately"
+    forbidden_categories:
+      - "legacy_algorithm_names"
+      - "versioned_system_labels"
+      - "theoretical_lineage_references"
     forbidden_patterns:
-      - "V[0-9]{2}"  # Any V followed by two digits
+      - "V[0-9]{2}"  # Any V followed by two digits (versioned labels)
       - "based on theory"
       - "evolved from"
       - "supersedes"
