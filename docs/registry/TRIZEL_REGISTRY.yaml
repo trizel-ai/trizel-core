@@ -46,6 +46,9 @@ repositories:
       ar:
         title: "حوكمة TRIZEL الأساسية"
         description: "مستودع الحوكمة والميثاق القانوني الذي يحدد الحدود المعرفية والمبادئ الهيكلية"
+      zh:
+        title: "TRIZEL 核心治理"
+        description: "定义认识论边界和结构原则的规范治理和章程存储库"
 
   - repository: "trizel-ai/Auto-dz-act"
     layer: 1
@@ -62,6 +65,9 @@ repositories:
       ar:
         title: "خوارزمية AUTO DZ ACT"
         description: "مستودع تعريف الخوارزمية القانوني"
+      zh:
+        title: "AUTO DZ ACT 算法"
+        description: "规范算法定义存储库"
 
   - repository: "abdelkader-omran/AUTO-DZ-ACT-3I-ATLAS-DAILY"
     layer: 2
@@ -78,6 +84,9 @@ repositories:
       ar:
         title: "بيانات 3I ATLAS اليومية"
         description: "مستودع البيانات المراقبة اليومية لـ 3I ATLAS"
+      zh:
+        title: "3I ATLAS 每日数据"
+        description: "3I ATLAS 的每日观测数据存储库"
 
   - repository: "abdelkader-omran/trizel-monitor"
     layer: 2
@@ -94,6 +103,9 @@ repositories:
       ar:
         title: "مراقب TRIZEL"
         description: "مستودع لمراقبة وجمع البيانات المراقبة"
+      zh:
+        title: "TRIZEL 监控器"
+        description: "用于监控和观测数据收集的存储库"
 
   - repository: "abdelkader-omran/AUTO-DZ-ACT-ANALYSIS-3I-ATLAS"
     layer: 3
@@ -110,6 +122,9 @@ repositories:
       ar:
         title: "تحليل 3I ATLAS"
         description: "مستودع التحليل والاستنتاج لبيانات 3I ATLAS"
+      zh:
+        title: "3I ATLAS 分析"
+        description: "3I ATLAS 数据的分析和推断存储库"
 
   - repository: "trizel-ai/trizel-phase4-gateway"
     layer: 4
@@ -126,6 +141,9 @@ repositories:
       ar:
         title: "بوابة TRIZEL المرحلة 4"
         description: "بوابة التقييم وواجهة حدود TCRL"
+      zh:
+        title: "TRIZEL 第4阶段网关"
+        description: "评估网关和 TCRL 边界接口"
 
   - repository: "abdelkader-omran/trizel-AI"
     layer: 6
@@ -142,3 +160,6 @@ repositories:
       ar:
         title: "موقع TRIZEL AI"
         description: "طبقة الموقع والتنسيق للتصور والنشر"
+      zh:
+        title: "TRIZEL AI 网站"
+        description: "用于可视化和发布的网站和编排层"
