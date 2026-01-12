@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TRIZEL Project Registry - Multilingual repository governance and layer map">
+    <meta name="keywords" content="TRIZEL, governance, epistemic layers, repository registry">
+    <meta name="robots" content="index, follow">
+    <title>TRIZEL Project Registry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #e6f0ff;
+            --text-secondary: #c7d7f5;
+            --text-muted: #9fb6d9;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #60a5fa;
+            --border-color: #334155;
+            --badge-canonical: #10b981;
+            --badge-active: #3b82f6;
+            --badge-archived: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        body[dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .language-selector button {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        .language-selector button:hover {
+            background: var(--accent-blue);
+            color: var(--text-primary);
+            border-color: var(--accent-blue);
+        }
+
+        .language-selector button.active {
+            background: var(--accent-blue);
+            color: var(--text-primary);
+            border-color: var(--accent-blue);
+        }
+
+        .provenance {
+            background: var(--bg-secondary);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .provenance h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .provenance-details {
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+
+        .provenance-details a {
+            color: var(--accent-blue-light);
+            text-decoration: none;
+        }
+
+        .provenance-details a:hover {
+            text-decoration: underline;
+        }
+
+        .layer-section {
+            margin-bottom: 40px;
+        }
+
+        .layer-header {
+            background: var(--bg-secondary);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .layer-title {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .repository-card {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .repository-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+
+        .repository-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .repository-title {
+            font-size: 1.3em;
+            color: var(--text-primary);
+        }
+
+        .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-canonical {
+            background: var(--badge-canonical);
+            color: white;
+        }
+
+        .badge-active {
+            background: var(--badge-active);
+            color: white;
+        }
+
+        .badge-archived {
+            background: var(--badge-archived);
+            color: white;
+        }
+
+        .repository-description {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .repository-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--accent-blue-light);
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        .repository-link:hover {
+            text-decoration: underline;
+        }
+
+        .repository-meta {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+
+        .planned-notice {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            border-left: 4px solid #f59e0b;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--accent-blue-light);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* RTL-specific adjustments */
+        body[dir="rtl"] .repository-header {
+            flex-direction: row-reverse;
+        }
+
+        body[dir="rtl"] .badges {
+            flex-direction: row-reverse;
+        }
+
+        body[dir="rtl"] .provenance {
+            border-left: none;
+            border-right: 4px solid var(--accent-blue);
+        }
+
+        body[dir="rtl"] .layer-header {
+            border-left: none;
+            border-right: 4px solid var(--accent-blue);
+        }
+
+        body[dir="rtl"] .planned-notice {
+            border-left: none;
+            border-right: 4px solid var(--f59e0b);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="main-title">TRIZEL Project Registry</h1>
+            <p class="subtitle" id="subtitle">Canonical Repository Governance and Layer Map</p>
+            
+            <div class="language-selector">
+                <button onclick="switchLanguage('en')" class="active" data-lang="en">English (EN)</button>
+                <button onclick="switchLanguage('fr')" data-lang="fr">Français (FR)</button>
+                <button onclick="switchLanguage('ar')" data-lang="ar">العربية (AR)</button>
+                <button onclick="switchLanguage('zh')" data-lang="zh">中文 (ZH) - Planned</button>
+            </div>
+        </header>
+
+        <div class="provenance">
+            <h3 id="provenance-title">Registry Provenance</h3>
+            <div class="provenance-details">
+                <p><strong id="source-label">Source Repository:</strong> <a href="https://github.com/trizel-ai/trizel-core" target="_blank">trizel-ai/trizel-core</a></p>
+                <p><strong id="file-label">Source File:</strong> docs/registry/TRIZEL_REGISTRY.yaml</p>
+                <p><strong id="version-label">Registry Version:</strong> 1.0.0</p>
+                <p><strong id="updated-label">Last Updated:</strong> 2026-01-12</p>
+                <p><strong id="layer-label">Governance Layer:</strong> 0 (Canonical, Read-Only)</p>
+            </div>
+        </div>
+
+        <main id="registry-content">
+            <!-- Content will be dynamically loaded based on language -->
+        </main>
+
+        <footer>
+            <p><strong>TRIZEL</strong> — Technology for Research, Inference, Zonal Evaluation & Learning</p>
+            <p id="footer-text">Canonical Governance & Charter Repository | Layer 0 — Non-Executable, Governance Metadata</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/trizel-ai/trizel-core" target="_blank" id="github-link">View on GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Registry data (embedded from TRIZEL_REGISTRY.yaml)
+        const registryData = {
+            repositories: [
+                {
+                    repository: "trizel-ai/trizel-core",
+                    layer: 0,
+                    status: "active",
+                    canonical: true,
+                    role: "governance_charter",
+                    i18n: {
+                        en: {
+                            title: "TRIZEL Core Governance",
+                            description: "Canonical governance and charter repository defining epistemic boundaries and structural principles"
+                        },
+                        fr: {
+                            title: "Gouvernance TRIZEL Core",
+                            description: "Référentiel canonique de gouvernance et de charte définissant les frontières épistémiques et les principes structurels"
+                        },
+                        ar: {
+                            title: "حوكمة TRIZEL الأساسية",
+                            description: "مستودع الحوكمة والميثاق القانوني الذي يحدد الحدود المعرفية والمبادئ الهيكلية"
+                        },
+                        zh: {
+                            title: "TRIZEL 核心治理",
+                            description: "定义认识论边界和结构原则的规范治理和章程存储库"
+                        }
+                    }
+                },
+                {
+                    repository: "trizel-ai/Auto-dz-act",
+                    layer: 1,
+                    status: "active",
+                    canonical: true,
+                    role: "algorithm_definition",
+                    i18n: {
+                        en: {
+                            title: "AUTO DZ ACT Algorithm",
+                            description: "Canonical algorithm definition repository"
+                        },
+                        fr: {
+                            title: "Algorithme AUTO DZ ACT",
+                            description: "Référentiel de définition d'algorithme canonique"
+                        },
+                        ar: {
+                            title: "خوارزمية AUTO DZ ACT",
+                            description: "مستودع تعريف الخوارزمية القانوني"
+                        },
+                        zh: {
+                            title: "AUTO DZ ACT 算法",
+                            description: "规范算法定义存储库"
+                        }
+                    }
+                },
+                {
+                    repository: "abdelkader-omran/AUTO-DZ-ACT-3I-ATLAS-DAILY",
+                    layer: 2,
+                    status: "active",
+                    canonical: false,
+                    role: "data_observation",
+                    i18n: {
+                        en: {
+                            title: "3I ATLAS Daily Data",
+                            description: "Daily observational data repository for 3I ATLAS"
+                        },
+                        fr: {
+                            title: "Données quotidiennes 3I ATLAS",
+                            description: "Référentiel de données d'observation quotidiennes pour 3I ATLAS"
+                        },
+                        ar: {
+                            title: "بيانات 3I ATLAS اليومية",
+                            description: "مستودع البيانات المراقبة اليومية لـ 3I ATLAS"
+                        },
+                        zh: {
+                            title: "3I ATLAS 每日数据",
+                            description: "3I ATLAS 的每日观测数据存储库"
+                        }
+                    }
+                },
+                {
+                    repository: "abdelkader-omran/trizel-monitor",
+                    layer: 2,
+                    status: "active",
+                    canonical: false,
+                    role: "monitoring_observation",
+                    i18n: {
+                        en: {
+                            title: "TRIZEL Monitor",
+                            description: "Repository for monitoring and observational data collection"
+                        },
+                        fr: {
+                            title: "Moniteur TRIZEL",
+                            description: "Référentiel pour la surveillance et la collecte de données d'observation"
+                        },
+                        ar: {
+                            title: "مراقب TRIZEL",
+                            description: "مستودع لمراقبة وجمع البيانات المراقبة"
+                        },
+                        zh: {
+                            title: "TRIZEL 监控器",
+                            description: "用于监控和观测数据收集的存储库"
+                        }
+                    }
+                },
+                {
+                    repository: "abdelkader-omran/AUTO-DZ-ACT-ANALYSIS-3I-ATLAS",
+                    layer: 3,
+                    status: "active",
+                    canonical: false,
+                    role: "analysis_inference",
+                    i18n: {
+                        en: {
+                            title: "3I ATLAS Analysis",
+                            description: "Analysis and inference repository for 3I ATLAS data"
+                        },
+                        fr: {
+                            title: "Analyse 3I ATLAS",
+                            description: "Référentiel d'analyse et d'inférence pour les données 3I ATLAS"
+                        },
+                        ar: {
+                            title: "تحليل 3I ATLAS",
+                            description: "مستودع التحليل والاستنتاج لبيانات 3I ATLAS"
+                        },
+                        zh: {
+                            title: "3I ATLAS 分析",
+                            description: "3I ATLAS 数据的分析和推断存储库"
+                        }
+                    }
+                },
+                {
+                    repository: "trizel-ai/trizel-phase4-gateway",
+                    layer: 4,
+                    status: "active",
+                    canonical: true,
+                    role: "evaluation_gateway",
+                    i18n: {
+                        en: {
+                            title: "TRIZEL Phase 4 Gateway",
+                            description: "Evaluation gateway and TCRL boundary interface"
+                        },
+                        fr: {
+                            title: "Passerelle TRIZEL Phase 4",
+                            description: "Passerelle d'évaluation et interface de frontière TCRL"
+                        },
+                        ar: {
+                            title: "بوابة TRIZEL المرحلة 4",
+                            description: "بوابة التقييم وواجهة حدود TCRL"
+                        },
+                        zh: {
+                            title: "TRIZEL 第4阶段网关",
+                            description: "评估网关和 TCRL 边界接口"
+                        }
+                    }
+                },
+                {
+                    repository: "abdelkader-omran/trizel-AI",
+                    layer: 6,
+                    status: "active",
+                    canonical: false,
+                    role: "website_orchestration",
+                    i18n: {
+                        en: {
+                            title: "TRIZEL AI Website",
+                            description: "Website and orchestration layer for visualization and publication"
+                        },
+                        fr: {
+                            title: "Site Web TRIZEL AI",
+                            description: "Couche de site Web et d'orchestration pour la visualisation et la publication"
+                        },
+                        ar: {
+                            title: "موقع TRIZEL AI",
+                            description: "طبقة الموقع والتنسيق للتصور والنشر"
+                        },
+                        zh: {
+                            title: "TRIZEL AI 网站",
+                            description: "用于可视化和发布的网站和编排层"
+                        }
+                    }
+                }
+            ]
+        };
+
+        const translations = {
+            en: {
+                mainTitle: "TRIZEL Project Registry",
+                subtitle: "Canonical Repository Governance and Layer Map",
+                provenanceTitle: "Registry Provenance",
+                sourceLabel: "Source Repository:",
+                fileLabel: "Source File:",
+                versionLabel: "Registry Version:",
+                updatedLabel: "Last Updated:",
+                layerLabel: "Governance Layer:",
+                footerText: "Canonical Governance & Charter Repository | Layer 0 — Non-Executable, Governance Metadata",
+                githubLink: "View on GitHub",
+                layerNames: {
+                    0: "Layer 0: Governance & Charter",
+                    1: "Layer 1: Algorithm Definition",
+                    2: "Layer 2: Data & Observation",
+                    3: "Layer 3: Analysis & Inference",
+                    4: "Layer 4: Evaluation Gateway",
+                    5: "Layer 5: Interpretation & Synthesis",
+                    6: "Layer 6: Website & Orchestration"
+                },
+                badges: {
+                    canonical: "Canonical",
+                    active: "Active",
+                    archived: "Archived"
+                },
+                roleLabel: "Role:",
+                layerDesignation: "Layer:"
+            },
+            fr: {
+                mainTitle: "Registre de Projet TRIZEL",
+                subtitle: "Gouvernance Canonique des Référentiels et Carte des Couches",
+                provenanceTitle: "Provenance du Registre",
+                sourceLabel: "Référentiel Source:",
+                fileLabel: "Fichier Source:",
+                versionLabel: "Version du Registre:",
+                updatedLabel: "Dernière Mise à Jour:",
+                layerLabel: "Couche de Gouvernance:",
+                footerText: "Référentiel Canonique de Gouvernance et de Charte | Couche 0 — Métadonnées Non-Exécutables de Gouvernance",
+                githubLink: "Voir sur GitHub",
+                layerNames: {
+                    0: "Couche 0: Gouvernance et Charte",
+                    1: "Couche 1: Définition d'Algorithme",
+                    2: "Couche 2: Données et Observation",
+                    3: "Couche 3: Analyse et Inférence",
+                    4: "Couche 4: Passerelle d'Évaluation",
+                    5: "Couche 5: Interprétation et Synthèse",
+                    6: "Couche 6: Site Web et Orchestration"
+                },
+                badges: {
+                    canonical: "Canonique",
+                    active: "Actif",
+                    archived: "Archivé"
+                },
+                roleLabel: "Rôle:",
+                layerDesignation: "Couche:"
+            },
+            ar: {
+                mainTitle: "سجل مشروع TRIZEL",
+                subtitle: "الحوكمة القانونية للمستودعات وخريطة الطبقات",
+                provenanceTitle: "مصدر السجل",
+                sourceLabel: "المستودع المصدر:",
+                fileLabel: "الملف المصدر:",
+                versionLabel: "إصدار السجل:",
+                updatedLabel: "آخر تحديث:",
+                layerLabel: "طبقة الحوكمة:",
+                footerText: "مستودع الحوكمة والميثاق القانوني | الطبقة 0 — بيانات الحوكمة غير القابلة للتنفيذ",
+                githubLink: "عرض على GitHub",
+                layerNames: {
+                    0: "الطبقة 0: الحوكمة والميثاق",
+                    1: "الطبقة 1: تعريف الخوارزمية",
+                    2: "الطبقة 2: البيانات والمراقبة",
+                    3: "الطبقة 3: التحليل والاستنتاج",
+                    4: "الطبقة 4: بوابة التقييم",
+                    5: "الطبقة 5: التفسير والتوليف",
+                    6: "الطبقة 6: الموقع والتنسيق"
+                },
+                badges: {
+                    canonical: "قانوني",
+                    active: "نشط",
+                    archived: "مؤرشف"
+                },
+                roleLabel: "الدور:",
+                layerDesignation: "الطبقة:"
+            },
+            zh: {
+                mainTitle: "TRIZEL 项目注册表",
+                subtitle: "规范存储库治理和层级映射",
+                provenanceTitle: "注册表来源",
+                sourceLabel: "源存储库:",
+                fileLabel: "源文件:",
+                versionLabel: "注册表版本:",
+                updatedLabel: "最后更新:",
+                layerLabel: "治理层:",
+                footerText: "规范治理和章程存储库 | 第0层 — 非可执行治理元数据",
+                githubLink: "在 GitHub 上查看",
+                layerNames: {
+                    0: "第0层: 治理和章程",
+                    1: "第1层: 算法定义",
+                    2: "第2层: 数据和观测",
+                    3: "第3层: 分析和推断",
+                    4: "第4层: 评估网关",
+                    5: "第5层: 解释和综合",
+                    6: "第6层: 网站和编排"
+                },
+                badges: {
+                    canonical: "规范",
+                    active: "活跃",
+                    archived: "已归档"
+                },
+                roleLabel: "角色:",
+                layerDesignation: "层级:"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+            
+            // Update RTL for Arabic
+            if (lang === 'ar') {
+                document.body.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            } else {
+                document.body.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', lang);
+            }
+            
+            // Update static text
+            const t = translations[lang];
+            document.getElementById('main-title').textContent = t.mainTitle;
+            document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('provenance-title').textContent = t.provenanceTitle;
+            document.getElementById('source-label').textContent = t.sourceLabel;
+            document.getElementById('file-label').textContent = t.fileLabel;
+            document.getElementById('version-label').textContent = t.versionLabel;
+            document.getElementById('updated-label').textContent = t.updatedLabel;
+            document.getElementById('layer-label').textContent = t.layerLabel;
+            document.getElementById('footer-text').textContent = t.footerText;
+            document.getElementById('github-link').textContent = t.githubLink;
+            
+            // Render repositories
+            renderRepositories(lang);
+        }
+
+        function renderRepositories(lang) {
+            const content = document.getElementById('registry-content');
+            const t = translations[lang];
+            
+            // Group repositories by layer
+            const layerGroups = {};
+            registryData.repositories.forEach(repo => {
+                if (!layerGroups[repo.layer]) {
+                    layerGroups[repo.layer] = [];
+                }
+                layerGroups[repo.layer].push(repo);
+            });
+            
+            // Sort layers
+            const sortedLayers = Object.keys(layerGroups).sort((a, b) => parseInt(a) - parseInt(b));
+            
+            let html = '';
+            
+            // Chinese planned notice (only in ZH mode)
+            if (lang === 'zh') {
+                html += `
+                    <div class="planned-notice">
+                        <strong>注意:</strong> 中文翻译目前处于计划阶段。完整的中文支持正在开发中。
+                    </div>
+                `;
+            }
+            
+            sortedLayers.forEach(layer => {
+                const layerNum = parseInt(layer);
+                const repos = layerGroups[layer];
+                
+                html += `
+                    <div class="layer-section">
+                        <div class="layer-header">
+                            <h2 class="layer-title">${t.layerNames[layerNum]}</h2>
+                        </div>
+                `;
+                
+                repos.forEach(repo => {
+                    const repoI18n = repo.i18n[lang] || repo.i18n.en;
+                    const canonicalBadge = repo.canonical ? `<span class="badge badge-canonical">${t.badges.canonical}</span>` : '';
+                    const statusBadge = `<span class="badge badge-${repo.status}">${t.badges[repo.status]}</span>`;
+                    
+                    html += `
+                        <div class="repository-card">
+                            <div class="repository-header">
+                                <h3 class="repository-title">${repoI18n.title}</h3>
+                                <div class="badges">
+                                    ${canonicalBadge}
+                                    ${statusBadge}
+                                </div>
+                            </div>
+                            <p class="repository-description">${repoI18n.description}</p>
+                            <a href="https://github.com/${repo.repository}" target="_blank" class="repository-link">
+                                ${repo.repository} ↗
+                            </a>
+                            <div class="repository-meta">
+                                <strong>${t.roleLabel}</strong> ${repo.role} | 
+                                <strong>${t.layerDesignation}</strong> ${repo.layer}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+            });
+            
+            content.innerHTML = html;
+        }
+
+        // Initialize with English
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('en');
+        });
+    </script>
+</body>
+</html>
