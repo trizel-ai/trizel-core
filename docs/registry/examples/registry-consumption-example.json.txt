@@ -1,0 +1,246 @@
+{
+  "_comment": "NON-EXECUTABLE EXAMPLE - This is a static reference showing how registry data might be structured after YAML-to-JSON conversion. This file is for documentation purposes only. File extension is .json.txt to clearly indicate this is a documentation example, not actual data.",
+  "_metadata": {
+    "repository": "trizel-ai/trizel-core",
+    "layer": 0,
+    "purpose": "Reference documentation for Layer 6 implementation",
+    "note": "Actual conversion logic belongs in Layer 6 repository, not Layer 0",
+    "file_extension": ".json.txt used to avoid Layer 0 CI check for data files while providing valid JSON example"
+  },
+  
+  "registry_metadata": {
+    "version": "1.0.0",
+    "schema_version": "1.0.0",
+    "repository": "trizel-ai/trizel-core",
+    "layer": 0,
+    "effective_date": "2026-01-12T11:49:00Z",
+    "status": "canonical",
+    "publishable": true
+  },
+  
+  "repositories": [
+    {
+      "repository": "trizel-ai/trizel-core",
+      "layer": 0,
+      "status": "active",
+      "canonical": true,
+      "role": "governance_charter",
+      "i18n": {
+        "en": {
+          "title": "TRIZEL Core Governance",
+          "description": "Canonical governance and charter repository defining epistemic boundaries and structural principles"
+        },
+        "fr": {
+          "title": "Gouvernance TRIZEL Core",
+          "description": "Référentiel canonique de gouvernance et de charte définissant les frontières épistémiques et les principes structurels"
+        },
+        "ar": {
+          "title": "حوكمة TRIZEL الأساسية",
+          "description": "مستودع الحوكمة والميثاق القانوني الذي يحدد الحدود المعرفية والمبادئ الهيكلية"
+        }
+      }
+    },
+    {
+      "repository": "trizel-ai/Auto-dz-act",
+      "layer": 1,
+      "status": "active",
+      "canonical": true,
+      "role": "algorithm_definition",
+      "i18n": {
+        "en": {
+          "title": "AUTO DZ ACT Algorithm",
+          "description": "Canonical algorithm definition repository"
+        },
+        "fr": {
+          "title": "Algorithme AUTO DZ ACT",
+          "description": "Référentiel de définition d'algorithme canonique"
+        },
+        "ar": {
+          "title": "خوارزمية AUTO DZ ACT",
+          "description": "مستودع تعريف الخوارزمية القانوني"
+        }
+      }
+    },
+    {
+      "repository": "abdelkader-omran/AUTO-DZ-ACT-3I-ATLAS-DAILY",
+      "layer": 2,
+      "status": "active",
+      "canonical": false,
+      "role": "data_observation",
+      "i18n": {
+        "en": {
+          "title": "3I ATLAS Daily Data",
+          "description": "Daily observational data repository for 3I ATLAS"
+        },
+        "fr": {
+          "title": "Données quotidiennes 3I ATLAS",
+          "description": "Référentiel de données d'observation quotidiennes pour 3I ATLAS"
+        },
+        "ar": {
+          "title": "بيانات 3I ATLAS اليومية",
+          "description": "مستودع البيانات المراقبة اليومية لـ 3I ATLAS"
+        }
+      }
+    },
+    {
+      "repository": "abdelkader-omran/trizel-monitor",
+      "layer": 2,
+      "status": "active",
+      "canonical": false,
+      "role": "monitoring_observation",
+      "i18n": {
+        "en": {
+          "title": "TRIZEL Monitor",
+          "description": "Repository for monitoring and observational data collection"
+        },
+        "fr": {
+          "title": "Moniteur TRIZEL",
+          "description": "Référentiel pour la surveillance et la collecte de données d'observation"
+        },
+        "ar": {
+          "title": "مراقب TRIZEL",
+          "description": "مستودع لمراقبة وجمع البيانات المراقبة"
+        }
+      }
+    },
+    {
+      "repository": "abdelkader-omran/AUTO-DZ-ACT-ANALYSIS-3I-ATLAS",
+      "layer": 3,
+      "status": "active",
+      "canonical": false,
+      "role": "analysis_inference",
+      "i18n": {
+        "en": {
+          "title": "3I ATLAS Analysis",
+          "description": "Analysis and inference repository for 3I ATLAS data"
+        },
+        "fr": {
+          "title": "Analyse 3I ATLAS",
+          "description": "Référentiel d'analyse et d'inférence pour les données 3I ATLAS"
+        },
+        "ar": {
+          "title": "تحليل 3I ATLAS",
+          "description": "مستودع التحليل والاستنتاج لبيانات 3I ATLAS"
+        }
+      }
+    },
+    {
+      "repository": "trizel-ai/trizel-phase4-gateway",
+      "layer": 4,
+      "status": "active",
+      "canonical": true,
+      "role": "evaluation_gateway",
+      "i18n": {
+        "en": {
+          "title": "TRIZEL Phase 4 Gateway",
+          "description": "Evaluation gateway and TCRL boundary interface"
+        },
+        "fr": {
+          "title": "Passerelle TRIZEL Phase 4",
+          "description": "Passerelle d'évaluation et interface de frontière TCRL"
+        },
+        "ar": {
+          "title": "بوابة TRIZEL المرحلة 4",
+          "description": "بوابة التقييم وواجهة حدود TCRL"
+        }
+      }
+    },
+    {
+      "repository": "abdelkader-omran/trizel-AI",
+      "layer": 6,
+      "status": "active",
+      "canonical": false,
+      "role": "website_orchestration",
+      "i18n": {
+        "en": {
+          "title": "TRIZEL AI Website",
+          "description": "Website and orchestration layer for visualization and publication"
+        },
+        "fr": {
+          "title": "Site Web TRIZEL AI",
+          "description": "Couche de site Web et d'orchestration pour la visualisation et la publication"
+        },
+        "ar": {
+          "title": "موقع TRIZEL AI",
+          "description": "طبقة الموقع والتنسيق للتصور والنشر"
+        }
+      }
+    }
+  ],
+  
+  "_usage_notes": {
+    "allowlist_only": "Website must only display repositories explicitly listed in this JSON",
+    "no_auto_discovery": "Never scan GitHub API or organization to discover repositories",
+    "fail_closed": "If validation fails, halt build immediately - do not proceed",
+    "non_interpretive": "Display only the factual metadata provided - add no commentary",
+    "multilingual": "All three languages (en, fr, ar) are required for each repository",
+    "rtl_support": "Arabic (ar) requires right-to-left text direction in UI",
+    "provenance": "Always display registry_metadata fields on the website",
+    "deprecated_terms": "Reject entire registry if any forbidden term from DEPRECATED_TERMS.md found",
+    "layer_0_boundary": "This JSON example belongs in Layer 0 docs; actual conversion logic belongs in Layer 6"
+  },
+  
+  "_example_display_structure": {
+    "description": "Example of how the website might structure the display (non-executable)",
+    "page_title": "TRIZEL Project Map",
+    "sections": [
+      {
+        "section_title": "Layer 0: Governance & Charter",
+        "repositories": [
+          {
+            "display": {
+              "en": {
+                "title": "TRIZEL Core Governance",
+                "description": "Canonical governance and charter repository defining epistemic boundaries and structural principles",
+                "badges": ["canonical", "active"],
+                "link": "https://github.com/trizel-ai/trizel-core"
+              },
+              "fr": {
+                "title": "Gouvernance TRIZEL Core",
+                "description": "Référentiel canonique de gouvernance et de charte définissant les frontières épistémiques et les principes structurels",
+                "badges": ["canonique", "actif"],
+                "link": "https://github.com/trizel-ai/trizel-core"
+              },
+              "ar": {
+                "title": "حوكمة TRIZEL الأساسية",
+                "description": "مستودع الحوكمة والميثاق القانوني الذي يحدد الحدود المعرفية والمبادئ الهيكلية",
+                "badges": ["قانوني", "نشط"],
+                "link": "https://github.com/trizel-ai/trizel-core"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "section_title": "Layer 1: Algorithm Definition",
+        "repositories": [
+          {
+            "display": {
+              "en": {
+                "title": "AUTO DZ ACT Algorithm",
+                "description": "Canonical algorithm definition repository",
+                "badges": ["canonical", "active"],
+                "link": "https://github.com/trizel-ai/Auto-dz-act"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "provenance_footer": {
+      "registry_version": "1.0.0",
+      "last_updated": "2026-01-12T11:49:00Z",
+      "source": "trizel-ai/trizel-core",
+      "schema": "1.0.0"
+    }
+  },
+  
+  "_conversion_notes": {
+    "format": "JSON conversion from TRIZEL_REGISTRY.yaml",
+    "method": "Use safe YAML parser, convert to JSON preserving structure",
+    "validation": "Validate before and after conversion",
+    "storage": "Store as build artifact or commit to Layer 6 repository",
+    "update_frequency": "Re-fetch and convert when registry changes",
+    "no_manual_edits": "JSON must be strictly derived from YAML - no manual modifications"
+  }
+}

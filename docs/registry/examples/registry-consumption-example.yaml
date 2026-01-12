@@ -1,0 +1,234 @@
+# registry-consumption-example.yaml
+#
+# NON-EXECUTABLE EXAMPLE
+# This is a static reference example showing how a Layer 6 website
+# might structure its allowlist configuration for consuming the
+# TRIZEL registry. This file is for documentation purposes only
+# and contains no executable logic.
+#
+# Repository: trizel-ai/trizel-core
+# Layer: 0 — Governance & Charter
+# Purpose: Reference documentation for Layer 6 implementation
+
+# ==============================================================================
+# ALLOWLIST CONFIGURATION (Example for Layer 6 Website)
+# ==============================================================================
+
+allowlist:
+  metadata:
+    # Configuration metadata
+    version: "1.0.0"
+    description: "Allowlist configuration for TRIZEL website registry consumption"
+    layer: 6
+    consumer: "abdelkader-omran/trizel-AI"
+    
+  approved_sources:
+    # Only these sources may be ingested
+    - source_id: "trizel-registry"
+      repository: "trizel-ai/trizel-core"
+      file_path: "docs/registry/TRIZEL_REGISTRY.yaml"
+      schema_version: "1.0.0"
+      fetch_method: "https"
+      fetch_url: "https://raw.githubusercontent.com/trizel-ai/trizel-core/main/docs/registry/TRIZEL_REGISTRY.yaml"
+      pinned_commit: null  # TODO: Pin to specific commit SHA for production
+      publishable_required: true
+      validation_rules:
+        - check_schema_version: true
+        - check_publishable_flag: true
+        - check_deprecated_terms: true
+        - check_yaml_syntax: true
+        - check_required_fields: true
+        - check_i18n_completeness: true
+
+  validation_settings:
+    # Fail-closed behavior configuration
+    fail_on_error: true
+    halt_build_on_validation_failure: true
+    log_validation_errors: true
+    require_manual_intervention: true
+    
+  deprecated_terms:
+    # Terms that must trigger rejection
+    # See trizel-ai/trizel-core/DEPRECATED_TERMS.md for canonical list
+    description: "Check against DEPRECATED_TERMS.md for forbidden terminology"
+    source: "https://github.com/trizel-ai/trizel-core/blob/main/DEPRECATED_TERMS.md"
+    action_on_detection: "reject_immediately"
+    forbidden_categories:
+      - "legacy_algorithm_names"
+      - "versioned_system_labels"
+      - "theoretical_lineage_references"
+    forbidden_patterns:
+      - "V[0-9]{2}"  # Any V followed by two digits (versioned labels)
+      - "based on theory"
+      - "evolved from"
+      - "supersedes"
+      
+  required_metadata_fields:
+    # Registry metadata that must be present
+    registry_level:
+      - "version"
+      - "schema_version"
+      - "repository"
+      - "layer"
+      - "effective_date"
+      - "status"
+      - "publishable"
+      
+    repository_level:
+      - "repository"
+      - "layer"
+      - "status"
+      - "canonical"
+      - "role"
+      - "i18n"
+      
+    i18n_level:
+      - "en"
+      - "fr"
+      - "ar"
+      
+    i18n_language_level:
+      - "title"
+      - "description"
+
+  display_rules:
+    # Non-interpretive display constraints
+    allowed_content:
+      - "repository_names"      # From i18n.title
+      - "repository_descriptions"  # From i18n.description
+      - "layer_assignments"     # From layer field
+      - "operational_status"    # From status field
+      - "canonical_designation" # From canonical field
+      - "github_links"          # From repository field
+      - "role_designations"     # From role field
+      - "provenance_metadata"   # Version, date, source
+      
+    forbidden_content:
+      - "interpretive_commentary"
+      - "analytical_conclusions"
+      - "performance_metrics"
+      - "theoretical_claims"
+      - "modified_governance_text"
+      - "non_approved_sources"
+      - "raw_data"
+      - "analysis_results"
+
+  multilingual_support:
+    # Required language configuration
+    supported_languages:
+      - code: "en"
+        name: "English"
+        default: true
+        rtl: false
+      - code: "fr"
+        name: "Français"
+        default: false
+        rtl: false
+      - code: "ar"
+        name: "العربية"
+        default: false
+        rtl: true
+        
+    requirements:
+      - all_languages_required: true
+      - rtl_support_for_arabic: true
+      - language_switcher_visible: true
+      - preserve_state_on_switch: true
+
+# ==============================================================================
+# BUILD PROCESS EXAMPLE (Non-executable pseudocode)
+# ==============================================================================
+
+build_process:
+  description: "Example workflow for consuming registry (not executable code)"
+  
+  steps:
+    - step: 1
+      name: "Fetch Registry"
+      actions:
+        - "Request TRIZEL_REGISTRY.yaml from approved source"
+        - "Verify HTTP 200 response"
+        - "Store raw YAML content"
+      failure_behavior: "Halt build, log error"
+      
+    - step: 2
+      name: "Parse YAML"
+      actions:
+        - "Parse YAML using safe parser"
+        - "Verify syntax validity"
+      failure_behavior: "Halt build, log syntax error"
+      
+    - step: 3
+      name: "Validate Schema"
+      actions:
+        - "Check schema_version matches compatibility"
+        - "Verify publishable flag is true"
+        - "Check all required metadata present"
+      failure_behavior: "Halt build, log validation error"
+      
+    - step: 4
+      name: "Check Deprecated Terms"
+      actions:
+        - "Scan entire content for forbidden terms"
+        - "Reject if any forbidden term found"
+      failure_behavior: "Halt build, log deprecated term location"
+      
+    - step: 5
+      name: "Validate Repositories"
+      actions:
+        - "Check each repository has required fields"
+        - "Verify i18n completeness (en, fr, ar)"
+        - "Validate character limits"
+        - "Check layer and status values"
+      failure_behavior: "Halt build, log validation error"
+      
+    - step: 6
+      name: "Generate Website"
+      actions:
+        - "Extract multilingual content"
+        - "Render static pages"
+        - "Apply RTL for Arabic"
+        - "Display provenance metadata"
+      failure_behavior: "Halt build, log generation error"
+
+# ==============================================================================
+# PROVENANCE TRACKING EXAMPLE
+# ==============================================================================
+
+provenance_display:
+  description: "Metadata that must be displayed on website"
+  
+  required_fields:
+    - field: "registry_version"
+      source: "registry_metadata.version"
+      display: "Registry Version: {value}"
+      
+    - field: "effective_date"
+      source: "registry_metadata.effective_date"
+      display: "Last Updated: {value}"
+      
+    - field: "source_repository"
+      source: "registry_metadata.repository"
+      display: "Source: {value}"
+      
+    - field: "schema_version"
+      source: "registry_metadata.schema_version"
+      display: "Schema: {value}"
+      
+    - field: "fetch_timestamp"
+      source: "build_time"
+      display: "Fetched: {value}"
+
+# ==============================================================================
+# NOTES
+# ==============================================================================
+
+notes:
+  - "This is a NON-EXECUTABLE example for reference only"
+  - "Actual implementation belongs in Layer 6 repository"
+  - "Layer 0 (trizel-core) must not contain executable website code"
+  - "Follow allowlist-only, fail-closed, non-interpretive principles"
+  - "Pin to specific commit SHA in production (not main branch)"
+  - "Test thoroughly with all three languages (en/fr/ar)"
+  - "Ensure RTL support for Arabic is properly implemented"
+  - "Never auto-discover repositories; use explicit allowlist only"
