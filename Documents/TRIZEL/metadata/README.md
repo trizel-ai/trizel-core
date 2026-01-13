@@ -289,15 +289,14 @@ Roles are **layer-specific** and **non-overlapping**:
 
 ---
 
-## Deprecated Terms (Absolute Prohibition)
+### Deprecated Terms (Absolute Prohibition)
 
-The following terms are **permanently forbidden** in all metadata:
+All deprecated terminology is centrally defined and enforced via CI.
 
-- **STOE**
-- **V12** through **V22** (all versions in this range)
-- Any theoretical lineage references
-- Any versioned system labels
+Refer exclusively to:
+- `DEPRECATED_TERMS.md`
 
+Any forbidden token detected by automated checks will cause immediate rejection.
 **Enforcement**: Automated CI checks must scan all metadata and **fail builds** if deprecated terms are detected.
 
 **Action**: If found, remove immediately and reject the metadata.
