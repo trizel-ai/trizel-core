@@ -291,12 +291,18 @@ Roles are **layer-specific** and **non-overlapping**:
 
 ## Deprecated Terms (Absolute Prohibition)
 
-The following terms are **permanently forbidden** in all metadata:
+The following legacy placeholders are **permanently forbidden** in all metadata:
 
-- **STOE**
-- **V12** through **V22** (all versions in this range)
+- **DEPRECATED_TERM_PLACEHOLDER**
+- **VERSION_LABEL_PLACEHOLDER_RANGE**
 - Any theoretical lineage references
 - Any versioned system labels
+
+**Enforcement**: Automated CI checks must scan all metadata and **fail builds** if deprecated terms are detected.
+
+**Action**: If found, remove immediately and reject the metadata.
+
+See `../../DEPRECATED_TERMS.md` for complete list and enforcement rules.
 
 **Enforcement**: Automated CI checks must scan all metadata and **fail builds** if deprecated terms are detected.
 
