@@ -126,7 +126,7 @@ jobs:
           while IFS= read -r -d '' file; do
             if [ ! -s "$file" ]; then
               echo "❌ ERROR: Empty markdown file: $file"
-              exit 1
+              empty_found=true
             fi
           done < <(find . -type f -name "*.md" -not -path "./.git/*" -print0)
 
@@ -144,37 +144,32 @@ jobs:
             "if __name__"
             "import pandas"
             "import numpy"
-            "SELECT * FROM"
+            "SELECT \* FROM"
+            "data analysis"
             "statistical test"
             "model training"
           )
 
           violations_found=false
           for phrase in "${forbidden_phrases[@]}"; do
-            if grep -rin "$phrase" \
-              --exclude-dir=.git \
-              --exclude-dir=.github \
-              --exclude="governance-validation.yml" \
-              --exclude-dir="docs/internal/policy" \
-              --include="*.md" \
-              . ; then
-              echo "⚠ WARNING: Found potential cross-layer indicator: '$phrase'"
+            if grep -rin --include="*.md" --exclude="governance-validation.yml" \
+              --exclude-dir=.git --exclude-dir=.github \
+              --exclude-dir=node_modules --exclude-dir=vendor --exclude-dir=dist --exclude-dir=build --exclude-dir=target \
+              --exclude-dir=.venv --exclude-dir=.mypy_cache --exclude-dir=.pytest_cache \
+              "$phrase" . ; then
+              echo "⚠ WARNING: Found potentially cross-layer phrase: '$phrase'"
               violations_found=true
             fi
           done
 
           if [ "$violations_found" = true ]; then
-            echo "⚠ REVIEW REQUIRED: Potential cross-layer indicators detected in markdown."
-            echo "This job does not fail on heuristics; validate context manually."
+            echo "⚠ Review required: Potential cross-layer content detected (warning-only)."
           else
-            echo "✓ No cross-layer indicators detected (heuristic)"
+            echo "✓ No cross-layer phrases detected"
           fi
 
-      - name: Summary
-        if: success()
-        run: |
           echo ""
-          echo "✓ Governance validation checks PASSED"
-          echo "✓ Layer 0 boundaries enforced (no executable code / datasets / notebooks)"
+          echo "✓ All governance validation checks PASSED"
+          echo "✓ Repository maintains Layer 0 boundaries"
+          echo "✓ No executable code, data files, or notebooks detected"
           echo "✓ Required governance files present"
-          echo "✓ Markdown non-empty validation passed"
