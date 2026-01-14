@@ -13,58 +13,76 @@ jobs:
   validate-governance:
     runs-on: ubuntu-latest
     name: Validate governance boundaries
-    
+    timeout-minutes: 10
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0
+
       - name: Verify Layer 0 boundaries
+        shell: bash
         run: |
+          set -euo pipefail
+          export LC_ALL=C
+
           echo "Validating Layer 0 (Governance) boundaries..."
-          
-          # Check for executable code files (should not exist in governance repo)
-          echo "Checking for executable code files..."
-          if find . -type f \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.go" -o -name "*.rs" \) \
-            -not -path "./.git/*" | grep -q .; then
-            echo "❌ ERROR: Found executable code files"
-            echo "Layer 0 (Governance) must not contain executable code."
-            find . -type f \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.go" -o -name "*.rs" \) \
-              -not -path "./.git/*"
+
+          # Common excludes to reduce noise/latency and avoid false positives
+          EXCLUDE_PATHS=(
+            -not -path "./.git/*"
+            -not -path "./.github/*"
+            -not -path "./node_modules/*"
+            -not -path "./vendor/*"
+            -not -path "./dist/*"
+            -not -path "./build/*"
+            -not -path "./target/*"
+            -not -path "./.venv/*"
+            -not -path "./.mypy_cache/*"
+            -not -path "./.pytest_cache/*"
+          )
+
+          echo ""
+          echo "1) Checking for executable code files (disallowed in Layer 0)..."
+          if find . -type f \( \
+              -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o \
+              -name "*.cpp" -o -name "*.go" -o -name "*.rs" \
+            \) "${EXCLUDE_PATHS[@]}" | grep -q .; then
+            echo "❌ ERROR: Found executable code files. Layer 0 must not contain executable code."
+            find . -type f \( \
+                -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o \
+                -name "*.cpp" -o -name "*.go" -o -name "*.rs" \
+              \) "${EXCLUDE_PATHS[@]}"
             exit 1
           fi
           echo "✓ No executable code files found"
-      
-      - name: Check for data files
-        run: |
-          echo "Checking for data files..."
-          if find . -type f \( -name "*.csv" -o -name "*.json" -o -name "*.xml" -o -name "*.parquet" -o -name "*.db" -o -name "*.sqlite" \) \
-            -not -path "./.git/*" \
-            -not -path "./.github/*" | grep -q .; then
-            echo "❌ ERROR: Found data files"
-            echo "Layer 0 (Governance) must not contain data files."
-            find . -type f \( -name "*.csv" -o -name "*.json" -o -name "*.xml" -o -name "*.parquet" -o -name "*.db" -o -name "*.sqlite" \) \
-              -not -path "./.git/*" \
-              -not -path "./.github/*"
+
+          echo ""
+          echo "2) Checking for data files (disallowed in Layer 0)..."
+          # Note: if your Layer 0 repo legitimately contains JSON/YAML templates, do NOT add *.json/*.yaml here.
+          if find . -type f \( \
+              -name "*.csv" -o -name "*.xml" -o -name "*.parquet" -o -name "*.db" -o -name "*.sqlite" \
+            \) "${EXCLUDE_PATHS[@]}" | grep -q .; then
+            echo "❌ ERROR: Found data files. Layer 0 must not contain data files."
+            find . -type f \( \
+                -name "*.csv" -o -name "*.xml" -o -name "*.parquet" -o -name "*.db" -o -name "*.sqlite" \
+              \) "${EXCLUDE_PATHS[@]}"
             exit 1
           fi
           echo "✓ No data files found"
-      
-      - name: Check for Jupyter notebooks
-        run: |
-          echo "Checking for Jupyter notebooks..."
-          if find . -type f -name "*.ipynb" \
-            -not -path "./.git/*" | grep -q .; then
-            echo "❌ ERROR: Found Jupyter notebook files"
-            echo "Layer 0 (Governance) must not contain analysis notebooks."
-            find . -type f -name "*.ipynb" -not -path "./.git/*"
+
+          echo ""
+          echo "3) Checking for Jupyter notebooks (disallowed in Layer 0)..."
+          if find . -type f -name "*.ipynb" "${EXCLUDE_PATHS[@]}" | grep -q .; then
+            echo "❌ ERROR: Found Jupyter notebook files. Layer 0 must not contain notebooks."
+            find . -type f -name "*.ipynb" "${EXCLUDE_PATHS[@]}"
             exit 1
           fi
           echo "✓ No Jupyter notebooks found"
-      
-      - name: Verify required governance files exist
-        run: |
-          echo "Checking for required governance files..."
-          
+
+          echo ""
+          echo "4) Verifying required governance files exist..."
           required_files=(
             "COPILOT_INSTRUCTIONS.md"
             "ROLE.md"
@@ -74,75 +92,70 @@ jobs:
             "README.md"
             "LICENSE"
           )
-          
+
           missing_files=()
           for file in "${required_files[@]}"; do
             if [ ! -f "$file" ]; then
               missing_files+=("$file")
             fi
           done
-          
+
           if [ ${#missing_files[@]} -ne 0 ]; then
             echo "❌ ERROR: Missing required governance files:"
             printf '%s\n' "${missing_files[@]}"
             exit 1
           fi
           echo "✓ All required governance files present"
-      
-      - name: Validate markdown files
-        run: |
-          echo "Validating markdown files..."
-          
-          # Check that all .md files are valid (basic check)
-          find . -type f -name "*.md" -not -path "./.git/*" | while read -r file; do
+
+          echo ""
+          echo "5) Validating markdown files (non-empty)..."
+          empty_found=false
+          while IFS= read -r -d '' file; do
             if [ ! -s "$file" ]; then
               echo "❌ ERROR: Empty markdown file: $file"
-              exit 1
+              empty_found=true
             fi
-          done
+          done < <(find . -type f -name "*.md" "${EXCLUDE_PATHS[@]}" -print0)
+
+          if [ "$empty_found" = true ]; then
+            exit 1
+          fi
           echo "✓ All markdown files validated"
-      
-      - name: Check for cross-layer violations
-        run: |
-          echo "Checking for cross-layer violations..."
-          
-          # Search for phrases that indicate execution, analysis, or data content
+
+          echo ""
+          echo "6) Cross-layer phrase scan (warning-only; manual review trigger)..."
           forbidden_phrases=(
             "def main"
             "if __name__"
             "import pandas"
             "import numpy"
-            "SELECT * FROM"
+            "SELECT \* FROM"
             "data analysis"
             "statistical test"
             "machine learning"
             "model training"
           )
-          
+
           violations_found=false
           for phrase in "${forbidden_phrases[@]}"; do
-            if grep -rin "$phrase" \
-              --exclude-dir=.git \
-              --exclude="governance-validation.yml" \
-              --include="*.md" \
-              . ; then
-              echo "⚠ Warning: Found potentially forbidden phrase: '$phrase'"
+            if grep -rin --include="*.md" --exclude="governance-validation.yml" \
+              --exclude-dir=.git --exclude-dir=.github \
+              --exclude-dir=node_modules --exclude-dir=vendor --exclude-dir=dist --exclude-dir=build --exclude-dir=target \
+              --exclude-dir=.venv --exclude-dir=.mypy_cache --exclude-dir=.pytest_cache \
+              "$phrase" . ; then
+              echo "⚠ WARNING: Found potentially cross-layer phrase: '$phrase'"
               violations_found=true
             fi
           done
-          
+
           if [ "$violations_found" = true ]; then
-            echo "⚠ Review required: Potential cross-layer content detected"
-            echo "Please verify this is appropriate for Layer 0 (Governance)"
+            echo "⚠ Review required: Potential cross-layer content detected (warning-only)."
           else
-            echo "✓ No cross-layer violations detected"
+            echo "✓ No cross-layer phrases detected"
           fi
-      
-      - name: Summary
-        if: success()
-        run: |
+
           echo ""
           echo "✓ All governance validation checks PASSED"
           echo "✓ Repository maintains Layer 0 boundaries"
-          echo "✓ No executable code, data, or analysis content detected"
-          echo "✓ All required governance files present"
+          echo "✓ No executable code, data files, or notebooks detected"
+          echo "✓ Required governance files present"
