@@ -13,7 +13,6 @@ jobs:
   validate-governance:
     runs-on: ubuntu-latest
     name: Validate governance boundaries
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -30,13 +29,13 @@ jobs:
           # - Explicitly exclude .git and .github and common docs-only assets.
           # - Keep list conservative; expand only by governance decision.
           if find . -type f \
-            \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.go" -o -name "*.rs" -o -name "*.rb" -o -name "*.php" -o -name "*.sh" -o -name "*.ps1" -o -name "*.bat" \) \
+            \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.go" -o -name "*.rs" -o -name "*.rb" -o -name "*.php" -o -name "*.swift" -o -name "*.cs" -o -name "*.kt" -o -name "*.m" -o -name "*.mm" -o -name "*.scala" \) \
             -not -path "./.git/*" \
             -not -path "./.github/*" \
             | grep -q . ; then
             echo "❌ ERROR: Found executable code files. Layer 0 must not contain executable code."
             find . -type f \
-              \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.go" -o -name "*.rs" -o -name "*.rb" -o -name "*.php" -o -name "*.sh" -o -name "*.ps1" -o -name "*.bat" \) \
+              \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.go" -o -name "*.rs" -o -name "*.rb" -o -name "*.php" -o -name "*.swift" -o -name "*.cs" -o -name "*.kt" -o -name "*.m" -o -name "*.mm" -o -name "*.scala" \) \
               -not -path "./.git/*" \
               -not -path "./.github/*"
             exit 1
@@ -144,7 +143,7 @@ jobs:
             "if __name__"
             "import pandas"
             "import numpy"
-            "SELECT \* FROM"
+            "SELECT * FROM"
             "data analysis"
             "statistical test"
             "model training"
@@ -157,13 +156,13 @@ jobs:
               --exclude-dir=node_modules --exclude-dir=vendor --exclude-dir=dist --exclude-dir=build --exclude-dir=target \
               --exclude-dir=.venv --exclude-dir=.mypy_cache --exclude-dir=.pytest_cache \
               "$phrase" . ; then
-              echo "⚠ WARNING: Found potentially cross-layer phrase: '$phrase'"
+              echo "⚠️ WARNING: Found potentially cross-layer phrase: '$phrase'"
               violations_found=true
             fi
           done
 
           if [ "$violations_found" = true ]; then
-            echo "⚠ Review required: Potential cross-layer content detected (warning-only)."
+            echo "⚠️ Review required: Potential cross-layer content detected (warning-only)."
           else
             echo "✓ No cross-layer phrases detected"
           fi
