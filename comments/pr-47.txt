@@ -1,0 +1,1 @@
+Closed as redundant after PR #48 merged. Governance baseline restored; further changes must be proposed as a single atomic PR.
