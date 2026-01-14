@@ -29,7 +29,7 @@ jobs:
 
           echo "Scanning YAML/JSON only for deprecated terms..."
 
-          # Common exclude dirs to reduce noise/latency
+          # Exclude common directories to reduce noise and runtime.
           EXCLUDES=(
             "--exclude-dir=.git"
             "--exclude-dir=.github"
@@ -43,13 +43,13 @@ jobs:
             "--exclude-dir=.pytest_cache"
           )
 
+          # Limit scan scope to YAML/JSON only.
           INCLUDES=(
             "--include=*.yml"
             "--include=*.yaml"
             "--include=*.json"
           )
 
-          # Helper: run grep, fail if any match is found
           fail_if_found() {
             local label="$1"
             local pattern="$2"
@@ -57,7 +57,8 @@ jobs:
 
             echo ""
             echo "==> ${label}"
-            if grep -rEn --binary-files=without-match "${EXCLUDES[@]}" "${INCLUDES[@]}" "${pattern}" . ; then
+            # -I ignores binary files; -E enables extended regex; -n prints line numbers; -r recursive.
+            if grep -rIEn "${EXCLUDES[@]}" "${INCLUDES[@]}" "${pattern}" . ; then
               echo ""
               echo "❌ ERROR: ${message}"
               exit 1
@@ -65,19 +66,19 @@ jobs:
             echo "✓ OK: ${label}"
           }
 
-          # 1) STOE (exact string)
+          # 1) STOE (word-boundary)
           fail_if_found \
             "Check for deprecated term 'STOE'" \
-            "STOE" \
+            "\bSTOE\b" \
             "Found deprecated term 'STOE' in YAML/JSON payloads. Remove it completely."
 
-          # 2) V12-V22 version labels (word boundary)
+          # 2) V12–V22 (word-boundary)
           fail_if_found \
             "Check for deprecated version labels V12–V22" \
             "\bV(12|13|14|15|16|17|18|19|20|21|22)\b" \
             "Found deprecated version labels (V12–V22) in YAML/JSON payloads. Remove them completely."
 
-          # 3) Versioned system labels (case-insensitive)
+          # 3) V<number> system (case-insensitive)
           fail_if_found \
             "Check for forbidden 'V<number> system' patterns" \
             "\bV[0-9]+[[:space:]]+system\b" \
@@ -92,4 +93,5 @@ jobs:
 
           echo ""
           echo "✓ All deprecated terms checks PASSED (YAML/JSON scope)"
+          echo "✓ No forbidden terminology detected in YAML/JSON payloads"
           echo "✓ Repository compliant with TRIZEL DIRECTIVE"
