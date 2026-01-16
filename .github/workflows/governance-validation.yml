@@ -3,8 +3,7 @@ name: Governance Validation
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  push:
-    branches: [main, master, develop]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +11,7 @@ permissions:
 jobs:
   validate-governance:
     runs-on: ubuntu-latest
-    name: Validate governance boundaries
+    name: "Governance Validation / Validate governance boundaries"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
