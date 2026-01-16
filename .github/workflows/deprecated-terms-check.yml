@@ -3,8 +3,7 @@ name: Deprecated Terms Check
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  push:
-    branches: [main, master, develop]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +11,7 @@ permissions:
 jobs:
   check-deprecated-terms:
     runs-on: ubuntu-latest
-    name: Check for deprecated terminology (YAML/JSON only)
+    name: "Deprecated Terms Check / Check for deprecated terminology"
     timeout-minutes: 5
 
     steps:
