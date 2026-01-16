@@ -33,6 +33,7 @@ jobs:
           EXCLUDES=(
             "--exclude-dir=.git"
             "--exclude-dir=.github"
+            "--exclude-dir=governance"
             "--exclude-dir=node_modules"
             "--exclude-dir=vendor"
             "--exclude-dir=dist"
