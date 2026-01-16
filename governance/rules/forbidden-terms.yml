@@ -1,0 +1,76 @@
+# Forbidden Terms Rules
+# This file defines deprecated and forbidden terminology for the TRIZEL ecosystem
+# Based on TRIZEL DIRECTIVE and DEPRECATED_TERMS.md policy
+
+name: Forbidden Terms and Deprecated Terminology
+description: Defines prohibited terms and naming conventions for YAML/JSON payloads
+version: 1.0.0
+scope: YAML and JSON files only
+
+deprecated_terms:
+  stoe:
+    pattern: '\bSTOE\b'
+    description: "STOE is completely deprecated and must be removed"
+    action: remove_completely
+    severity: error
+
+  version_labels:
+    pattern: '\bV(12|13|14|15|16|17|18|19|20|21|22)\b'
+    description: "Version labels V12-V22 are deprecated and must be removed"
+    action: remove_completely
+    severity: error
+
+  version_system_pattern:
+    pattern: '\bV[0-9]+[[:space:]]+system\b'
+    description: "V<number> system patterns are forbidden"
+    action: remove_completely
+    severity: error
+    case_sensitive: false
+
+algorithm_naming:
+  canonical_name: "AUTO DZ ACT"
+  description: "Only the exact canonical form is allowed"
+  
+  forbidden_variants:
+    - pattern: "AUTO-DZ-ACT"
+      description: "Hyphenated variant not allowed"
+    - pattern: "AutoDzAct"
+      description: "CamelCase variant not allowed"
+    - pattern: "auto dz act"
+      description: "Lowercase variant not allowed"
+    - pattern: "AUTO DZ ACT[[:space:]]+system"
+      description: "Cannot append 'system' suffix"
+    - pattern: "AUTO DZ ACT[[:space:]]+v"
+      description: "Cannot append version prefix"
+  
+  severity: error
+  action: use_canonical_form_only
+
+scan_scope:
+  include:
+    - "*.yml"
+    - "*.yaml"
+    - "*.json"
+  
+  exclude_directories:
+    - ".git"
+    - ".github"
+    - "node_modules"
+    - "vendor"
+    - "dist"
+    - "build"
+    - "target"
+    - ".venv"
+    - ".mypy_cache"
+    - ".pytest_cache"
+
+validation:
+  workflow: .github/workflows/deprecated-terms-check.yml
+  check_name: "Deprecated Terms Check / Check for deprecated terminology"
+  enforcement: required_on_pr
+  timeout_minutes: 5
+
+compliance:
+  policy_document: DEPRECATED_TERMS.md
+  directive: TRIZEL DIRECTIVE
+  enforcement_level: strict

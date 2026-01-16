@@ -1,0 +1,91 @@
+# Layer 0 Boundary Rules
+# This file defines the governance boundaries for Layer 0 (trizel-core)
+# Layer 0 is the canonical governance repository and must contain ONLY governance documents
+
+name: Layer 0 Boundaries
+description: Defines what content is allowed and prohibited in the Layer 0 governance repository
+version: 1.0.0
+
+boundaries:
+  allowed_content:
+    - Governance documents (markdown files)
+    - Policy definitions
+    - Charter documents
+    - Repository templates
+    - Workflow definitions (.github/workflows)
+    - Documentation
+    - YAML/JSON configuration files (governance schemas)
+    - License files
+    - README and project metadata
+
+  prohibited_content:
+    executable_code:
+      description: "No executable code files allowed in Layer 0"
+      file_extensions:
+        - "*.py"
+        - "*.js"
+        - "*.ts"
+        - "*.java"
+        - "*.cpp"
+        - "*.c"
+        - "*.h"
+        - "*.go"
+        - "*.rs"
+        - "*.rb"
+        - "*.php"
+        - "*.swift"
+        - "*.cs"
+        - "*.kt"
+        - "*.m"
+        - "*.mm"
+        - "*.scala"
+      exceptions:
+        - ".github/*"  # GitHub Actions workflows are allowed
+        - ".git/*"     # Git internals excluded
+        - "scripts/governance/*"  # Governance automation scripts allowed
+
+    data_files:
+      description: "No datasets, databases, or analysis notebooks allowed"
+      file_extensions:
+        - "*.csv"
+        - "*.parquet"
+        - "*.feather"
+        - "*.arrow"
+        - "*.db"
+        - "*.sqlite"
+        - "*.sqlite3"
+        - "*.pkl"
+        - "*.pickle"
+        - "*.h5"
+        - "*.hdf5"
+        - "*.sav"
+        - "*.dta"
+        - "*.mat"
+        - "*.ipynb"
+
+required_files:
+  description: "Core governance files that must exist at repository root"
+  files:
+    - "COPILOT_INSTRUCTIONS.md"
+    - "ROLE.md"
+    - "OUTPUT_CONTRACT.md"
+    - "PUBLICATION_POLICY.md"
+    - "DEPRECATED_TERMS.md"
+    - "README.md"
+
+validation:
+  workflow: .github/workflows/governance-validation.yml
+  check_name: "Governance Validation / Validate governance boundaries"
+  enforcement: required_on_pr
+
+heuristic_warnings:
+  description: "Warning-only indicators of potential cross-layer content"
+  phrases:
+    - "def main"
+    - "if __name__"
+    - "import pandas"
+    - "import numpy"
+    - "SELECT * FROM"
+    - "data analysis"
+    - "statistical test"
+    - "model training"
