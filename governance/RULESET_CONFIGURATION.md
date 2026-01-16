@@ -67,9 +67,15 @@ Prevents accidental deletion of the `main` branch.
 
 ### Bypass List
 
-**Configuration**: EMPTY (strict enforcement)
+**Configuration**: EMPTY (strict enforcement - RECOMMENDED)
 
-**Rationale**: No one should bypass governance checks, including administrators. If absolutely necessary for emergency situations, only the organization owner (`trizel-admin`) should be on the bypass list, but prefer keeping it empty.
+**Rationale**: No one should bypass governance checks, including administrators. This ensures consistent enforcement for all contributors.
+
+**Emergency Exception** (use with extreme caution):
+- If absolutely necessary for critical emergency situations only, the organization owner (`trizel-admin`) MAY be added to the bypass list
+- This should be temporary and removed immediately after the emergency
+- Document any bypass usage in repository records
+- **Strongly prefer keeping the bypass list empty at all times**
 
 ## How to Configure
 
