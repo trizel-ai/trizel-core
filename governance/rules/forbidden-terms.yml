@@ -55,6 +55,7 @@ scan_scope:
   exclude_directories:
     - ".git"
     - ".github"
+    - "governance"  # Governance rules document deprecated terms, not use them
     - "node_modules"
     - "vendor"
     - "dist"
