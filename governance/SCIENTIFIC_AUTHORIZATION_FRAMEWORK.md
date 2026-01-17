@@ -68,12 +68,12 @@ If activated in the future, this framework would apply to authorization decision
 
 The following roles are defined **for a potential future authorization phase only**:
 
-| Role | Responsibility | Authority |
-|---|---|---|
-| Contributor | Prepares reproducible artifacts and documentation | Proposes only |
-| Scientific Reviewer (min. 2) | Independent verification and critique | Recommends |
-| Governance Authority (Layer-0) | Final decision and audit record | Grants or denies |
-| External Advisor (optional) | Independent advisory review | Non-binding |
+| Role                            | Responsibility                                        | Authority         |
+|---------------------------------|-------------------------------------------------------|-------------------|
+| Contributor                     | Prepares reproducible artifacts and documentation     | Proposes only     |
+| Scientific Reviewer (min. 2)    | Independent verification and critique                 | Recommends        |
+| Governance Authority (Layer-0)  | Final decision and audit record                       | Grants or denies  |
+| External Advisor (optional)     | Independent advisory review                           | Non-binding       |
 
 Reviewers must be independent and must not be direct contributors to the output under review.
 
