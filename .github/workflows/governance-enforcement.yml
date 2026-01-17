@@ -58,6 +58,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install PyYAML
+        run: |
+          pip install pyyaml
+
       - name: Run schema validation
         run: |
           python3 scripts/governance/schema_validation.py
