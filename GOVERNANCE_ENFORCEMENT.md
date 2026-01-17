@@ -474,6 +474,7 @@ To add new governance rules:
 - `DEPRECATED_TERMS.md` - Forbidden terminology policy
 - `governance/README.md` - Governance directory overview
 - `.github/workflows/governance-enforcement.yml` - Enforcement workflow
+- `docs/policies/ZENODO_ARCHIVING_POLICY.md` - Zenodo archiving and DOI minting policy
 
 ---
 
