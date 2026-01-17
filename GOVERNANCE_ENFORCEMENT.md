@@ -475,6 +475,7 @@ To add new governance rules:
 - `governance/README.md` - Governance directory overview
 - `.github/workflows/governance-enforcement.yml` - Enforcement workflow
 - `docs/policies/ZENODO_ARCHIVING_POLICY.md` - Zenodo archiving and DOI minting policy
+- `docs/policies/ZENODO_EXCEPTION_REGISTER.md` - Register of historical Zenodo exceptions
 
 ---
 
