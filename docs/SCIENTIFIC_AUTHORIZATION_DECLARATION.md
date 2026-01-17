@@ -1,7 +1,7 @@
 # Scientific Authorization Declaration
 
 **Repository:** trizel-ai/trizel-core  
-**Status:** AUTHORIZED (PROCESS + SPECIFIC AUTHORIZATIONS)  
+**Status:** AUTHORIZED (FRAMEWORK AND SPECIFIC GRANTS)  
 **Effective Date:** 2026-01-17  
 **Last Updated:** 2026-01-18  
 **Governing Authority:** TRIZEL Governance (Layer-0)  

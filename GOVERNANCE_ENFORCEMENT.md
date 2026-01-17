@@ -532,8 +532,8 @@ This FREEZE is binding across all TRIZEL repositories and organizations. All con
 ## SCIENTIFIC AUTHORIZATION STATUS
 
 **Scientific Authorization Framework:** ACTIVE  
-**Scientific Authorization Declaration:** ACTIVE (PROCESS + SPECIFIC AUTHORIZATIONS)  
-**SYSTEM FREEZE:** REMAINS ACTIVE (WITH LIMITED EXCEPTIONS)
+**Scientific Authorization Declaration:** ACTIVE (FRAMEWORK AND SPECIFIC GRANTS)  
+**SYSTEM FREEZE:** ACTIVE (PARTIAL EXCEPTION FOR SA-3I-ATLAS-THEORY-001)
 
 ### Framework and Declaration
 
