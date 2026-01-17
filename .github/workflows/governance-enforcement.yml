@@ -42,7 +42,7 @@ jobs:
 
       - name: Run governance integrity check
         run: |
-          bash tools/governance/governance_integrity.sh "$BASE_BRANCH" "$HEAD_BRANCH"
+          bash scripts/governance/governance_integrity.sh "$BASE_BRANCH" "$HEAD_BRANCH"
 
   schema_validation:
     runs-on: ubuntu-latest
@@ -60,7 +60,7 @@ jobs:
 
       - name: Run schema validation
         run: |
-          python3 tools/governance/schema_validation.py
+          python3 scripts/governance/schema_validation.py
 
   deprecated_terms_check:
     runs-on: ubuntu-latest
@@ -73,7 +73,7 @@ jobs:
 
       - name: Run deprecated terms check
         run: |
-          bash tools/governance/deprecated_terms_check.sh
+          bash scripts/governance/deprecated_terms_check.sh
 
   immutable_references_check:
     runs-on: ubuntu-latest
@@ -86,7 +86,7 @@ jobs:
 
       - name: Run immutable references check
         run: |
-          bash tools/governance/immutable_references_check.sh
+          bash scripts/governance/immutable_references_check.sh
 
   evidence_first_check:
     runs-on: ubuntu-latest
@@ -104,7 +104,7 @@ jobs:
 
       - name: Run evidence first check
         run: |
-          python3 tools/governance/evidence_first_check.py
+          python3 scripts/governance/evidence_first_check.py
 
   enforcement_summary:
     runs-on: ubuntu-latest

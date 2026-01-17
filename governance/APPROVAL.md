@@ -48,7 +48,7 @@ Implementing GATE 1 governance enforcement framework. Adding branch contract doc
 ### PR #TBD - 2026-01-17
 **Files Modified:**
 - .github/workflows/governance-enforcement.yml (NEW)
-- tools/governance/* (NEW - validator scripts)
+- scripts/governance/* (NEW - validator scripts)
 - governance/APPROVAL.md (NEW - this file)
 - BRANCH_CONTRACT.md (NEW)
 - GOVERNANCE_ENFORCEMENT.md (NEW)

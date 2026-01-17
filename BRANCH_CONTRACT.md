@@ -190,11 +190,11 @@ To verify compliance locally before pushing:
 
 ```bash
 # Run all governance checks
-bash tools/governance/governance_integrity.sh main HEAD
-python3 tools/governance/schema_validation.py
-bash tools/governance/deprecated_terms_check.sh
-bash tools/governance/immutable_references_check.sh
-python3 tools/governance/evidence_first_check.py
+bash scripts/governance/governance_integrity.sh main HEAD
+python3 scripts/governance/schema_validation.py
+bash scripts/governance/deprecated_terms_check.sh
+bash scripts/governance/immutable_references_check.sh
+python3 scripts/governance/evidence_first_check.py
 ```
 
 ---

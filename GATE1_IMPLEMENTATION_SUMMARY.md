@@ -36,7 +36,7 @@ This PR implements **GATE 1 (Layer-0 Governance Enforcement)** - a comprehensive
 ### Workflows
 - ✅ `.github/workflows/governance-enforcement.yml` - Main GATE 1 workflow
 
-### Validators (tools/governance/)
+### Validators (scripts/governance/)
 - ✅ `governance_integrity.sh` - Approval validation
 - ✅ `schema_validation.py` - YAML/JSON syntax
 - ✅ `deprecated_terms_check.sh` - Forbidden terms
@@ -143,11 +143,11 @@ See `GOVERNANCE_ENFORCEMENT.md` section "How to Trigger Failures" for complete e
 ### Local Development
 All validators can run locally:
 ```bash
-bash tools/governance/governance_integrity.sh main HEAD
-python3 tools/governance/schema_validation.py
-bash tools/governance/deprecated_terms_check.sh
-bash tools/governance/immutable_references_check.sh
-python3 tools/governance/evidence_first_check.py
+bash scripts/governance/governance_integrity.sh main HEAD
+python3 scripts/governance/schema_validation.py
+bash scripts/governance/deprecated_terms_check.sh
+bash scripts/governance/immutable_references_check.sh
+python3 scripts/governance/evidence_first_check.py
 ```
 
 ---
@@ -225,10 +225,10 @@ All validators use standard exit codes:
 
 ### Deprecated Terms
 - **Source**: `DEPRECATED_TERMS.md`
-- **Enforcer**: `tools/governance/deprecated_terms_check.sh`
+- **Enforcer**: `scripts/governance/deprecated_terms_check.sh`
 
 ### Governance Files
-- **Source**: `tools/governance/governance_integrity.sh` (hardcoded list)
+- **Source**: `scripts/governance/governance_integrity.sh` (hardcoded list)
 - **Approval**: `governance/APPROVAL.md`
 
 ### Evidence Metadata
@@ -242,7 +242,7 @@ All validators use standard exit codes:
 To add new governance rules:
 
 1. **Document** the rule (in this file or GOVERNANCE_ENFORCEMENT.md)
-2. **Create validator** script in `tools/governance/`
+2. **Create validator** script in `scripts/governance/`
 3. **Add job** to `.github/workflows/governance-enforcement.yml`
 4. **Update APPROVAL.md** with justification
 5. **Test** with intentional failures
@@ -297,7 +297,7 @@ To add new governance rules:
 - `GOVERNANCE_ENFORCEMENT.md` - Complete enforcement guide
 - `governance/APPROVAL.md` - Approval log
 - `governance/README.md` - Governance directory overview
-- `tools/governance/README.md` - Validator documentation
+- `scripts/governance/README.md` - Validator documentation
 - `DEPRECATED_TERMS.md` - Forbidden terminology policy
 
 ---

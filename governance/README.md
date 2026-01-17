@@ -84,7 +84,7 @@ Location: `.github/workflows/`
 
 ### Validator Scripts
 
-Location: `tools/governance/` (NEW - GATE 1)
+Location: `scripts/governance/` (NEW - GATE 1)
 
 - **`governance_integrity.sh`** - Validates governance change approvals
   - Detects changes to governance-controlled files
@@ -124,11 +124,11 @@ Location: `scripts/governance/` (LEGACY)
 
 ```bash
 # From repository root
-bash tools/governance/governance_integrity.sh main HEAD
-python3 tools/governance/schema_validation.py
-bash tools/governance/deprecated_terms_check.sh
-bash tools/governance/immutable_references_check.sh
-python3 tools/governance/evidence_first_check.py
+bash scripts/governance/governance_integrity.sh main HEAD
+python3 scripts/governance/schema_validation.py
+bash scripts/governance/deprecated_terms_check.sh
+bash scripts/governance/immutable_references_check.sh
+python3 scripts/governance/evidence_first_check.py
 ```
 
 ### Run Legacy Validation
@@ -171,23 +171,23 @@ See `GOVERNANCE_ENFORCEMENT_CHECKLIST.md` for:
 Five independent checks run on every PR:
 
 1. **Governance Integrity Check**
-   - Source: `tools/governance/governance_integrity.sh`
+   - Source: `scripts/governance/governance_integrity.sh`
    - Validates governance change approvals
 
 2. **Schema Validation Check**
-   - Source: `tools/governance/schema_validation.py`
+   - Source: `scripts/governance/schema_validation.py`
    - Validates YAML/JSON syntax
 
 3. **Deprecated Terms Check**
-   - Source: `tools/governance/deprecated_terms_check.sh`
+   - Source: `scripts/governance/deprecated_terms_check.sh`
    - Prevents forbidden terminology
 
 4. **Immutable References Check**
-   - Source: `tools/governance/immutable_references_check.sh`
+   - Source: `scripts/governance/immutable_references_check.sh`
    - Blocks placeholders in governance
 
 5. **Evidence First Check**
-   - Source: `tools/governance/evidence_first_check.py`
+   - Source: `scripts/governance/evidence_first_check.py`
    - Validates evidence metadata
 
 ### Legacy Status Checks

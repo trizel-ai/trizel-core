@@ -9,12 +9,12 @@ This directory contains the validation scripts for GATE 1 (Layer-0 Governance En
 
 **Usage:**
 ```bash
-bash tools/governance/governance_integrity.sh <base_branch> <head_branch>
+bash scripts/governance/governance_integrity.sh <base_branch> <head_branch>
 ```
 
 **Example:**
 ```bash
-bash tools/governance/governance_integrity.sh main HEAD
+bash scripts/governance/governance_integrity.sh main HEAD
 ```
 
 **What it checks:**
@@ -33,7 +33,7 @@ bash tools/governance/governance_integrity.sh main HEAD
 
 **Usage:**
 ```bash
-python3 tools/governance/schema_validation.py
+python3 scripts/governance/schema_validation.py
 ```
 
 **What it checks:**
@@ -56,7 +56,7 @@ python3 tools/governance/schema_validation.py
 
 **Usage:**
 ```bash
-bash tools/governance/deprecated_terms_check.sh
+bash scripts/governance/deprecated_terms_check.sh
 ```
 
 **What it checks:**
@@ -81,7 +81,7 @@ bash tools/governance/deprecated_terms_check.sh
 
 **Usage:**
 ```bash
-bash tools/governance/immutable_references_check.sh
+bash scripts/governance/immutable_references_check.sh
 ```
 
 **What it checks:**
@@ -106,7 +106,7 @@ bash tools/governance/immutable_references_check.sh
 
 **Usage:**
 ```bash
-python3 tools/governance/evidence_first_check.py
+python3 scripts/governance/evidence_first_check.py
 ```
 
 **What it checks:**
@@ -139,11 +139,11 @@ To run all governance checks locally:
 cd /path/to/trizel-core
 
 # Run all validators
-bash tools/governance/governance_integrity.sh main HEAD
-python3 tools/governance/schema_validation.py
-bash tools/governance/deprecated_terms_check.sh
-bash tools/governance/immutable_references_check.sh
-python3 tools/governance/evidence_first_check.py
+bash scripts/governance/governance_integrity.sh main HEAD
+python3 scripts/governance/schema_validation.py
+bash scripts/governance/deprecated_terms_check.sh
+bash scripts/governance/immutable_references_check.sh
+python3 scripts/governance/evidence_first_check.py
 ```
 
 ## Integration with GitHub Actions

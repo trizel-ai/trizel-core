@@ -29,7 +29,7 @@ GATE 1 is the **Layer-0 Governance Enforcement** framework that:
 The enforcement is implemented in `.github/workflows/governance-enforcement.yml` and consists of 5 independent jobs:
 
 ### 1. Governance Integrity Check
-**Script:** `tools/governance/governance_integrity.sh`
+**Script:** `scripts/governance/governance_integrity.sh`
 
 **Purpose:** Ensures governance-controlled files are only modified with proper approval
 
@@ -51,7 +51,7 @@ The enforcement is implemented in `.github/workflows/governance-enforcement.yml`
 ---
 
 ### 2. Schema Validation Check
-**Script:** `tools/governance/schema_validation.py`
+**Script:** `scripts/governance/schema_validation.py`
 
 **Purpose:** Validates all YAML and JSON files for syntax errors
 
@@ -64,7 +64,7 @@ The enforcement is implemented in `.github/workflows/governance-enforcement.yml`
 ---
 
 ### 3. Deprecated Terms Check
-**Script:** `tools/governance/deprecated_terms_check.sh`
+**Script:** `scripts/governance/deprecated_terms_check.sh`
 
 **Purpose:** Scans for forbidden terminology defined in DEPRECATED_TERMS.md
 
@@ -87,7 +87,7 @@ The enforcement is implemented in `.github/workflows/governance-enforcement.yml`
 ---
 
 ### 4. Immutable References Check
-**Script:** `tools/governance/immutable_references_check.sh`
+**Script:** `scripts/governance/immutable_references_check.sh`
 
 **Purpose:** Ensures governance files are complete and contain no placeholders
 
@@ -105,7 +105,7 @@ The enforcement is implemented in `.github/workflows/governance-enforcement.yml`
 ---
 
 ### 5. Evidence First Check
-**Script:** `tools/governance/evidence_first_check.py`
+**Script:** `scripts/governance/evidence_first_check.py`
 
 **Purpose:** Enforces evidence-first metadata for identified artifacts
 
@@ -341,11 +341,11 @@ Before pushing, run checks locally to catch issues:
 cd /path/to/trizel-core
 
 # Run individual checks
-bash tools/governance/governance_integrity.sh main HEAD
-python3 tools/governance/schema_validation.py
-bash tools/governance/deprecated_terms_check.sh
-bash tools/governance/immutable_references_check.sh
-python3 tools/governance/evidence_first_check.py
+bash scripts/governance/governance_integrity.sh main HEAD
+python3 scripts/governance/schema_validation.py
+bash scripts/governance/deprecated_terms_check.sh
+bash scripts/governance/immutable_references_check.sh
+python3 scripts/governance/evidence_first_check.py
 ```
 
 **Requirements:**
@@ -430,7 +430,7 @@ To add new governance rules:
 
 1. **Propose changes** in an issue or discussion
 2. **Update documentation** first (this file, BRANCH_CONTRACT.md)
-3. **Update or create validator script** in `tools/governance/`
+3. **Update or create validator script** in `scripts/governance/`
 4. **Add job to workflow** in `.github/workflows/governance-enforcement.yml`
 5. **Update APPROVAL.md** with justification
 6. **Test thoroughly** with intentional failures
