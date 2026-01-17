@@ -1,0 +1,160 @@
+name: GATE 1 - Governance Enforcement
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+env:
+  BASE_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}
+  HEAD_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+
+jobs:
+  governance_integrity:
+    runs-on: ubuntu-latest
+    name: Governance Integrity Check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect target branch
+        id: branch_info
+        run: |
+          echo "Base branch: $BASE_BRANCH"
+          echo "Head branch: $HEAD_BRANCH"
+          echo "base_branch=$BASE_BRANCH" >> $GITHUB_OUTPUT
+          echo "head_branch=$HEAD_BRANCH" >> $GITHUB_OUTPUT
+          
+          if [[ "$BASE_BRANCH" == "main" ]]; then
+            echo "blocking_mode=true" >> $GITHUB_OUTPUT
+            echo "⚠️  BLOCKING MODE: Merges to 'main' require all governance checks to pass"
+          else
+            echo "blocking_mode=false" >> $GITHUB_OUTPUT
+            echo "ℹ️  NON-BLOCKING MODE: Checks will report but not block merge"
+          fi
+
+      - name: Run governance integrity check
+        run: |
+          bash scripts/governance/governance_integrity.sh "$BASE_BRANCH" "$HEAD_BRANCH"
+
+  schema_validation:
+    runs-on: ubuntu-latest
+    name: Schema Validation Check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PyYAML
+        run: |
+          pip install pyyaml
+
+      - name: Run schema validation
+        run: |
+          python3 scripts/governance/schema_validation.py
+
+  deprecated_terms_check:
+    runs-on: ubuntu-latest
+    name: Deprecated Terms Check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run deprecated terms check
+        run: |
+          bash scripts/governance/deprecated_terms_check.sh
+
+  immutable_references_check:
+    runs-on: ubuntu-latest
+    name: Immutable References Check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run immutable references check
+        run: |
+          bash scripts/governance/immutable_references_check.sh
+
+  evidence_first_check:
+    runs-on: ubuntu-latest
+    name: Evidence First Check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run evidence first check
+        run: |
+          python3 scripts/governance/evidence_first_check.py
+
+  enforcement_summary:
+    runs-on: ubuntu-latest
+    name: Enforcement Summary
+    needs: [governance_integrity, schema_validation, deprecated_terms_check, immutable_references_check, evidence_first_check]
+    if: always()
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Generate enforcement summary
+        run: |
+          echo "=========================================="
+          echo "GATE 1 - GOVERNANCE ENFORCEMENT SUMMARY"
+          echo "=========================================="
+          echo ""
+          echo "Target Branch: $BASE_BRANCH"
+          echo "Source Branch: $HEAD_BRANCH"
+          echo ""
+          
+          if [[ "$BASE_BRANCH" == "main" ]]; then
+            echo "✅ BLOCKING MODE: All checks must pass to merge into 'main'"
+          else
+            echo "ℹ️  NON-BLOCKING MODE: Target branch is '$BASE_BRANCH'"
+          fi
+          
+          echo ""
+          echo "Check Results:"
+          echo "  - Governance Integrity: ${{ needs.governance_integrity.result }}"
+          echo "  - Schema Validation: ${{ needs.schema_validation.result }}"
+          echo "  - Deprecated Terms: ${{ needs.deprecated_terms_check.result }}"
+          echo "  - Immutable References: ${{ needs.immutable_references_check.result }}"
+          echo "  - Evidence First: ${{ needs.evidence_first_check.result }}"
+          echo ""
+          
+          if [[ "${{ needs.governance_integrity.result }}" == "success" ]] && \
+             [[ "${{ needs.schema_validation.result }}" == "success" ]] && \
+             [[ "${{ needs.deprecated_terms_check.result }}" == "success" ]] && \
+             [[ "${{ needs.immutable_references_check.result }}" == "success" ]] && \
+             [[ "${{ needs.evidence_first_check.result }}" == "success" ]]; then
+            echo "✅ ALL GOVERNANCE CHECKS PASSED"
+            exit 0
+          else
+            echo "❌ GOVERNANCE CHECK FAILURES DETECTED"
+            echo ""
+            echo "See individual job logs above for details."
+            echo "Refer to GOVERNANCE_ENFORCEMENT.md for remediation guidance."
+            exit 1
+          fi
