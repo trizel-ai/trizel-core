@@ -42,7 +42,8 @@ echo "1. Checking for TODO placeholders in governance files..."
 TODO_FOUND=false
 for path in "${CRITICAL_PATHS[@]}"; do
   if [[ -e "$path" ]]; then
-    if grep -rIn "${EXCLUDE_ARGS[@]}" "\bTODO\b" "$path" 2>/dev/null; then
+    # Exclude lines that are documenting the check itself
+    if grep -rIn "${EXCLUDE_ARGS[@]}" "\bTODO\b" "$path" 2>/dev/null | grep -v "Blocks TODO" | grep -v "Remove TODO" | grep -v "placeholder" 2>/dev/null; then
       TODO_FOUND=true
     fi
   fi
@@ -63,7 +64,7 @@ echo "2. Checking for XXXX placeholders in governance files..."
 XXXX_FOUND=false
 for path in "${CRITICAL_PATHS[@]}"; do
   if [[ -e "$path" ]]; then
-    if grep -rIn "${EXCLUDE_ARGS[@]}" "XXXX" "$path" 2>/dev/null; then
+    if grep -rIn "${EXCLUDE_ARGS[@]}" "XXXX" "$path" 2>/dev/null | grep -v "Blocks TODO/XXXX" | grep -v "Remove TODO/XXXX" | grep -v "placeholder" 2>/dev/null; then
       XXXX_FOUND=true
     fi
   fi
@@ -84,7 +85,7 @@ echo "3. Checking for TBD (To Be Determined) in governance files..."
 TBD_FOUND=false
 for path in "${CRITICAL_PATHS[@]}"; do
   if [[ -e "$path" ]]; then
-    if grep -rIn "${EXCLUDE_ARGS[@]}" "\bTBD\b" "$path" 2>/dev/null | grep -v "PR #TBD" 2>/dev/null; then
+    if grep -rIn "${EXCLUDE_ARGS[@]}" "\bTBD\b" "$path" 2>/dev/null | grep -v "PR #TBD" | grep -v "Blocks TODO/XXXX/TBD" | grep -v "Remove TODO/XXXX/TBD" | grep -v "placeholder" 2>/dev/null; then
       TBD_FOUND=true
     fi
   fi

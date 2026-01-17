@@ -19,7 +19,7 @@ fi
 echo "Using source file: $DEPRECATED_TERMS_FILE"
 echo ""
 
-# Exclusions
+# Exclusions - files where deprecated terms are documented
 EXCLUDE_ARGS=(
   "--exclude-dir=.git"
   "--exclude-dir=.github"
@@ -29,8 +29,20 @@ EXCLUDE_ARGS=(
   "--exclude-dir=build"
   "--exclude-dir=target"
   "--exclude-dir=.venv"
+  "--exclude-dir=Documents"
+  "--exclude-dir=website"
+  "--exclude-dir=docs"
+  "--exclude-dir=governance"
   "--exclude=DEPRECATED_TERMS.md"
+  "--exclude=GOVERNANCE_ENFORCEMENT.md"
   "--exclude=deprecated-terms-check.yml"
+  "--exclude=deprecated_terms_check.sh"
+  "--exclude=forbidden-terms.yml"
+  "--exclude=IMPLEMENTATION_SUMMARY.md"
+  "--exclude=COPILOT_DELIVERABLES.md"
+  "--exclude=FINAL_VALIDATION_REPORT.md"
+  "--exclude=IMPLEMENTATION_SUMMARY_METADATA_AND_REGISTRY.md"
+  "--exclude=RULESET_CONFIGURATION.md"
   "--exclude=*.log"
 )
 

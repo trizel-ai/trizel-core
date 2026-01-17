@@ -77,6 +77,10 @@ The enforcement is implemented in `.github/workflows/governance-enforcement.yml`
 - Incorrect algorithm name variants (AUTO-DZ-ACT, AutoDzAct, etc.)
 - Versioned algorithm names (AUTO DZ ACT system, AUTO DZ ACT v1, etc.)
 
+**Scope:**
+- All files except documentation directories (docs/, Documents/, website/, governance/)
+- Excludes files that document the deprecated terms themselves
+
 **Allowed:**
 - Canonical form only: **AUTO DZ ACT** (exact case and spacing)
 
@@ -400,12 +404,14 @@ This file defines:
 
 ## Evidence and Immutable Reference Paths
 
+### Evidence and Immutable Reference Paths
+
 ### Paths Checked for Evidence Metadata:
-- Files with "evidence" in path
-- Files with "validation" in path
-- Files with "artifact" in path
-- Files with "record" in path
-- Files with "manifest" in path
+- Files with "evidence_record" or "evidence_artifact" in path
+- Files with "artifact_record" in path
+- Files with "manifest_record" in path
+
+**Note:** Conservative enforcement - only applies to files that clearly identify as evidence records by naming convention.
 
 ### Paths Checked for Immutable References:
 - `governance/` (entire directory)

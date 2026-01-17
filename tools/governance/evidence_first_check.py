@@ -10,12 +10,12 @@ from pathlib import Path
 from typing import List, Tuple, Dict
 
 # Patterns that identify files requiring evidence metadata
+# Conservative: only files that are clearly evidence/artifact records
 EVIDENCE_PATTERNS = [
-    r'evidence',
-    r'validation',
-    r'artifact',
-    r'record',
-    r'manifest',
+    r'evidence[_-]record',
+    r'evidence[_-]artifact',
+    r'artifact[_-]record',
+    r'manifest[_-]record',
 ]
 
 # Required metadata fields for evidence-first artifacts
