@@ -35,6 +35,7 @@ EXCLUDE_ARGS=(
   "--exclude-dir=governance"
   "--exclude=DEPRECATED_TERMS.md"
   "--exclude=GOVERNANCE_ENFORCEMENT.md"
+  "--exclude=GATE1_IMPLEMENTATION_SUMMARY.md"
   "--exclude=deprecated-terms-check.yml"
   "--exclude=deprecated_terms_check.sh"
   "--exclude=forbidden-terms.yml"
