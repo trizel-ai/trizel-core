@@ -492,6 +492,43 @@ For questions or issues:
 
 ---
 
+## SYSTEM FREEZE STATUS
+
+**Status:** GLOBAL FREEZE ACTIVE
+
+The TRIZEL project is currently in a **GLOBAL FREEZE** state following the completion of Layer-0 (Governance), Layer-1 (Research Documentation), and Layer-2 (Presentation).
+
+### Freeze Declaration
+
+The formal FREEZE DECLARATION is documented in:
+
+- **Global Freeze:** `docs/FREEZE_DECLARATION.md`
+- **Layer-Specific Freeze:** `governance/FREEZE.md`
+
+### Enforcement During Freeze
+
+All Pull Requests are subject to FREEZE compliance:
+
+1. **Scientific Content Prohibition** - Any PR introducing scientific content, research analysis, or scientific publication is **non-compliant** with TRIZEL governance
+2. **Automatic Rejection** - Non-compliant PRs introducing scientific material during FREEZE must be rejected
+3. **Authorization Requirement** - Scientific activities require explicit Scientific Authorization Declaration (currently NOT GRANTED)
+
+### Scope of Prohibition
+
+During FREEZE, the following are prohibited:
+
+- Scientific research, analysis, or experimentation
+- Scientific publication or dissemination
+- DOI minting and Zenodo archiving of scientific work
+- Dataset creation or release for scientific purposes
+- Citation generation for scientific findings
+
+### Compliance Requirement
+
+This FREEZE is binding across all TRIZEL repositories and organizations. All contributors must comply with FREEZE restrictions until the FREEZE is formally lifted by governance authority.
+
+---
+
 ## Version History
 
 | Version | Date       | Changes                                       |
