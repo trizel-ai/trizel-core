@@ -529,11 +529,47 @@ This FREEZE is binding across all TRIZEL repositories and organizations. All con
 
 ---
 
+## SCIENTIFIC AUTHORIZATION STATUS
+
+**Scientific Authorization Framework:** ACTIVE  
+**Scientific Authorization Declaration:** ACTIVE (PROCESS ONLY)  
+**SYSTEM FREEZE:** REMAINS ACTIVE  
+
+### Framework and Declaration
+
+The Scientific Authorization Framework (`governance/SCIENTIFIC_AUTHORIZATION_FRAMEWORK.md`) defines the process by which scientific outputs may be authorized in the future. This framework is now active.
+
+The Scientific Authorization Declaration (`docs/SCIENTIFIC_AUTHORIZATION_DECLARATION.md`) authorizes **ONLY** the governance process for reviewing and deciding scientific authorization requests. It does **NOT** authorize any scientific activity itself.
+
+### Current Status
+
+- **SYSTEM FREEZE:** Fully active and binding
+- **Scientific Activity:** Prohibited without explicit authorization
+- **Authorization Process:** Operational (requests may be submitted and reviewed)
+- **Scientific Authorization Granted:** NONE (no scientific work is authorized)
+
+### Enforcement Rule
+
+Any Pull Request that introduces scientific content, execution, data generation, models, experiments, or scientific publication **without** an explicit scientific authorization record issued through the authorized process **MUST** fail governance checks and be rejected.
+
+**Compliance Requirement:**
+
+All scientific PRs must include:
+1. Reference to a valid Scientific Authorization Record
+2. Evidence of required reviewer approvals (minimum 2 independent reviewers)
+3. Formal governance sign-off documentation
+4. Compliance verification with all applicable policies
+
+**Without these requirements met, the PR is non-compliant and must be rejected.**
+
+---
+
 ## Version History
 
 | Version | Date       | Changes                                       |
 |---------|------------|-----------------------------------------------|
 | 1.0.0   | 2026-01-17 | Initial governance enforcement guide for GATE 1 |
+| 1.1.0   | 2026-01-17 | Added Scientific Authorization Status section |
 
 ---
 
