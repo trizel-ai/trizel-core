@@ -5,14 +5,21 @@ This directory contains the governance enforcement infrastructure for `trizel-co
 ## Purpose
 
 The governance directory centralizes all documentation, rules, and tooling related to:
+- **GATE 1 (Layer-0 Governance Enforcement)** - Comprehensive validation framework
 - Repository boundary enforcement (Layer 0 rules)
 - Deprecated terminology prevention
 - GitHub ruleset configuration
 - Automated validation scripts
+- Branch-aware governance (main vs format branches)
 
 ## Contents
 
 ### Documentation
+
+- **`APPROVAL.md`** - Governance change approval log
+  - Required for all governance file modifications
+  - Tracks PR number, files, reason, and approver
+  - Single source of truth for governance authorization
 
 - **`RULESET_CONFIGURATION.md`** - Complete guide for configuring the GitHub ruleset `layer0-main-governance`
   - Step-by-step setup instructions
@@ -42,24 +49,69 @@ Directory: `rules/`
 
 ## Related Files
 
+### Root Documentation
+
+- **`BRANCH_CONTRACT.md`** - Branch governance contract (NEW)
+  - Defines roles for main, format, and feature branches
+  - Branch-specific enforcement rules
+  - Protection settings and requirements
+
+- **`GOVERNANCE_ENFORCEMENT.md`** - Comprehensive enforcement guide (NEW)
+  - How each check works
+  - How to trigger failures (for testing)
+  - How to make checks pass
+  - Troubleshooting and verification procedures
+
 ### Workflows
 
 Location: `.github/workflows/`
 
-- **`governance-validation.yml`** - Validates Layer 0 boundaries
+- **`governance-enforcement.yml`** - GATE 1 comprehensive enforcement (NEW)
+  - 5 independent validation jobs
+  - Branch-aware enforcement (blocking vs reporting mode)
+  - Runs on all PRs and pushes to main
+
+- **`governance-validation.yml`** - Validates Layer 0 boundaries (LEGACY)
   - Checks for prohibited executable code
   - Checks for prohibited data files
   - Verifies required governance files exist
   - Validates markdown files are non-empty
 
-- **`deprecated-terms-check.yml`** - Validates YAML/JSON for deprecated terms
+- **`deprecated-terms-check.yml`** - Validates YAML/JSON for deprecated terms (LEGACY)
   - Scans for deprecated term "STOE"
   - Scans for deprecated version labels (V12-V22)
   - Enforces algorithm naming conventions
 
-### Scripts
+### Validator Scripts
 
-Location: `scripts/governance/`
+Location: `tools/governance/` (NEW - GATE 1)
+
+- **`governance_integrity.sh`** - Validates governance change approvals
+  - Detects changes to governance-controlled files
+  - Requires approval entry in governance/APPROVAL.md
+  - Documents approved path enforcement
+
+- **`schema_validation.py`** - Validates YAML/JSON syntax
+  - Checks all YAML and JSON files for syntax errors
+  - Reports exact line numbers for issues
+  - Excludes build artifacts and dependencies
+
+- **`deprecated_terms_check.sh`** - Scans for forbidden terminology
+  - Uses DEPRECATED_TERMS.md as single source of truth
+  - Checks for STOE, V12-V22, algorithm variants
+  - Comprehensive term scanning across all files
+
+- **`immutable_references_check.sh`** - Validates governance completeness
+  - Blocks TODO/XXXX/TBD placeholders in governance
+  - Ensures CROSS_REPO_GOVERNANCE.md integrity
+  - Enforces immutable references requirement
+
+- **`evidence_first_check.py`** - Validates evidence metadata
+  - Checks evidence files for required fields
+  - Requires Evidence, Method, Validation, ImmutableRefs
+  - Conservative enforcement on identified artifacts
+
+Location: `scripts/governance/` (LEGACY)
 
 - **`validate_repo.py`** - Python validation script
   - Programmatic interface to run governance checks locally
@@ -68,7 +120,18 @@ Location: `scripts/governance/`
 
 ## Quick Start
 
-### Run Local Validation
+### Run GATE 1 Checks Locally
+
+```bash
+# From repository root
+bash tools/governance/governance_integrity.sh main HEAD
+python3 tools/governance/schema_validation.py
+bash tools/governance/deprecated_terms_check.sh
+bash tools/governance/immutable_references_check.sh
+python3 tools/governance/evidence_first_check.py
+```
+
+### Run Legacy Validation
 
 ```bash
 # From repository root
@@ -85,7 +148,12 @@ Quick checklist:
 3. Target branch: `main`
 4. Enable "Require PR before merging"
 5. Enable "Require status checks to pass"
-6. Add required checks (see RULESET_CONFIGURATION.md for exact names)
+6. Add GATE 1 required checks:
+   - `Governance Integrity Check`
+   - `Schema Validation Check`
+   - `Deprecated Terms Check`
+   - `Immutable References Check`
+   - `Evidence First Check`
 7. Ensure bypass list is EMPTY
 
 ### Check Current Status
@@ -98,9 +166,33 @@ See `GOVERNANCE_ENFORCEMENT_CHECKLIST.md` for:
 
 ## Enforcement Model
 
-### Required Status Checks
+### GATE 1 Required Status Checks (NEW)
 
-Two GitHub Actions workflows run on every PR and must pass:
+Five independent checks run on every PR:
+
+1. **Governance Integrity Check**
+   - Source: `tools/governance/governance_integrity.sh`
+   - Validates governance change approvals
+
+2. **Schema Validation Check**
+   - Source: `tools/governance/schema_validation.py`
+   - Validates YAML/JSON syntax
+
+3. **Deprecated Terms Check**
+   - Source: `tools/governance/deprecated_terms_check.sh`
+   - Prevents forbidden terminology
+
+4. **Immutable References Check**
+   - Source: `tools/governance/immutable_references_check.sh`
+   - Blocks placeholders in governance
+
+5. **Evidence First Check**
+   - Source: `tools/governance/evidence_first_check.py`
+   - Validates evidence metadata
+
+### Legacy Status Checks
+
+Two GitHub Actions workflows (being superseded by GATE 1):
 
 1. **Governance Validation / Validate governance boundaries**
    - Source: `.github/workflows/governance-validation.yml`
@@ -112,7 +204,15 @@ Two GitHub Actions workflows run on every PR and must pass:
 
 ### Enforcement Level
 
-**Strict**: No bypasses allowed. All PRs must pass both checks before merge.
+**Strict**: No bypasses allowed. All PRs must pass checks before merge.
+
+### Branch-Aware Enforcement
+
+- **`main` branch**: BLOCKING MODE - All checks must pass
+- **`format*` branches**: REPORT MODE - Checks run but don't block
+- **Other branches**: BLOCKING MODE - All checks must pass
+
+See `BRANCH_CONTRACT.md` for complete branch governance rules.
 
 ### Scope
 
