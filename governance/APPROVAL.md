@@ -60,6 +60,18 @@ Initial implementation of GATE 1 (Layer-0 Governance Enforcement) with branch-aw
 
 ---
 
+### PR #TBD - 2026-01-17
+**Files Modified:**
+- governance/SCIENTIFIC_AUTHORIZATION_FRAMEWORK.md (NEW)
+- governance/APPROVAL.md (Updated - adding this entry)
+
+**Reason:**
+Addition of Scientific Authorization Framework document. This framework establishes the process and conditions for potential future scientific authorization, while explicitly maintaining the current SYSTEM FREEZE. The framework does NOT grant any scientific authorization and does NOT lift any restrictions. It defines roles, responsibilities, and procedures that would apply only if governance explicitly activates scientific authorization in the future through a separate governance action.
+
+**Approver:** Governance Process - Framework Definition
+
+---
+
 ## Notes
 
 - This file serves as the single source of truth for governance change authorization
