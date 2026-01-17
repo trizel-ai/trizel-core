@@ -44,9 +44,18 @@ During the FREEZE, the following activities are strictly prohibited without expl
 
 Any scientific activity requires an **explicit Scientific Authorization Declaration** issued through the governance framework.
 
-No scientific activity is authorized under this FREEZE.
+Scientific Authorization status: **GRANTED (LIMITED SCOPE)**
 
-Scientific Authorization status: **NOT GRANTED**
+### Specific Authorizations
+
+The following specific scientific authorizations have been granted:
+
+1. **SA-3I-ATLAS-THEORY-001** (Effective: 2026-01-18)
+   - Theoretical analysis of interstellar object 3I/ATLAS only
+   - No observational activity, no publication
+   - Document: `docs/authorizations/SA-3I-ATLAS-THEORY-001.md`
+
+All other scientific activities remain unauthorized and prohibited.
 
 ---
 

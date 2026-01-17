@@ -532,25 +532,39 @@ This FREEZE is binding across all TRIZEL repositories and organizations. All con
 ## SCIENTIFIC AUTHORIZATION STATUS
 
 **Scientific Authorization Framework:** ACTIVE  
-**Scientific Authorization Declaration:** ACTIVE (PROCESS ONLY)  
-**SYSTEM FREEZE:** REMAINS ACTIVE  
+**Scientific Authorization Declaration:** ACTIVE (PROCESS + SPECIFIC AUTHORIZATIONS)  
+**SYSTEM FREEZE:** REMAINS ACTIVE (WITH LIMITED EXCEPTIONS)
 
 ### Framework and Declaration
 
 The Scientific Authorization Framework (`governance/SCIENTIFIC_AUTHORIZATION_FRAMEWORK.md`) defines the process by which scientific outputs may be authorized in the future. This framework is now active.
 
-The Scientific Authorization Declaration (`docs/SCIENTIFIC_AUTHORIZATION_DECLARATION.md`) authorizes **ONLY** the governance process for reviewing and deciding scientific authorization requests. It does **NOT** authorize any scientific activity itself.
+The Scientific Authorization Declaration (`docs/SCIENTIFIC_AUTHORIZATION_DECLARATION.md`) authorizes **BOTH** the governance process for reviewing and deciding scientific authorization requests **AND** specific scientific authorizations that have been granted.
 
 ### Current Status
 
-- **SYSTEM FREEZE:** Fully active and binding
-- **Scientific Activity:** Prohibited without explicit authorization
+- **SYSTEM FREEZE:** Active with limited exceptions
 - **Authorization Process:** Operational (requests may be submitted and reviewed)
-- **Scientific Authorization Granted:** NONE (no scientific work is authorized)
+- **Specific Scientific Authorizations Granted:**
+  1. **SA-3I-ATLAS-THEORY-001** (Effective: 2026-01-18)
+     - Theoretical analysis of interstellar object 3I/ATLAS only
+     - No observational activity, no publication
+     - Document: `docs/authorizations/SA-3I-ATLAS-THEORY-001.md`
 
 ### Enforcement Rule
 
-Any Pull Request that introduces scientific content, execution, data generation, models, experiments, or scientific publication **without** an explicit scientific authorization record issued through the authorized process **MUST** fail governance checks and be rejected.
+Any Pull Request that introduces scientific content must either:
+1. Fall within the scope of an explicitly granted authorization (with proper reference), OR
+2. Include a valid scientific authorization record issued through the authorized process
+
+**For SA-3I-ATLAS-THEORY-001:**
+- Work must be strictly theoretical analysis of 3I/ATLAS
+- No observational activity
+- No publication, DOI registration, or Zenodo deposits
+- No public scientific communication as TRIZEL output
+
+**For all other scientific work:**
+Any Pull Request that introduces scientific content outside of granted authorizations **without** an explicit scientific authorization record issued through the authorized process **MUST** fail governance checks and be rejected.
 
 **Compliance Requirement:**
 
