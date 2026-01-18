@@ -98,16 +98,16 @@ All publications listed below are sourced from the ORCID profile 0009-0003-9884-
 
 #### Publication 1: Epistemic State Analysis of 3I/ATLAS
 
-**Title:** Epistemic State Analysis of the Interstellar Object 3I/ATLAS Using the AUTO DZ ACT Verification Framework  
+**Title:** Epistemic State Analysis of the Interstellar Object 3I/ATLAS Using AUTO DZ ACT  
 **Year:** 2025  
 **Type:** Methodological Study / Preprint  
 **Author:** Abdelkader Omran  
 **ORCID:** 0009-0003-9884-3697  
-**Framework Version:** AUTO DZ ACT v2.2  
+**Framework Version:** Referenced in publication metadata  
 **Source:** Academia.edu  
 
 **Description:**  
-This paper applies the AUTO DZ ACT scientific verification framework (v2.2) to the entire dataset of the interstellar object 3I/ATLAS. Instead of proposing a physical model, the work introduces a state-based classification system to distinguish between what is testable, undecidable, or unconstrained by current data. This provides a reproducible methodology for interpreting scientific observations while avoiding premature conclusions.
+This paper applies AUTO DZ ACT to the entire dataset of the interstellar object 3I/ATLAS. Instead of proposing a physical model, the work introduces a state-based classification system to distinguish between what is testable, undecidable, or unconstrained by current data. This provides a reproducible methodology for interpreting scientific observations while avoiding premature conclusions.
 
 **Relevance to Laboratory:**  
 - Core methodological framework for this laboratory
@@ -117,7 +117,7 @@ This paper applies the AUTO DZ ACT scientific verification framework (v2.2) to t
 
 **Laboratory Layer Mapping:**
 - **Concepts:** Epistemic states, testability criteria, undecidability, constraint classification
-- **Models:** AUTO DZ ACT verification framework (v2.2), state-based classification system
+- **Models:** AUTO DZ ACT, state-based classification system
 - **Hypotheses:** Testability boundaries for 3I/ATLAS interpretations
 - **Constraints:** Data constraint identification, epistemic limitation mapping
 
@@ -154,7 +154,7 @@ Comprehensive analysis reviewing the post-perihelion behavior of 3I/ATLAS, highl
 | ORCID | Publication | Year | Layer | Extracted Content |
 |-------|------------|------|-------|-------------------|
 | 0009-0003-9884-3697 | Epistemic State Analysis | 2025 | Concepts | Epistemic states, testability, undecidability |
-| 0009-0003-9884-3697 | Epistemic State Analysis | 2025 | Models | AUTO DZ ACT v2.2, state-based classification |
+| 0009-0003-9884-3697 | Epistemic State Analysis | 2025 | Models | AUTO DZ ACT, state-based classification |
 | 0009-0003-9884-3697 | Epistemic State Analysis | 2025 | Hypotheses | Testability boundaries for 3I/ATLAS |
 | 0009-0003-9884-3697 | Epistemic State Analysis | 2025 | Constraints | Data constraints, epistemic limitations |
 | 0009-0003-9884-3697 | Physical & Spectral Analysis | 2025 | Concepts | Brightness anomalies, spectral features, plasma events |
@@ -355,8 +355,8 @@ Relevance: [How it applies to 3I/ATLAS]
 **Researcher:** Abdelkader Omran  
 
 **Publications Ingested:**
-1. **Epistemic State Analysis of the Interstellar Object 3I/ATLAS Using the AUTO DZ ACT Verification Framework** (2025)
-   - Framework: AUTO DZ ACT v2.2
+1. **Epistemic State Analysis of the Interstellar Object 3I/ATLAS Using AUTO DZ ACT** (2025)
+   - Framework: AUTO DZ ACT
    - Type: Methodological Study / Preprint
    - Source: Academia.edu
 
@@ -366,7 +366,7 @@ Relevance: [How it applies to 3I/ATLAS]
 
 **Relevance Assessment:**
 - Both publications directly address 3I/ATLAS, the exclusive object of study for this laboratory
-- Publications provide methodological framework (AUTO DZ ACT) and observational synthesis
+- Publications provide methodological approach (AUTO DZ ACT) and observational synthesis
 - Content is fully aligned with SA-3I-ATLAS-THEORY-001 authorization scope
 - Publications authored by the ORCID profile holder with full traceability
 
@@ -505,7 +505,7 @@ This laboratory operates in strict adherence to:
 - ✅ **Layer mappings completed for all publications**
 
 **What Is Available:**
-- ✅ Publication 1: Epistemic State Analysis (AUTO DZ ACT v2.2 framework)
+- ✅ Publication 1: Epistemic State Analysis (AUTO DZ ACT)
 - ✅ Publication 2: Physical & Spectral Analysis (observational synthesis)
 - ✅ Complete metadata for both publications
 - ✅ Laboratory layer assignments for extracted knowledge

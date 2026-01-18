@@ -28,7 +28,7 @@ This layer stores **ORCID-validated publication metadata** that serves as the pr
 ### Publications Summary
 
 1. **Epistemic State Analysis of 3I/ATLAS** (2025)
-   - Framework: AUTO DZ ACT v2.2
+   - Framework: AUTO DZ ACT
    - Type: Methodological Study / Preprint
    - Traceability: `ORCID:0009-0003-9884-3697/PUB001/2025`
 

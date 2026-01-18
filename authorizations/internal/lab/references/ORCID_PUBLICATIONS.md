@@ -31,26 +31,26 @@ This document contains the complete, ORCID-validated publication list that serve
 **Full Citation:**
 ```
 Omran, A. (2025). Epistemic State Analysis of the Interstellar Object 3I/ATLAS 
-Using the AUTO DZ ACT Verification Framework. Preprint/Methodological Study. 
+Using AUTO DZ ACT. Preprint/Methodological Study. 
 Academia.edu.
 ```
 
 **Metadata:**
-- **Title:** Epistemic State Analysis of the Interstellar Object 3I/ATLAS Using the AUTO DZ ACT Verification Framework
+- **Title:** Epistemic State Analysis of the Interstellar Object 3I/ATLAS Using AUTO DZ ACT
 - **Author:** Abdelkader Omran
 - **ORCID:** 0009-0003-9884-3697
 - **Year:** 2025
 - **Type:** Methodological Study / Preprint
 - **Publication Venue:** Academia.edu
-- **Framework Version:** AUTO DZ ACT v2.2
+- **Framework Version:** Referenced in publication metadata
 - **DOI:** [Not available in preprint form]
 - **Status:** Published/Available
 
 **Abstract/Summary:**
-This paper applies the AUTO DZ ACT scientific verification framework (version 2.2) to the entire dataset of the interstellar object 3I/ATLAS. Instead of proposing a physical model, the work introduces a state-based classification system to distinguish between what is testable, undecidable, or unconstrained by current data. This provides a reproducible methodology for interpreting scientific observations while avoiding premature conclusions.
+This paper applies AUTO DZ ACT to the entire dataset of the interstellar object 3I/ATLAS. Instead of proposing a physical model, the work introduces a state-based classification system to distinguish between what is testable, undecidable, or unconstrained by current data. This provides a reproducible methodology for interpreting scientific observations while avoiding premature conclusions.
 
 **Key Contributions:**
-- Introduction of AUTO DZ ACT v2.2 verification framework
+- Introduction of AUTO DZ ACT for verification
 - State-based epistemic classification system
 - Testability criteria for 3I/ATLAS observations
 - Methodological rigor for avoiding premature scientific conclusions
@@ -72,7 +72,7 @@ This paper applies the AUTO DZ ACT scientific verification framework (version 2.
 - Testability criteria
 
 **→ Models Layer:**
-- AUTO DZ ACT v2.2 as meta-framework
+- AUTO DZ ACT as meta-framework
 - State classification model for scientific claims
 - Verification protocol structure
 - Reproducibility methodology
@@ -169,7 +169,7 @@ Comprehensive analysis reviewing the post-perihelion behavior of 3I/ATLAS, highl
 - **Publication Years:** 2025
 - **Publication Types:** Methodological Study (1), Independent Publication/Preprint (1)
 - **Primary Subject:** Interstellar Object 3I/ATLAS
-- **Framework Used:** AUTO DZ ACT v2.2
+- **Framework Used:** AUTO DZ ACT
 - **ORCID Verification:** Complete (all publications linked to ORCID 0009-0003-9884-3697)
 
 ---
@@ -179,7 +179,7 @@ Comprehensive analysis reviewing the post-perihelion behavior of 3I/ATLAS, highl
 | Pub ID | ORCID | Author | Year | Laboratory Layer | Content Type |
 |--------|-------|--------|------|------------------|--------------|
 | PUB001 | 0009-0003-9884-3697 | Omran, A. | 2025 | Concepts | Epistemic states, testability |
-| PUB001 | 0009-0003-9884-3697 | Omran, A. | 2025 | Models | AUTO DZ ACT v2.2 framework |
+| PUB001 | 0009-0003-9884-3697 | Omran, A. | 2025 | Models | AUTO DZ ACT |
 | PUB001 | 0009-0003-9884-3697 | Omran, A. | 2025 | Hypotheses | Testability boundaries |
 | PUB001 | 0009-0003-9884-3697 | Omran, A. | 2025 | Constraints | Data/epistemic limitations |
 | PUB002 | 0009-0003-9884-3697 | Omran, A. | 2025 | Concepts | Brightness, spectral, plasma |
@@ -199,7 +199,7 @@ When referencing these publications within laboratory documents:
 ```
 
 **Examples:**
-- `[ORCID:0009-0003-9884-3697/PUB001/2025] → AUTO DZ ACT v2.2 framework`
+- `[ORCID:0009-0003-9884-3697/PUB001/2025] → AUTO DZ ACT`
 - `[ORCID:0009-0003-9884-3697/PUB002/2025] → Brightness anomalies of 3I/ATLAS`
 
 ---

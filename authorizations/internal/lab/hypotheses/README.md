@@ -37,7 +37,7 @@ Each hypothesis entry MUST include:
 ## Source Publications
 
 Hypotheses derived from:
-- [PUB001] Testability framework (AUTO DZ ACT v2.2)
+- [PUB001] Testability framework (AUTO DZ ACT)
 - [PUB002] Anomaly-driven alternative explanations
 
 ## Testability

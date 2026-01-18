@@ -15,7 +15,7 @@ This layer stores **theoretical models and frameworks** extracted from ORCID-val
 ✅ **READY FOR POPULATION**
 
 ORCID publications ingested. Key models identified for extraction:
-- AUTO DZ ACT v2.2 verification framework
+- AUTO DZ ACT for verification
 - State-based classification system
 - Physical structure models
 - Thermal activity models
@@ -36,7 +36,7 @@ Each model entry MUST include:
 ## Source Publications
 
 Models extracted from:
-- [PUB001] AUTO DZ ACT v2.2 framework (methodological)
+- [PUB001] AUTO DZ ACT (methodological)
 - [PUB002] Physical, thermal, and spectral models
 
 ## Epistemic Approach

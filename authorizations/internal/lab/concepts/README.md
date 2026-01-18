@@ -36,7 +36,7 @@ Each concept entry MUST include:
 ## Source Publications
 
 Concepts extracted from:
-- [PUB001] Epistemic State Analysis (AUTO DZ ACT v2.2)
+- [PUB001] Epistemic State Analysis (AUTO DZ ACT)
 - [PUB002] Physical and Spectral Analysis
 
 ## Governance
