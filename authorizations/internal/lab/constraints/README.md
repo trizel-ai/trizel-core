@@ -10,24 +10,34 @@
 
 This layer stores **physical and mathematical constraints** from ORCID-validated publications that bound the theoretical analysis of 3I/ATLAS.
 
+## Status
+
+✅ **READY FOR POPULATION**
+
+ORCID publications ingested. Key constraint areas identified:
+- Data availability constraints
+- Epistemic limitations
+- Observed brightness variations
+- Spectral data constraints
+- Thermal emission measurements
+- Perihelion behavior observations
+
 ## Content Structure
 
 Each constraint entry MUST include:
 
-1. **Constraint Type:** Physical, Mathematical, Observational, Logical
+1. **Constraint Type:** Physical, Mathematical, Observational, Logical, Epistemic
 2. **Constraint Statement:** Precise statement of the constraint
 3. **Source Traceability:** ORCID → Publication → Specific Data/Equation
 4. **Applicability:** Which models/hypotheses this constraint applies to
 5. **Strength:** Hard constraint vs. soft preference vs. assumption
 6. **Uncertainty:** Epistemic uncertainty in the constraint itself
 
-## Constraint Categories (Future)
+## Source Publications
 
-Once ORCID publications are ingested, constraints may include:
-- **Observational:** Measured trajectory parameters, brightness, etc.
-- **Physical:** Conservation laws, thermodynamic limits, velocity bounds
-- **Mathematical:** Consistency requirements, parameter ranges
-- **Logical:** Framework compatibility requirements
+Constraints extracted from:
+- [PUB001] Epistemic and methodological limitations
+- [PUB002] Observational constraints (brightness, spectral, thermal, perihelion)
 
 ## Constraint Evaluation
 
@@ -36,12 +46,6 @@ Constraints will be used to:
 - Identify incompatible frameworks
 - Bound parameter spaces
 - Assess logical consistency
-
-## Status
-
-⚠️ **AWAITING ORCID ID**
-
-This layer will be populated once ORCID publications are ingested and constraints are extracted.
 
 ## Governance
 
@@ -52,4 +56,4 @@ This layer will be populated once ORCID publications are ingested and constraint
 
 ---
 
-**No content currently present. Awaiting ORCID input.**
+**Layer ready for population from ORCID-validated publications.**

@@ -10,6 +10,19 @@
 
 This layer stores **fundamental theoretical concepts** extracted from ORCID-validated publications and relevant to 3I/ATLAS analysis.
 
+## Status
+
+✅ **READY FOR POPULATION**
+
+ORCID publications ingested. Key concepts identified for extraction:
+- Epistemic states (testable, undecidable, unconstrained)
+- Brightness anomalies
+- Spectral features
+- Jet-like plasma events
+- Post-perihelion behavior
+- Verification framework principles
+- Testability criteria
+
 ## Content Structure
 
 Each concept entry MUST include:
@@ -20,20 +33,11 @@ Each concept entry MUST include:
 4. **Relevance:** How concept applies to 3I/ATLAS
 5. **Relationships:** Links to other concepts in this layer
 
-## Examples (Future)
+## Source Publications
 
-Once ORCID publications are ingested, this layer may include concepts such as:
-- Interstellar trajectory dynamics
-- Non-gravitational acceleration mechanisms
-- Composition models for celestial objects
-- Orbital parameter definitions
-- Hyperbolic escape velocity concepts
-
-## Status
-
-⚠️ **AWAITING ORCID ID**
-
-This layer will be populated once ORCID publications are ingested and processed.
+Concepts extracted from:
+- [PUB001] Epistemic State Analysis (AUTO DZ ACT v2.2)
+- [PUB002] Physical and Spectral Analysis
 
 ## Governance
 
@@ -44,4 +48,4 @@ This layer will be populated once ORCID publications are ingested and processed.
 
 ---
 
-**No content currently present. Awaiting ORCID input.**
+**Layer ready for population from ORCID-validated publications.**

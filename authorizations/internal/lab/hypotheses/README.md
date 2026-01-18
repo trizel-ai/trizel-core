@@ -10,6 +10,18 @@
 
 This layer stores **testable hypotheses** for 3I/ATLAS analysis, derived from ORCID-validated publications and theoretical frameworks.
 
+## Status
+
+✅ **READY FOR POPULATION**
+
+ORCID publications ingested. Key hypothesis areas identified:
+- Testability boundaries for 3I/ATLAS interpretations
+- Non-cometary origin scenarios
+- Alternative composition models
+- Plasma event generation mechanisms
+- Brightness variation explanations
+- Spectral anomaly interpretations
+
 ## Content Structure
 
 Each hypothesis entry MUST include:
@@ -22,13 +34,11 @@ Each hypothesis entry MUST include:
 6. **Consistency Checks:** Internal logical consistency evaluation
 7. **Limitations:** What this hypothesis cannot explain
 
-## Hypothesis Categories (Future)
+## Source Publications
 
-Once ORCID publications are ingested, hypotheses may include:
-- Trajectory hypotheses (hyperbolic vs. bound, gravitational vs. non-gravitational)
-- Composition hypotheses (volatile-rich vs. refractory, porous vs. compact)
-- Origin hypotheses (planetary system ejection vs. stellar disruption vs. galactic)
-- Acceleration hypotheses (outgassing vs. radiation pressure vs. novel mechanisms)
+Hypotheses derived from:
+- [PUB001] Testability framework (AUTO DZ ACT v2.2)
+- [PUB002] Anomaly-driven alternative explanations
 
 ## Testability
 
@@ -37,12 +47,6 @@ All hypotheses MUST be:
 - **Testable:** Makes specific predictions
 - **Logically Consistent:** No internal contradictions
 - **Framework-Explicit:** Clear which theory generates the hypothesis
-
-## Status
-
-⚠️ **AWAITING ORCID ID**
-
-This layer will be populated once ORCID publications are ingested and theoretical frameworks are extracted.
 
 ## Governance
 
@@ -53,4 +57,4 @@ This layer will be populated once ORCID publications are ingested and theoretica
 
 ---
 
-**No content currently present. Awaiting ORCID input.**
+**Layer ready for population from ORCID-validated publications.**
