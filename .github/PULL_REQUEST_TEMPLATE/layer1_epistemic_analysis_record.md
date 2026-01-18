@@ -46,7 +46,7 @@ The analysis contained in this PR is derived exclusively from:
 
 - ORCID-linked publications
 - Internal governance documents
-- Authorized exception (if applicable): <!-- Specify authorization identifier, e.g., SA-3I-ATLAS-THEORY-001 -->
+- Authorized exception (if applicable): <!-- Specify authorization identifier, e.g., SA-XXXX-ANALYSIS-001 -->
 
 **❌ No external datasets**  
 **❌ No anonymous sources**  
@@ -59,7 +59,7 @@ List all ORCID-linked publications and authorized sources used:
 <!-- 
 Example:
 - ORCID: 0000-0000-0000-0000 | DOI: 10.xxxx/xxxxx | Title: "Example Publication"
-- Authorization: SA-3I-ATLAS-THEORY-001
+- Authorization: SA-XXXX-ANALYSIS-001
 -->
 
 ---
@@ -85,8 +85,8 @@ List all files being added or modified:
 
 <!-- 
 Example:
-- authorizations/internal/lab/hypotheses/3I_ATLAS_HYPOTHESIS_001.md
-- authorizations/internal/lab/constraints/3I_ATLAS_CONSTRAINTS_001.md
+- authorizations/internal/lab/hypotheses/TOPIC_HYPOTHESIS_001.md
+- authorizations/internal/lab/constraints/TOPIC_CONSTRAINTS_001.md
 -->
 
 ---
@@ -133,7 +133,7 @@ Interpretation beyond this scope is explicitly forbidden.
 ```
 GOVERNANCE TRACEABILITY
 ├── Governance Authority: docs/governance/TRIZEL_GOVERNANCE_LEDGER.md
-├── Authorization: [Specify authorization ID, e.g., SA-3I-ATLAS-THEORY-001]
+├── Authorization: [Specify authorization ID, e.g., SA-XXXX-ANALYSIS-001]
 ├── SYSTEM FREEZE: ACTIVE (compliant, no publication authorized)
 ├── Operational Protocol: authorizations/internal/LAYER1_OPERATIONAL_PROTOCOL.md
 └── ORCID Provenance: authorizations/internal/lab/references/
@@ -190,5 +190,5 @@ Provide any additional context, notes, or clarifications that reviewers should b
 
 **PR Author:** @<!-- username -->  
 **Date:** <!-- YYYY-MM-DD -->  
-**Authorization Reference:** <!-- e.g., SA-3I-ATLAS-THEORY-001 -->  
+**Authorization Reference:** <!-- e.g., SA-XXXX-ANALYSIS-001 -->  
 **Protocol Version:** 1.0.0
