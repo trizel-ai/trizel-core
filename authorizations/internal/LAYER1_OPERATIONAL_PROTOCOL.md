@@ -37,7 +37,7 @@ This file is a **reusable template** for future Layer-1 epistemic analysis recor
 
 **To create an actual Layer-1 epistemic analysis record:**
 - A separate, explicitly authorized pull request MUST be submitted
-- That PR MUST reference a valid scientific authorization (e.g., SA-XXX-XXX-XXX)
+- That PR MUST reference a valid scientific authorization (e.g., SA-[TOPIC]-[TYPE]-[NUMBER])
 - That PR MUST be approved through governance review
 - That PR MUST instantiate this template with specific operational details
 
@@ -91,7 +91,7 @@ Layer-1 operates exclusively as a **documentation and analysis** layer, not an e
 When this template is instantiated in an authorized PR, the resulting protocol derives authority from:
 
 - **Primary Authority:** `docs/governance/TRIZEL_GOVERNANCE_LEDGER.md`
-- **Specific Authorization:** Must be explicitly cited (e.g., SA-XXX-XXX-XXX)
+- **Specific Authorization:** Must be explicitly cited (e.g., SA-[TOPIC]-[TYPE]-[NUMBER])
 - **Governance Framework:** TRIZEL Layer-0 (Governance & Charter)
 
 **This template itself does not grant authority.** Authority is granted only through proper instantiation in an authorized PR.
@@ -533,7 +533,7 @@ Every Layer-1 document or output created under an instantiated protocol must exp
    - Relevant ledger sections cited
 
 2. **Authorization Document**
-   - Specific authorization ID (e.g., SA-XXX-XXX-XXX)
+   - Specific authorization ID (e.g., SA-[TOPIC]-[TYPE]-[NUMBER])
    - Full path to authorization document
    - Effective date and status
 
@@ -557,9 +557,9 @@ Every Layer-1 document or output created under an instantiated protocol must exp
 ```
 GOVERNANCE TRACEABILITY
 ├── Governance Authority: docs/governance/TRIZEL_GOVERNANCE_LEDGER.md
-├── Authorization: [SPECIFIC-AUTH-ID] (path/to/authorization.md)
+├── Authorization: SA-[TOPIC]-[TYPE]-[NUMBER] (path/to/authorization.md)
 ├── SYSTEM FREEZE: ACTIVE (compliant, no publication authorized)
-├── Operational Protocol: [Instantiated from LAYER1_OPERATIONAL_PROTOCOL.md template]
+├── Operational Protocol: Instantiated from template
 └── ORCID Provenance: [when applicable] authorizations/internal/lab/references/
 ```
 
