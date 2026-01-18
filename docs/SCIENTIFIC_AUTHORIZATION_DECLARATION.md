@@ -1,8 +1,9 @@
 # Scientific Authorization Declaration
 
 **Repository:** trizel-ai/trizel-core  
-**Status:** AUTHORIZED (PROCESS ONLY)  
+**Status:** AUTHORIZED (FRAMEWORK AND SPECIFIC GRANTS)  
 **Effective Date:** 2026-01-17  
+**Last Updated:** 2026-01-18  
 **Governing Authority:** TRIZEL Governance (Layer-0)  
 
 **References:**
@@ -30,6 +31,32 @@ This declaration is a governance-only document that establishes operational auth
 3. **AUTHORIZES ONLY** the documentation and recording of authorization decisions within the governance framework.
 
 The SYSTEM FREEZE remains fully active and binding. All scientific activities remain prohibited unless and until a separate, explicit scientific authorization is granted through the process established by this declaration.
+
+---
+
+## Specific Scientific Authorizations Granted
+
+The following specific scientific authorizations have been issued under this framework:
+
+### SA-3I-ATLAS-THEORY-001 - Theoretical Analysis of 3I/ATLAS
+
+**Authorization ID:** SA-3I-ATLAS-THEORY-001  
+**Effective Date:** 2026-01-18  
+**Status:** ACTIVE (Limited Scope)  
+**Document:** `docs/authorizations/SA-3I-ATLAS-THEORY-001.md`
+
+**Scope:**
+- Theoretical physics analysis only
+- Limited to interstellar object 3I/ATLAS
+- No observational activity
+- No publication or public dissemination
+
+**Prohibitions:**
+- All activities outside the defined scope in the authorization document
+- Publication, DOI registration, Zenodo deposits
+- Public scientific communication as TRIZEL output
+
+This authorization represents a narrow exception to the SYSTEM FREEZE and may be revoked at any time.
 
 ---
 
