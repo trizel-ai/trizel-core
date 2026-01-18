@@ -31,8 +31,14 @@ This document complies with `DEPRECATED_TERMS.md` and uses only approved termino
 Historical non-operational reference to deprecated concepts has been removed completely from TRIZEL governance.
 
 All Layer-1 documentation now uses only approved, governance-safe terminology:
+
+**Algorithm Names:**
 - **"AUTO DZ ACT"** - Canonical algorithm name (exact spacing and capitalization required)
+
+**Methodological Terms:**
 - **"Epistemic analysis frame"** - Methodological construct (not "theory")
+
+**Conceptual References:**
 - **"Historical non-operational reference"** - Replacement for deprecated conceptual references
 - **"Layer-1"** - Research documentation and epistemic analysis layer
 
@@ -52,9 +58,11 @@ This document contains ZERO instances of prohibited terminology.
 
 Layer-1 in TRIZEL operates under:
 - **SYSTEM FREEZE** (active by default)
-- **Authorization requirement** (SA-3I-ATLAS-THEORY-001 currently active for 3I/ATLAS epistemic analysis)
+- **Authorization requirement** (SA-3I-ATLAS-THEORY-001 currently active for 3I/ATLAS epistemic analysis)*
 - **Internal-only scope** (no publication, no public release)
 - **Non-interpretive stance** (governance provides structure, not scientific claims)
+
+*Note: Authorization identifier preserves original form per governance ledger Section IV. The authorized activity is correctly termed "epistemic analysis frame."
 
 ---
 
@@ -72,7 +80,7 @@ This document has been verified against:
 
 - `DEPRECATED_TERMS.md` - Canonical list of forbidden terms
 - `docs/governance/TRIZEL_GOVERNANCE_LEDGER.md` - Governance authority
-- `authorizations/internal/LAYER1_OPERATIONAL_PROTOCOL.md` - Layer-1 operational context
+- `authorizations/internal/LAYER1_OPERATIONAL_PROTOCOL.md` - Layer-1 governance protocols (separate document)
 
 ---
 
