@@ -88,6 +88,18 @@ Implementation of SA-3I-ATLAS-THEORY-001: Scientific Authorization for theoretic
 
 ---
 
+### PR #TBD - 2026-01-18
+**Files Modified:**
+- governance/LAYER1_GOVERNANCE_DECLARATION.md (NEW)
+- governance/APPROVAL.md (Updated - adding this entry)
+
+**Reason:**
+Creation of canonical Layer-1 Governance Declaration that permanently supersedes all prior Layer-1 related PRs and resolves all terminology ambiguities. This governance declaration: (1) permanently bans "STOE" and requires "historical non-operational reference" as replacement; (2) registers AUTO DZ ACT as a Foundational Epistemic Memory Marker (memory-only, non-functional, mandatory canonical reference); (3) establishes trizel-admin comment handling rule (comments containing PR titles/descriptions/activation language are binding governance references); (4) locks epistemic memory for these resolutions; (5) consolidates all fragmented Layer-1 governance into single authoritative record. This is governance-only, non-operational, declarative, and archival in nature.
+
+**Approver:** TRIZEL Governance (Layer-0)
+
+---
+
 ## Notes
 
 - This file serves as the single source of truth for governance change authorization
