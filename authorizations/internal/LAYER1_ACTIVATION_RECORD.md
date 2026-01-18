@@ -1,17 +1,29 @@
 # LAYER1 ACTIVATION RECORD
 
 **Repository:** trizel-ai/trizel-core  
-**Document Type:** Terminology Compliance Record  
+**Document Type:** Terminology Compliance Record (SUPERSEDED)  
 **Authority Level:** Layer-0 (Governance)  
-**Status:** NON-OPERATIONAL  
+**Status:** SUPERSEDED — See Canonical Declaration  
 **Version:** 1.0.0  
 **Date:** 2026-01-18  
 
 ---
 
-## Document Purpose
+## ⚠️ SUPERSESSION NOTICE ⚠️
 
-This document serves as a **governance-declarative, non-operational record** for Layer-1 terminology compliance.
+**This document has been SUPERSEDED by the canonical Layer-1 Governance Declaration.**
+
+**Canonical Authority:** `governance/LAYER1_GOVERNANCE_DECLARATION.md`
+
+For all Layer-1 governance, terminology, and epistemic memory references, consult the canonical declaration.
+
+**This document is retained for historical reference only.**
+
+---
+
+## Document Purpose (Historical)
+
+This document served as a **governance-declarative, non-operational record** for Layer-1 terminology compliance.
 
 **This document**:
 - Is non-executable
