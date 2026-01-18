@@ -671,13 +671,13 @@ TRIZEL Governance established this document (`docs/governance/TRIZEL_GOVERNANCE_
 **Description:**
 TRIZEL Governance formally activated Layer-1 (Internal Epistemic Analysis) operations under authorization SA-3I-ATLAS-THEORY-001. This activation enables controlled internal epistemic analysis based on ORCID-linked publications, with all outputs remaining non-publishable and internal-only. Layer-2 (Presentation) remains locked. SYSTEM FREEZE remains active and unchanged.
 
-This activation represents the operational deployment of the Layer-1 framework established in LAYER1_OPERATIONAL_PROTOCOL.md, transitioning it from template status to operational status. All Layer-1 activities must comply with SA-3I-ATLAS-THEORY-001 scope, ORCID-only input requirements, and strict non-publication constraints.
+This activation represents the operational deployment of the Layer-1 framework established in `LAYER1_OPERATIONAL_PROTOCOL.md`, transitioning it from template status to operational status. All Layer-1 activities must comply with SA-3I-ATLAS-THEORY-001 scope, ORCID-only input requirements, and strict non-publication constraints.
 
 **Authority:** TRIZEL Governance (Layer-0)
 
 **Scope:**
 - Internal epistemic analysis operational within SA-3I-ATLAS-THEORY-001 boundaries
-- LAYER1_OPERATIONAL_PROTOCOL.md status changed from TEMPLATE to OPERATIONAL
+- `LAYER1_OPERATIONAL_PROTOCOL.md` status changed from TEMPLATE to OPERATIONAL
 - Laboratory structure (`authorizations/internal/lab/`) operational
 - Internal working notes framework operational
 - ORCID-verified reference ingestion authorized
