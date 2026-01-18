@@ -662,6 +662,71 @@ TRIZEL Governance established this document (`docs/governance/TRIZEL_GOVERNANCE_
 
 ---
 
+#### GE-2026-01-18-005: Layer-1 Activation — Internal Epistemic Analysis Operational
+
+**Date:** 2026-01-18  
+**Type:** Authorization  
+**Summary:** Layer-1 activated for internal epistemic analysis under SA-3I-ATLAS-THEORY-001
+
+**Description:**
+TRIZEL Governance formally activated Layer-1 (Internal Epistemic Analysis) operations under authorization SA-3I-ATLAS-THEORY-001. This activation enables controlled internal epistemic analysis based on ORCID-linked publications, with all outputs remaining non-publishable and internal-only. Layer-2 (Presentation) remains locked. SYSTEM FREEZE remains active and unchanged.
+
+This activation represents the operational deployment of the Layer-1 framework established in LAYER1_OPERATIONAL_PROTOCOL.md, transitioning it from template status to operational status. All Layer-1 activities must comply with SA-3I-ATLAS-THEORY-001 scope, ORCID-only input requirements, and strict non-publication constraints.
+
+**Authority:** TRIZEL Governance (Layer-0)
+
+**Scope:**
+- Internal epistemic analysis operational within SA-3I-ATLAS-THEORY-001 boundaries
+- LAYER1_OPERATIONAL_PROTOCOL.md status changed from TEMPLATE to OPERATIONAL
+- Laboratory structure (`authorizations/internal/lab/`) operational
+- Internal working notes framework operational
+- ORCID-verified reference ingestion authorized
+- Epistemic analysis workflow activated
+
+**Authorized Activities:**
+- Internal epistemic analysis based exclusively on ORCID-linked publications
+- Generation of internal analysis records and evidence artifacts
+- Use of approved Layer-1 repositories and internal tools
+- Structured theoretical reasoning and hypothesis documentation
+- Conceptual framework development (internal only)
+
+**Explicit Prohibitions:**
+- No Layer-2 activation or public presentation
+- No publication, display, or external exposure of content
+- No modification of governance rules or Layer-0 authority
+- No observational activities or new data acquisition
+- No executable code, workflows, or automation
+- No CI modifications or deployment changes
+- No scientific claims as validated findings
+- No DOI minting, Zenodo deposits, or public citation generation
+
+**Impact:**
+- Layer-1 internal epistemic analysis now operational
+- ORCID-verified references may be ingested and organized
+- Internal working notes may be created within authorization scope
+- Structured epistemic analysis may proceed under governance oversight
+- SYSTEM FREEZE remains fully active for all external communication
+- Layer-2 (Presentation) remains explicitly locked
+- Foundation established for controlled internal analytical work
+
+**Compliance Statement:**
+- Evidence-first principle enforced (ORCID-only inputs)
+- Immutable references enforced (ORCID/DOI persistence)
+- Terminology governance enforced (epistemic analysis frame)
+- No deprecated terms introduced
+- No executable code or workflows added
+- No CI, automation, or deployment changes
+
+**References:**
+- Activation Record: `authorizations/internal/LAYER1_ACTIVATION_RECORD.md`
+- Operational Protocol: `authorizations/internal/LAYER1_OPERATIONAL_PROTOCOL.md`
+- Scientific Authorization: `docs/authorizations/SA-3I-ATLAS-THEORY-001.md`
+- Governance Ledger: This document
+
+**Status:** ACTIVE
+
+---
+
 ### Future Events
 
 All future governance events will be appended to this section in chronological order, following the event format specified above.
