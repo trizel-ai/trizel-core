@@ -218,9 +218,9 @@ TRIZEL_GOVERNANCE_LEDGER.md (Layer-0 Authority)
           ↓
 SA-3I-ATLAS-THEORY-001 (Scientific Authorization)
           ↓
-LAYER1_ACTIVATION_RECORD.md (This Document)
+LAYER1_ACTIVATION_RECORD.md (Operational Authorization)
           ↓
-LAYER1_OPERATIONAL_PROTOCOL.md (Operational Framework)
+LAYER1_OPERATIONAL_PROTOCOL.md (Template - Authorized for Use)
           ↓
 Internal Lab Structure & Outputs
 ```
@@ -256,7 +256,7 @@ The document `authorizations/internal/LAYER1_OPERATIONAL_PROTOCOL.md`:
 - Defines the epistemic analysis workflow to be followed
 - Establishes input/output requirements for all Layer-1 work
 
-**Clarification:** The protocol file itself maintains its template designation for reusability and governance clarity. This activation record grants authority to use that template operationally for Layer-1 activities under SA-3I-ATLAS-THEORY-001. The template becomes operational through authorization, not through modification of its own status field.
+**Clarification:** This activation authorizes operational use of the LAYER1_OPERATIONAL_PROTOCOL.md template for Layer-1 activities under SA-3I-ATLAS-THEORY-001.
 
 ### 7.2 Laboratory Structure
 
