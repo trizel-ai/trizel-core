@@ -247,22 +247,20 @@ This laboratory uses an **algorithmic layer architecture** to organize theoretic
 
 ---
 
-## THEORY TERMINOLOGY (CRITICAL)
+## EPISTEMIC ANALYSIS FRAME TERMINOLOGY (CRITICAL)
 
-### Strict Scientific Definition
+### Strict Definition
 
-In this laboratory, **"THEORY"** is used EXCLUSIVELY in its strict scientific sense:
+**EPISTEMIC ANALYSIS FRAME:** A governance-compliant analytical framework designed to evaluate, compare, and stress-test physical hypotheses without presupposing General Relativity or Newtonian mechanics, enabling controlled epistemic validation through AUTO DZ ACT within an internal laboratory context.
 
-**THEORY** = A formal, testable, falsifiable conceptual framework
-
-**THEORY IS:**
-- A structured explanatory framework
+In this laboratory, **epistemic analysis frames** are:
+- Structured explanatory frameworks
 - Testable through observation or logical consistency
 - Falsifiable (can be proven wrong)
 - Predictive (makes specific predictions)
 - Mathematical or conceptual
 
-**THEORY IS NOT:**
+**Epistemic analysis frames are NOT:**
 - Speculative or philosophical narrative
 - Untestable metaphysics
 - Dogma or established truth
@@ -277,15 +275,15 @@ This laboratory does **NOT** assume, enforce, or privilege:
 - General Relativity
 - Newtonian mechanics
 - Standard Model physics
-- Any established physical theory as inherently correct
+- Any established physical epistemic analysis frame as inherently correct
 
 **Open Testbed Principle:**
 
 3I/ATLAS is treated as a **physical gateway to new physics** — an epistemic testbed where:
-- All theories may be evaluated on equal footing
-- Existing theories may be compared, questioned, suspended, or extended
+- All epistemic analysis frames may be evaluated on equal footing
+- Existing frames may be compared, questioned, suspended, or extended
 - Novel frameworks may be proposed and analyzed
-- No theory is immune to scrutiny
+- No epistemic analysis frame is immune to scrutiny
 
 **Pre-Paradigmatic Language:**
 
@@ -443,7 +441,7 @@ All laboratory work MUST include:
 
 ### Epistemic Constraints
 
-1. **No Privileging:** No theory assumed as correct a priori
+1. **No Privileging:** No epistemic analysis frame assumed as correct a priori
 2. **Open Testbed:** All frameworks evaluated equally
 3. **Pre-Paradigmatic:** Language avoids dogmatic assertions
 4. **Uncertainty Acknowledgment:** Limitations explicitly stated
@@ -479,11 +477,11 @@ All laboratory work MUST include:
 
 This laboratory operates in strict adherence to:
 
-✓ **SA-3I-ATLAS-THEORY-001:** Theoretical analysis only, 3I/ATLAS scope only  
+✓ **SA-3I-ATLAS-THEORY-001:** Epistemic analysis only, 3I/ATLAS scope only  
 ✓ **SYSTEM FREEZE:** Remains fully active; no publication authorization  
 ✓ **Internal-Only Status:** Not for external release or scientific endorsement  
 ✓ **Non-Validation:** No claims of validated findings or performance  
-✓ **Open Epistemic Approach:** No privileging of established theories  
+✓ **Open Epistemic Approach:** No privileging of established epistemic analysis frames  
 ✓ **Pre-Paradigmatic Language:** Hypothesis-driven, exploratory, non-final  
 ✓ **ORCID-Driven:** All references traceable to ORCID-validated sources  
 ✓ **Documentation-Only:** No code execution or computational workflows  
@@ -499,7 +497,7 @@ This laboratory operates in strict adherence to:
 - ✅ Governance framework documented
 - ✅ Layer architecture defined
 - ✅ ORCID ingestion protocol specified
-- ✅ Theory terminology clarified
+- ✅ Epistemic analysis frame terminology clarified
 - ✅ Compliance requirements documented
 - ✅ **ORCID ID confirmed: 0009-0003-9884-3697 (Abdelkader Omran)**
 - ✅ **Publications ingested from ORCID profile (2 publications, 2025)**
@@ -552,7 +550,7 @@ This laboratory authorization will be **immediately revoked** upon:
 5. SYSTEM FREEZE modification
 6. Citation beyond ORCID-validated sources
 7. Experimental claims or validation assertions
-8. Privileging of established theories without epistemic justification
+8. Privileging of established epistemic analysis frames without epistemic justification
 
 ---
 

@@ -46,7 +46,7 @@ All hypotheses MUST be:
 - **Falsifiable:** Can be proven wrong in principle
 - **Testable:** Makes specific predictions
 - **Logically Consistent:** No internal contradictions
-- **Framework-Explicit:** Clear which theory generates the hypothesis
+- **Framework-Explicit:** Clear which epistemic analysis frame generates the hypothesis
 
 ## Governance
 

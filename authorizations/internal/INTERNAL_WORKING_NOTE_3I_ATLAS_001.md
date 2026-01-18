@@ -33,9 +33,9 @@ This document is created under the explicit and limited authorization **SA-3I-AT
 
 This document adopts an **open epistemic approach** to theoretical analysis:
 
-- **No privileging of established theories:** This analysis does not assume, enforce, or privilege General Relativity, Newtonian mechanics, or any other established physical framework as inherently correct or complete.
+- **No privileging of established epistemic analysis frames:** This analysis does not assume, enforce, or privilege General Relativity, Newtonian mechanics, or any other established physical framework as inherently correct or complete.
 
-- **Open epistemic testbed:** The interstellar object 3I/ATLAS is treated as an open testbed for theoretical reasoning, where existing theories may be compared, questioned, suspended, or extended.
+- **Open epistemic testbed:** The interstellar object 3I/ATLAS is treated as an open testbed for analytical reasoning, where existing epistemic analysis frames may be compared, questioned, suspended, or extended.
 
 - **Pre-paradigmatic language:** All terminology and reasoning are intentionally pre-paradigmatic, avoiding dogmatic assertions or finality.
 
@@ -43,19 +43,16 @@ This document adopts an **open epistemic approach** to theoretical analysis:
 
 ---
 
-## TERMINOLOGY: "THEORY" IN SCIENTIFIC CONTEXT
+## TERMINOLOGY: "EPISTEMIC ANALYSIS FRAME" DEFINITION
 
-Throughout this document, the word "theory" is used strictly in the scientific sense:
+**EPISTEMIC ANALYSIS FRAME:** A governance-compliant analytical framework designed to evaluate, compare, and stress-test physical hypotheses without presupposing General Relativity or Newtonian mechanics, enabling controlled epistemic validation through AUTO DZ ACT within an internal laboratory context.
 
-- **Theory** = A proposed framework, model, or hypothesis for understanding phenomena
-- **Theory** ≠ Established dogma, proven truth, or finalized paradigm
-
-The term is used to denote:
+Throughout this document, epistemic analysis frames are used to denote:
 - Conceptual frameworks under consideration
 - Mathematical models being explored
 - Hypothetical explanations being tested against logical consistency
 
-No use of "theory" in this document implies validation, consensus, or acceptance as scientific fact.
+No use of epistemic analysis frames in this document implies validation, consensus, or acceptance as scientific fact.
 
 ---
 
@@ -94,7 +91,7 @@ This analysis recognizes that multiple theoretical frameworks may be applied to 
 
 1. **Classical gravitational frameworks** (e.g., Newtonian mechanics)
 2. **Relativistic frameworks** (e.g., General Relativity)
-3. **Modified gravity proposals** (e.g., MOND, f(R) theories)
+3. **Modified gravity proposals** (e.g., MOND, f(R) epistemic analysis frames)
 4. **Alternative dynamics frameworks**
 5. **Hybrid or extended models**
 
@@ -128,7 +125,7 @@ The following questions guide theoretical exploration:
 **Framework-Dependent Questions:**
 - Do classical two-body dynamics sufficiently describe the trajectory?
 - Are relativistic corrections significant for this object's velocity regime?
-- Could modified gravity theories predict different perihelion behavior?
+- Could modified gravity frames predict different perihelion behavior?
 
 ### 3.2 Composition Hypotheses
 
@@ -207,7 +204,7 @@ The following questions guide theoretical exploration:
 **Distinguishing Predictions:**
 - Different frameworks may predict distinct trajectory behaviors at specific orbital phases
 - Composition-dependent models may require different observational signatures
-- Modified gravity theories may produce unique perihelion behaviors
+- Modified gravity frames may produce unique perihelion behaviors
 
 **Note:** This section identifies theoretical differences, not observational tests. No observational program is proposed or authorized.
 
@@ -219,9 +216,9 @@ The following questions guide theoretical exploration:
 
 1. **Dynamical Uniqueness:** Is 3I/ATLAS dynamically unique among interstellar objects, or representative of a broader population?
 
-2. **Composition Degeneracy:** Can trajectory analysis alone constrain composition, or are additional theoretical constraints required?
+2. **Composition Degeneracy:** Can trajectory analysis alone constrain composition, or are additional analytical constraints required?
 
-3. **Framework Selection:** On what basis should one theoretical framework be preferred over another for this specific object?
+3. **Framework Selection:** On what basis should one epistemic analysis frame be preferred over another for this specific object?
 
 4. **Generalization Limits:** What, if anything, can be inferred about interstellar object populations from a single case?
 
@@ -248,7 +245,7 @@ The following questions guide theoretical exploration:
 ### 7.2 Scope Boundaries
 
 This analysis:
-- Does **NOT** claim to validate any theoretical framework
+- Does **NOT** claim to validate any epistemic analysis frame
 - Does **NOT** assert experimental confirmation of any hypothesis
 - Does **NOT** propose new fundamental physics without extensive caveats
 - Does **NOT** generalize beyond the specific case of 3I/ATLAS
@@ -259,11 +256,11 @@ This analysis:
 
 This document has been prepared in strict adherence to:
 
-✓ **SA-3I-ATLAS-THEORY-001:** Theoretical analysis only, 3I/ATLAS scope only  
+✓ **SA-3I-ATLAS-THEORY-001:** Epistemic analysis only, 3I/ATLAS scope only  
 ✓ **SYSTEM FREEZE:** Remains fully active; no publication authorization  
 ✓ **Internal-Only Status:** Not for external release or scientific endorsement  
 ✓ **Non-Validation:** No claims of validated findings or performance  
-✓ **Open Epistemic Approach:** No privileging of established theories  
+✓ **Open Epistemic Approach:** No privileging of established epistemic analysis frames  
 ✓ **Pre-Paradigmatic Language:** Hypothesis-driven, exploratory, non-final  
 
 ---

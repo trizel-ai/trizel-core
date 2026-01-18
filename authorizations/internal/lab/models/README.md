@@ -43,13 +43,13 @@ Models extracted from:
 
 **No Privileged Frameworks:**
 - All models evaluated on equal footing
-- No theory assumed as correct a priori
+- No epistemic analysis frame assumed as correct a priori
 - 3I/ATLAS treated as testbed for framework comparison
 
 ## Governance
 
 - **Theoretical Only:** No experimental validation
-- **Framework Agnostic:** No privileging of established theories
+- **Framework Agnostic:** No privileging of established epistemic analysis frames
 - **ORCID-Traced:** All models traceable to ORCID sources
 - **Internal-Only:** Not for publication
 
