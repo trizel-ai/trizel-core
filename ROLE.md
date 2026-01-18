@@ -129,7 +129,7 @@ Changes to this repository must:
 2. **Version explicitly**: All changes tracked with version bumps
 3. **Document rationale**: Explain why governance changed
 4. **Check downstream impact**: Identify all affected repositories
-5. **Follow PR template**: Use `.github/pull_request_template.md`
+5. **Follow PR template**: Use `.github/PULL_REQUEST_TEMPLATE/` (select appropriate template)
 6. **Pass CI checks**: Deprecated terms blocker, governance validation
 
 ---

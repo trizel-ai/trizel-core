@@ -170,4 +170,4 @@ Proceed? [YES/NO + reasoning]
 - `OUTPUT_CONTRACT.md` — Export specifications
 - `PUBLICATION_POLICY.md` — Website ingestion rules
 - `DEPRECATED_TERMS.md` — Forbidden terminology
-- `.github/pull_request_template.md` — PR compliance checklist
+- `.github/PULL_REQUEST_TEMPLATE/` — PR compliance checklists

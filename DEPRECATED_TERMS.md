@@ -409,5 +409,5 @@ Terms can only be removed if:
 
 - `COPILOT_INSTRUCTIONS.md` — Copilot operating rules (references this file)
 - `.github/workflows/deprecated-terms-check.yml` — CI enforcement
-- `.github/pull_request_template.md` — PR checklist
+- `.github/PULL_REQUEST_TEMPLATE/` — PR checklists
 - `ROLE.md` — Repository layer assignment
