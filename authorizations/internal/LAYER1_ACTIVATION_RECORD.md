@@ -245,16 +245,18 @@ Internal Lab Structure & Outputs
 
 ## VII. Operational Framework
 
-### 7.1 LAYER1_OPERATIONAL_PROTOCOL Status
+### 7.1 LAYER1_OPERATIONAL_PROTOCOL Usage
 
-**Status Change:** TEMPLATE ONLY → OPERATIONAL
+**Authorization Status:** AUTHORIZED FOR OPERATIONAL USE
 
 The document `authorizations/internal/LAYER1_OPERATIONAL_PROTOCOL.md`:
-- Was previously a non-operational template
-- Is now **OPERATIONAL** under this activation
-- Provides structural framework for Layer-1 activities
-- Defines epistemic analysis workflow
-- Establishes input/output requirements
+- Remains structurally a template document (per its own designation)
+- Is now **AUTHORIZED FOR OPERATIONAL USE** under this activation
+- Provides authoritative structural framework for Layer-1 activities
+- Defines the epistemic analysis workflow to be followed
+- Establishes input/output requirements for all Layer-1 work
+
+**Clarification:** The protocol file itself maintains its template designation for reusability and governance clarity. This activation record grants authority to use that template operationally for Layer-1 activities under SA-3I-ATLAS-THEORY-001. The template becomes operational through authorization, not through modification of its own status field.
 
 ### 7.2 Laboratory Structure
 
@@ -303,7 +305,7 @@ If this activation is revoked:
 1. All Layer-1 activities must cease immediately
 2. No new internal analysis may be conducted
 3. Existing internal documents remain but are marked REVOKED
-4. LAYER1_OPERATIONAL_PROTOCOL returns to TEMPLATE-ONLY status
+4. LAYER1_OPERATIONAL_PROTOCOL is no longer authorized for operational use
 5. Revocation is recorded as governance event
 
 ### 8.3 Modification Prohibition
@@ -352,7 +354,7 @@ remains active and unchanged.
 
 **Scope:**
 - Internal epistemic analysis operational
-- LAYER1_OPERATIONAL_PROTOCOL.md status changed from TEMPLATE to OPERATIONAL
+- LAYER1_OPERATIONAL_PROTOCOL.md authorized for operational use
 - Laboratory structure operational
 - All activities within SA-3I-ATLAS-THEORY-001 boundaries
 
@@ -388,7 +390,7 @@ remains active and unchanged.
 - This document **activates Layer-1 capabilities**
 - This document **grants operational permissions** within defined scope
 - This document **constitutes a governance event**
-- This document **modifies LAYER1_OPERATIONAL_PROTOCOL status** from template to operational
+- This document **authorizes operational use of LAYER1_OPERATIONAL_PROTOCOL**
 
 ### 10.2 Immutability
 
