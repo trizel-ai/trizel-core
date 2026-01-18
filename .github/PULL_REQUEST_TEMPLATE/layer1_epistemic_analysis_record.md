@@ -46,8 +46,7 @@ The analysis contained in this PR is derived exclusively from:
 
 - ORCID-linked publications
 - Internal governance documents
-- Authorized exception (if applicable):
-  - SA-3I-ATLAS-THEORY-001 (identifier preserved)
+- Authorized exception (if applicable): <!-- Specify authorization identifier, e.g., SA-3I-ATLAS-THEORY-001 -->
 
 **❌ No external datasets**  
 **❌ No anonymous sources**  
