@@ -471,6 +471,7 @@ To add new governance rules:
 
 - `BRANCH_CONTRACT.md` - Branch governance rules
 - `governance/APPROVAL.md` - Approval log for governance changes
+- `governance/LAYER1_GOVERNANCE_DECLARATION.md` - Canonical Layer-1 governance declaration
 - `DEPRECATED_TERMS.md` - Forbidden terminology policy
 - `governance/README.md` - Governance directory overview
 - `.github/workflows/governance-enforcement.yml` - Enforcement workflow

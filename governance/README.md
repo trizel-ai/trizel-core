@@ -21,6 +21,14 @@ The governance directory centralizes all documentation, rules, and tooling relat
   - Tracks PR number, files, reason, and approver
   - Single source of truth for governance authorization
 
+- **`LAYER1_GOVERNANCE_DECLARATION.md`** - Canonical Layer-1 governance declaration (NEW)
+  - Single authoritative record for Layer-1 governance
+  - Supersedes all prior Layer-1 PRs and ambiguities
+  - Registers AUTO DZ ACT as Foundational Epistemic Memory Marker
+  - Establishes trizel-admin comment handling rule
+  - Permanently bans "STOE" and requires "historical non-operational reference"
+  - Locks epistemic memory for governance resolutions
+
 - **`RULESET_CONFIGURATION.md`** - Complete guide for configuring the GitHub ruleset `layer0-main-governance`
   - Step-by-step setup instructions
   - Verification checklist
