@@ -590,6 +590,11 @@ A document is eligible for Phase-E publication **if and only if** it meets ALL o
 - Any automated modification is a governance violation
 - Changes must be human-authored and governance-approved
 
+**Consistency Statement:**
+- This decision document is **manual-only**
+- Alerting and automation systems are **NOT included in this PR**
+- Any future automation or alerting regarding Phase-E publication requires separate governance decision and explicit PR
+
 ---
 
 ## VII. Publication Process and Governance Controls
