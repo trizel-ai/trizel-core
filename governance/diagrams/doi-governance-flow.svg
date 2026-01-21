@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900">
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    DOI Governance Flow — TRIZEL Phase-F
+  </text>
+  
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">
+    Fail-Closed DOI Issuance Pipeline
+  </text>
+
+  <!-- Definitions for arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27ae60" />
+    </marker>
+  </defs>
+
+  <!-- Layer Labels -->
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">Layer-1</text>
+  <text x="50" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e67e22">Layer-0</text>
+  <text x="50" y="780" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9b59b6">Layer-2</text>
+
+  <!-- Step 1: Observation/Analysis (Layer-1) -->
+  <rect x="200" y="90" width="400" height="80" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Layer-1: Observation / Analysis
+  </text>
+  <text x="400" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Scientific work produces outputs
+  </text>
+  <text x="400" y="162" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ecf0f1">
+    (Research, computation, data processing)
+  </text>
+
+  <!-- Arrow 1 -->
+  <line x1="400" y1="170" x2="400" y2="210" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: Snapshot Freeze -->
+  <rect x="200" y="210" width="400" height="80" rx="5" fill="#16a085" stroke="#138d75" stroke-width="2"/>
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Snapshot Freeze
+  </text>
+  <text x="400" y="262" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Immutable, hash-verified, timestamped
+  </text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ecf0f1">
+    SHA-256 hashes + manifest.json + read-only
+  </text>
+
+  <!-- Arrow 2 -->
+  <line x1="400" y1="290" x2="400" y2="340" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="320" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+    Freeze complete
+  </text>
+
+  <!-- Step 3: Governance Review (Layer-0) -->
+  <rect x="200" y="340" width="400" height="100" rx="5" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Layer-0: Governance Review
+  </text>
+  <text x="400" y="392" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Human review • Metadata check • Compliance
+  </text>
+  <text x="400" y="410" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ecf0f1">
+    Hash verification • Policy compliance • Authority check
+  </text>
+  <text x="400" y="428" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ecf0f1">
+    No automatic approval
+  </text>
+
+  <!-- Decision Diamond -->
+  <polygon points="400,450 480,510 400,570 320,510" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="400" y="505" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+    Approved?
+  </text>
+  <text x="400" y="522" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+    (Human decision)
+  </text>
+
+  <!-- Rejection Path (Left) -->
+  <line x1="320" y1="510" x2="120" y2="510" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead-red)"/>
+  <text x="220" y="505" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c" font-weight="bold">
+    NO
+  </text>
+
+  <rect x="20" y="480" width="100" height="60" rx="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="70" y="505" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+    REJECTED
+  </text>
+  <text x="70" y="525" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">
+    NO DOI
+  </text>
+  
+  <text x="70" y="560" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#7f8c8d">
+    Document reason
+  </text>
+  <text x="70" y="575" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#7f8c8d">
+    New snapshot needed
+  </text>
+
+  <!-- Approval Path (Right to Down) -->
+  <line x1="480" y1="510" x2="680" y2="510" stroke="#27ae60" stroke-width="2"/>
+  <text x="580" y="505" font-family="Arial, sans-serif" font-size="11" fill="#27ae60" font-weight="bold">
+    YES
+  </text>
+  
+  <line x1="680" y1="510" x2="680" y2="620" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+  <text x="690" y="565" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">
+    All checks passed
+  </text>
+
+  <!-- Step 4: DOI Issuance -->
+  <rect x="480" y="620" width="200" height="80" rx="5" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="580" y="648" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    DOI Issuance
+  </text>
+  <text x="580" y="670" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Manual Zenodo upload
+  </text>
+  <text x="580" y="688" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ecf0f1">
+    Curated • Documented
+  </text>
+
+  <!-- Arrow from DOI to Approval Record -->
+  <line x1="480" y1="660" x2="280" y2="660" stroke="#27ae60" stroke-width="2"/>
+  <line x1="280" y1="660" x2="280" y2="620" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+
+  <!-- Step 5: Governance Record -->
+  <rect x="180" y="620" width="200" height="60" rx="5" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="280" y="645" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+    Record in Governance
+  </text>
+  <text x="280" y="665" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+    governance/APPROVAL.md
+  </text>
+
+  <!-- Arrow to Layer-2 -->
+  <line x1="580" y1="700" x2="580" y2="740" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="590" y="725" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+    DOI assigned
+  </text>
+
+  <!-- Step 6: Layer-2 Display (Optional) -->
+  <rect x="380" y="740" width="400" height="80" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="580" y="770" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Layer-2: GOI Display (Optional)
+  </text>
+  <text x="580" y="792" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">
+    Static DOI reference only
+  </text>
+  <text x="580" y="810" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ecf0f1">
+    No minting authority • Citation display only
+  </text>
+
+  <!-- Key Rules Box -->
+  <rect x="20" y="620" width="150" height="140" rx="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="95" y="640" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Fail-Closed Rules
+  </text>
+  
+  <text x="30" y="665" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">
+    ✗ No auto DOI
+  </text>
+  <text x="30" y="683" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">
+    ✗ No post-freeze edits
+  </text>
+  <text x="30" y="701" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">
+    ✗ No API automation
+  </text>
+  <text x="30" y="719" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">
+    ✓ Human review required
+  </text>
+  <text x="30" y="737" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">
+    ✓ Hash verification
+  </text>
+  <text x="30" y="755" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">
+    ✓ Documented approval
+  </text>
+
+  <!-- Missing Step Notice -->
+  <rect x="20" y="840" width="760" height="40" rx="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="400" y="863" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+    ⚠ ANY MISSING STEP = NO DOI ⚠
+  </text>
+
+  <!-- Footer -->
+  <text x="400" y="895" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">
+    Repository: trizel-ai/trizel-core • Layer-0 Governance • Version 1.0.0
+  </text>
+</svg>
