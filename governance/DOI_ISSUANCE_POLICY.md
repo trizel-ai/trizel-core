@@ -4,7 +4,7 @@
 **Layer**: 0 — Governance  
 **Policy Version**: 1.0.0  
 **Effective Date**: 2026-01-21  
-**Status**: Active
+**Status**: Active (Framework defined; see `governance/FREEZE.md` for authorization status)
 
 ---
 
@@ -13,6 +13,8 @@
 This document establishes the formal, auditable, fail-closed governance framework for Digital Object Identifier (DOI) issuance within the TRIZEL scientific ecosystem.
 
 **Core Principle**: DOI issuance is a governed publication act, not a technical by-product.
+
+**Note**: This policy defines the governance framework for DOI issuance. Actual DOI issuance requires scientific authorization as specified in `governance/FREEZE.md`. Until such authorization is granted, this framework exists as a defined process that cannot be executed.
 
 ---
 

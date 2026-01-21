@@ -196,6 +196,8 @@ A **manifest** is a structured inventory of all files in the snapshot, including
 
 Manifests must be in JSON format with the following structure:
 
+**Example** (snapshot from Layer-1 repository `trizel-ai/trizel-AI`):
+
 ```json
 {
   "manifest_version": "1.0.0",
@@ -232,6 +234,8 @@ Manifests must be in JSON format with the following structure:
   }
 }
 ```
+
+**Note**: The `repository` field in provenance identifies where the scientific output was produced (typically `trizel-ai/trizel-AI` for Layer-1 research). This governance contract itself resides in `trizel-ai/trizel-core` (Layer-0).
 
 ### Required Manifest Fields
 
