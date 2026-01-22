@@ -1,6 +1,6 @@
 # Layer-1 Canonical Observatory Archive — Binding Reference
 
-**Authority:** Layer-0 (trizel-core) Governance  
+**Authority:** Layer-0 Central Governance (trizel-core)  
 **Status:** FINAL / BINDING  
 **Version:** v1.0.0  
 **Effective Date:** 2026-01-22  
@@ -8,12 +8,20 @@
 
 ---
 
-## I. Purpose
+## I. Purpose and Central Authority
 
-This document serves as the permanent, binding governance reference establishing:
+This document serves as the **CENTRAL Layer-0 governance authority** for TRIZEL, establishing:
 
 1. The canonical authority for Layer-1 Observatory Archive within TRIZEL
 2. The strict constraints on Layer-2 artifacts (UI, display, and presentation systems)
+3. Binding definitions and prohibitions for ALL TRIZEL accounts, organizations, repositories, and public displays
+
+**Central Governance Authority:**
+
+- trizel-core (Layer-0) **MUST** be treated as the single governance authority for TRIZEL definitions and scope
+- All TRIZEL repositories and artifacts **MUST** conform to this reference
+- Any conflicting text, display, or artifact is **NON-COMPLIANT**; Layer-0 prevails
+- This document is normative (authority-by-definition), not an enforcement mechanism
 
 This is a **contract-only governance document**. It contains no code, no execution logic, and no automation.
 
@@ -40,7 +48,6 @@ Layer-1 Observatory Archive **MUST**:
 
 2. **Official Source Constraint**
    - Accept official institutional sources only (as defined by Layer-0 policies)
-   - Follow TRIZEL governance policies for evidence acquisition
    - Maintain provenance chain for all data sources
 
 3. **Non-Interpretive Nature**
@@ -61,14 +68,21 @@ Layer-1 Observatory Archive **MUST NOT**:
 
 ## III. Layer-2 Read-Only Display Declaration
 
-### Layer-2 Definition
+### Layer-2 Definition and Scope
 
-**Layer-2 artifacts** include but are not limited to:
+**Layer-2 artifacts in ALL TRIZEL repositories** include but are not limited to:
 
 - trizel-site (website and public interfaces)
 - GOI (Governance-Oriented Interface systems)
 - Any visualization, display, or presentation layer
 - Any public-facing interface system consuming Layer-1 data
+- Any TRIZEL repository or account displaying observatory data
+
+**Scope of Application:**
+
+- These constraints apply to ALL TRIZEL accounts, organizations, and repositories
+- All public displays (including trizel-site / GOI) **MUST** comply
+- No exceptions or bypasses permitted
 
 ### Layer-2 Binding Constraints
 
@@ -91,6 +105,7 @@ Layer-2 artifacts **MUST** be:
    - Subordinate to Layer-1 canonical authority at all times
 
 4. **Non-Semantic**
+   - MUST NOT compute, infer, interpret, analyze, validate, or derive conclusions
    - Incapable of computation beyond formatting
    - Incapable of inference or interpretation
    - Incapable of analysis or pattern detection
@@ -128,22 +143,29 @@ Layer-2 artifacts **MUST**:
 
 5. **Governance Compliance**
    - Present content explicitly permitted by Layer-0 governance only
-   - Avoid transformation of semantic meaning through presentation
+   - MUST NOT change semantic meaning through presentation
    - Include explicit non-authoritative disclaimers
    - Reference Layer-1 canonical source (AUTO-DZ-ACT-3I-ATLAS-DAILY)
 
 ---
 
-## IV. Precedence and Authority
+## IV. Central Authority and Precedence
 
-### Layer-0 Governance Authority
+### Central Layer-0 Governance Authority
 
-This document is a **Layer-0 governance authority** and **MUST** be binding for:
+This document establishes **CENTRAL Layer-0 governance authority** and **MUST** be binding for:
 
-- All future UI development and display systems
-- All visualization and presentation work
+- ALL TRIZEL accounts, organizations, and repositories
+- All future UI development and display systems (including trizel-site / GOI)
+- All visualization and presentation work in any TRIZEL repository
 - All public-facing interfaces consuming Layer-1 data
 - All publication and archival decisions related to TRIZEL
+
+**Normative Reference:**
+
+- This document is normative (authority-by-definition)
+- Definitions and prohibitions stated herein are binding by declaration
+- This is NOT an enforcement mechanism; it establishes what IS and what IS NOT compliant
 
 ### Conflict Resolution
 
@@ -167,9 +189,15 @@ This document is a **Layer-0 governance authority** and **MUST** be binding for:
 
 ### Mandatory Compliance Statement
 
-**Any future Pull Request affecting Layer-2 UI/UX or public display MUST conform to this document.**
+**Any future UI/display/publication change in any TRIZEL repository MUST cite and comply with this document.**
 
 **Non-compliance MUST be treated as a governance violation.**
+
+**Scope of Application:**
+
+- Applies to ALL TRIZEL accounts, organizations, and repositories
+- All Layer-2 changes in any TRIZEL repository MUST conform
+- All public displays (including trizel-site / GOI) MUST conform
 
 ### Compliance Verification Checklist
 
