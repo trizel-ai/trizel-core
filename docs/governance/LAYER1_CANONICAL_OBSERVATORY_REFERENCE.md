@@ -84,8 +84,6 @@ Layer-2 artifacts **MUST** be:
    - Provide visual clarity without semantic transformation
    - Serve as passive rendering interface only
 
-Layer-2 artifacts **MUST** be:
-
 3. **Non-Authoritative**
    - Treated as having NO authority over evidence
    - NOT treated as a source of truth
@@ -229,8 +227,8 @@ Before merging any Layer-2 changes, verify:
 
 This document is authoritative and binding. It complements:
 
-- `trizel-ai/trizel-core/docs/governance/TRIZEL_GOVERNANCE_LEDGER.md` — Project governance ledger
-- `trizel-ai/trizel-core/docs/governance/CROSS_REPO_GOVERNANCE.md` — Cross-repository coordination
+- `docs/governance/TRIZEL_GOVERNANCE_LEDGER.md` — Project governance ledger
+- `docs/governance/CROSS_REPO_GOVERNANCE.md` — Cross-repository coordination
 - `governance/LAYER1_GOVERNANCE_DECLARATION.md` — Layer-1 terminology governance
 - `PUBLICATION_POLICY.md` — Website publication policy
 - `OUTPUT_CONTRACT.md` — Export and consumption contracts
