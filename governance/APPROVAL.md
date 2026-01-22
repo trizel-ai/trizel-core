@@ -100,6 +100,18 @@ Creation of canonical Layer-1 Governance Declaration that permanently supersedes
 
 ---
 
+### PR #TBD - 2026-01-22
+**Files Modified:**
+- docs/governance/LAYER1_CANONICAL_OBSERVATORY_REFERENCE.md (NEW)
+- governance/APPROVAL.md (Updated - adding this entry)
+
+**Reason:**
+Addition of Layer-1 Canonical Observatory Archive binding reference document. This contract-only governance reference formally and permanently declares: (1) AUTO-DZ-ACT-3I-ATLAS-DAILY as the canonical Layer-1 Observatory Archive with exclusive evidence authority; (2) Layer-2 artifacts (including trizel-site / GOI) are strictly read-only, non-authoritative, non-semantic, and MUST NOT imply analysis, interpretation, publication, or claims. This document establishes Layer-0 governance authority binding on all future UI, display, and publication systems. No code changes, no execution logic, no automation. Documentation / contract-only change.
+
+**Approver:** TRIZEL Governance (Layer-0)
+
+---
+
 ## Notes
 
 - This file serves as the single source of truth for governance change authorization
