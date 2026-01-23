@@ -217,6 +217,9 @@ This decision operates under strict Layer-0 governance controls:
 
 ### A. Epistemic Neutrality (EN) Semantic Authority
 
+**EN Definition:**  
+Epistemic Neutrality (EN) is the principle that TRIZEL governance maintains strict neutrality regarding scientific claims, theories, and interpretations. EN validation ensures artifacts are descriptive of process, not interpretive of results.
+
 **Principle:**  
 All published artifacts MUST maintain epistemic neutrality. TRIZEL governance does not claim scientific authority or endorse scientific theories.
 
@@ -286,10 +289,10 @@ This decision **ACTIVATES** the end-to-end publication pipeline:
 ### B. Supersedence
 
 **This Decision Extends (Does Not Replace):**
-- `DECISION_PHASE_E_PUBLICATION.md` — Allowlist and publication eligibility criteria remain binding
-- `DECISION_PHASE_E_TRANSITION.md` — T2/T3 governance rules remain applicable to Layer-2
+- `docs/governance/decisions/DECISION_PHASE_E_PUBLICATION.md` — Allowlist and publication eligibility criteria remain binding
+- `docs/governance/decisions/DECISION_PHASE_E_TRANSITION.md` — T2/T3 governance rules remain applicable to Layer-2
 - `PUBLICATION_POLICY.md` — Static-only and fail-closed principles remain in force
-- `FREEZE.md` — SYSTEM FREEZE for scientific content remains active
+- `docs/FREEZE_DECLARATION.md` — SYSTEM FREEZE for scientific content remains active
 
 **This Decision Does NOT Supersede:**
 - Scientific authorization requirements (no scientific publication is authorized)
@@ -345,11 +348,11 @@ Violations of this decision's constraints constitute governance violations and r
 - `docs/decisions/phase-f/DECISION_PHASE_F_UNFREEZE_END_TO_END.md`
 
 **Related Documents:**
-- `DECISION_PHASE_E_PUBLICATION.md` (Phase-E allowlist and eligibility)
-- `DECISION_PHASE_E_TRANSITION.md` (T2/T3 governance rules)
+- `docs/governance/decisions/DECISION_PHASE_E_PUBLICATION.md` (Phase-E allowlist and eligibility)
+- `docs/governance/decisions/DECISION_PHASE_E_TRANSITION.md` (T2/T3 governance rules)
 - `PUBLICATION_POLICY.md` (Static-only publication requirements)
-- `FREEZE.md` (SYSTEM FREEZE status)
-- `TRIZEL_GOVERNANCE_LEDGER.md` (Governance authority)
+- `docs/FREEZE_DECLARATION.md` (SYSTEM FREEZE status)
+- `docs/governance/TRIZEL_GOVERNANCE_LEDGER.md` (Governance authority)
 
 **Authority Level:** Layer-0 (Governance)  
 **Classification:** Governance Decision Record  
