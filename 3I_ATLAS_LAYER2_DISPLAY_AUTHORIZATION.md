@@ -1,8 +1,8 @@
-# ATLAS Layer-2 Display Authorization
+# 3I/ATLAS Layer-2 Display Authorization
 ## Institutional Information Display Only
 
 **Repository:** trizel-ai/trizel-core  
-**Authorization ID:** DA-ATLAS-L2-DISPLAY-001  
+**Authorization ID:** DA-3I-ATLAS-L2-DISPLAY-001  
 **Document Type:** Display Authorization (Governance Artifact)  
 **Effective Date:** 2026-01-23  
 **Status:** ACTIVE (Limited Scope)  
@@ -15,22 +15,36 @@
 
 This document constitutes a **formal and limited display authorization** granted under the TRIZEL governance system.
 
-It authorizes **Layer-2 (Presentation/Public Site) read-only display** of institutional information related to the **ATLAS / 3I scientific program**, strictly within the scope defined below.
+It authorizes **Layer-2 (Presentation/Public Site) read-only display** of institutional information related to the **3I/ATLAS program**, strictly within the scope defined below.
 
 **This is NOT a publication authorization.**  
 **This is NOT a data disclosure authorization.**  
 **This is NOT an analysis display authorization.**
 
-No other Layer-2 display activity related to ATLAS is authorized beyond what is explicitly specified herein.
+No other Layer-2 display activity related to 3I/ATLAS is authorized beyond what is explicitly specified herein.
 
 ---
 
-## 2. Scope of Authorization (Strict)
+## 2. Program Definition and Scope
 
-This authorization permits Layer-2 (public-facing presentation layer) to display **institutional metadata only** regarding the ATLAS / 3I program.
+### 2.1 3I/ATLAS Program Definition
+
+**3I/ATLAS** is a multi-repository, multi-role institutional program within the TRIZEL governance framework.
+
+The program encompasses:
+- **Observational components** (data acquisition and monitoring)
+- **Analytical components** (epistemic analysis and theoretical work)
+- **Governance components** (authorization, compliance, and oversight)
+- **Infrastructure components** (internal monitoring and experimental tools)
+
+**Critical Note:** The 3I/ATLAS program spans multiple TRIZEL repositories and layers. These execution-layer repositories are **NOT** to be exposed directly in Layer-2.
+
+### 2.2 Scope of Authorization (Strict)
+
+This authorization permits Layer-2 (public-facing presentation layer) to display **institutional metadata only** regarding the 3I/ATLAS program.
 
 **Program of Reference:**  
-- ATLAS / 3I scientific program as governed under SA-3I-ATLAS-THEORY-001
+- 3I/ATLAS institutional program as governed under SA-3I-ATLAS-THEORY-001
 
 **Display Medium:**  
 - Layer-2 presentation surfaces (public website, static pages)
@@ -46,19 +60,21 @@ This authorization permits Layer-2 (public-facing presentation layer) to display
 The following institutional information elements are authorized for Layer-2 display:
 
 ### 3.1 Program Existence
-- Statement that the ATLAS / 3I program exists within TRIZEL governance
-- General institutional context (e.g., "theoretical analysis program")
+- Statement that the 3I/ATLAS program exists within TRIZEL governance
+- General institutional context (e.g., "multi-repository observational and analytical program")
 - Program designation or identifier (e.g., "SA-3I-ATLAS-THEORY-001")
 
 ### 3.2 Institutional Scope
 - High-level description of program scope boundaries
 - General subject area (e.g., "interstellar object 3I/ATLAS")
-- Methodological categorization (e.g., "epistemic analysis frame")
+- Methodological categorization (e.g., "epistemic analysis frame," "observational monitoring")
 - Governance classification (e.g., "internal analysis, non-published")
+- Acknowledgment of multi-repository structure (without exposing repository URLs or execution details)
 
 ### 3.3 Governance Status
 - Current governance status (e.g., "ACTIVE", "FROZEN", "SUPERSEDED")
 - Relationship to SYSTEM FREEZE (e.g., "authorized exception", "freeze compliant")
+- Relationship to TRIZEL layers (e.g., "Layer-1 analysis," "Layer-0 governance")
 - Authorization reference identifier (e.g., "SA-3I-ATLAS-THEORY-001")
 - Effective dates or governance milestones
 
@@ -79,11 +95,12 @@ The following institutional information elements are authorized for Layer-2 disp
 
 This authorization **does NOT permit** Layer-2 display of:
 
-### 4.1 Raw Data
-- No observational data
+### 4.1 Raw Observational Data
+- No observational data from monitoring systems
 - No datasets or data tables
 - No measurement values
 - No data files or file listings
+- No processed datasets
 
 ### 4.2 Analytical Results
 - No analysis outputs
@@ -92,27 +109,31 @@ This authorization **does NOT permit** Layer-2 display of:
 - No scientific claims or validations
 - No hypothesis evaluations
 
-### 4.3 Metrics, Charts, or Visualizations
+### 4.3 Statistics, Charts, Metrics, or Visualizations
 - No performance metrics
 - No statistical summaries
 - No graphs or plots
 - No diagrams derived from analysis
 - No data visualizations of any kind
+- No quantitative performance indicators
 
-### 4.4 Timelines or Activity Indicators
+### 4.4 Timelines, Activity Indicators, or Update Frequency
 - No project timelines or roadmaps
 - No progress indicators
 - No activity logs or histories
 - No version histories of analysis
 - No temporal tracking of program evolution
+- No update frequency information
+- No "last updated" timestamps for data or analysis
 
-### 4.5 Live Feeds, Alerts, or Execution Surfaces
+### 4.5 Live Monitoring, Alerts, or Execution Surfaces
 - No real-time data streams
 - No monitoring dashboards
 - No status alerts or notifications
 - No execution interfaces
 - No interactive analysis tools
 - No submission or input forms related to analysis
+- No live feeds from monitoring systems
 
 ### 4.6 Internal Working Documents
 - No display of internal working notes
@@ -126,6 +147,12 @@ This authorization **does NOT permit** Layer-2 display of:
 - No content from embargoed publications
 - No proprietary or restricted materials
 - No pre-publication manuscripts
+
+### 4.8 Direct Links to Execution Repositories
+- No direct links to execution-layer repositories (e.g., AUTO-DZ-ACT-3I-ATLAS-DAILY, AUTO-DZ-ACT-ANALYSIS-3I-ATLAS)
+- No direct links to internal monitoring tools (e.g., trizel-monitor)
+- No direct links to experimental environments (e.g., trizel-lab)
+- No exposure of repository URLs, APIs, or execution endpoints
 
 ---
 
@@ -154,7 +181,7 @@ All Layer-2 displays authorized under this document **must include** clear gover
 ### 5.2 Attribution and Traceability
 
 Displayed information must include:
-- Reference to this authorization document (DA-ATLAS-L2-DISPLAY-001)
+- Reference to this authorization document (DA-3I-ATLAS-L2-DISPLAY-001)
 - Link to governance framework documentation
 - Clear separation from scientific content
 - Traceability to authorizing governance artifact
@@ -201,13 +228,22 @@ This authorization does **NOT** create a data pathway from Layer-1 to Layer-2.
 - No execution of Layer-1 code in Layer-2 contexts
 - Manual, governance-reviewed transcription only
 
+### 7.3 Multi-Repository Program Structure
+
+While the 3I/ATLAS program spans multiple repositories (observational, analytical, monitoring, experimental), Layer-2 display is **strictly limited to institutional metadata**.
+
+- No repository-specific performance metrics
+- No repository URLs or direct access links
+- No execution logs or repository activity indicators
+- Institutional program description only
+
 ---
 
 ## 8. Zenodo Metadata Display Protocol
 
 ### 8.1 Authorized Zenodo Metadata Elements
 
-For Zenodo records related to the ATLAS / 3I program, Layer-2 may display:
+For Zenodo records related to the 3I/ATLAS program, Layer-2 may display:
 
 1. **Bibliographic Metadata:**
    - Record title (as registered in Zenodo)
@@ -270,6 +306,7 @@ All Layer-2 displays under this authorization must:
 ✓ Include traceability to this authorization  
 ✓ Undergo governance review before publication  
 ✓ Separate institutional metadata from scientific content  
+✓ Use "3I/ATLAS" naming consistently  
 
 ### 9.2 Prohibited Actions (Automatic Violations)
 
@@ -282,6 +319,8 @@ The following actions constitute **automatic governance violations**:
 - Automating content ingestion from Layer-1
 - Removing or weakening governance disclaimers
 - Expanding scope beyond institutional metadata
+- Exposing direct links to execution repositories
+- Using incorrect program naming (e.g., "ATLAS" alone, "Atlas Lab")
 
 ### 9.3 Enforcement Mechanisms
 
@@ -347,7 +386,7 @@ Display authorization granted solely for institutional transparency purposes wit
 **Document Type:** Display Authorization (Governance Artifact)  
 **Classification:** Layer-0 Governance  
 **Repository:** trizel-ai/trizel-core  
-**Path:** ATLAS_LAYER2_DISPLAY_AUTHORIZATION.md  
+**Path:** 3I_ATLAS_LAYER2_DISPLAY_AUTHORIZATION.md  
 **Governance Reference:** docs/governance/TRIZEL_GOVERNANCE_LEDGER.md  
 **Related Authorization:** SA-3I-ATLAS-THEORY-001
 
@@ -361,26 +400,28 @@ Display authorization granted solely for institutional transparency purposes wit
 
 ### ✅ AUTHORIZED (Layer-2 Display)
 - Program existence statement
-- Institutional scope description
+- Institutional scope description (multi-repository, multi-role program)
 - Governance status indicators
+- Relationship to TRIZEL layers
 - Zenodo record metadata (title, DOI, date, access status)
 - Static, manually curated content
 - Governance disclaimers and traceability
 
 ### ❌ PROHIBITED (Layer-2 Display)
-- Raw data or datasets
+- Raw observational data or processed datasets
 - Analytical results or findings
-- Metrics, charts, or visualizations
-- Timelines or activity indicators
-- Live feeds, alerts, or monitoring
+- Statistics, charts, metrics, or visualizations
+- Timelines, activity indicators, or update frequency
+- Live monitoring, alerts, or execution surfaces
 - Internal working documents
 - Embargoed or closed content
 - Automated content ingestion
 - Scientific claims or validations
+- Direct links to execution repositories
 
 ---
 
-**This authorization provides transparency about program existence while maintaining strict governance boundaries around scientific content.**
+**This authorization provides transparency about the 3I/ATLAS program's institutional existence while maintaining strict governance boundaries around scientific content, data, and execution infrastructure.**
 
 **All Layer-2 implementations must comply with both the permissions and prohibitions specified herein.**
 
