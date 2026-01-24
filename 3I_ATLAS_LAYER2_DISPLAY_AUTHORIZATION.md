@@ -149,7 +149,7 @@ This authorization **does NOT permit** Layer-2 display of:
 - No pre-publication manuscripts
 
 ### 4.8 Direct Links to Execution Repositories
-- No direct links to execution-layer repositories (e.g., AUTO-DZ-ACT-3I-ATLAS-DAILY, AUTO-DZ-ACT-ANALYSIS-3I-ATLAS)
+- No direct links to execution-layer repositories (e.g., AUTO DZ ACT 3I-ATLAS-DAILY, AUTO DZ ACT ANALYSIS-3I-ATLAS)
 - No direct links to internal monitoring tools (e.g., trizel-monitor)
 - No direct links to experimental environments (e.g., trizel-lab)
 - No exposure of repository URLs, APIs, or execution endpoints
