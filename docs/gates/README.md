@@ -130,7 +130,7 @@ Gate 3B defines the deterministic implementation framework for Laboratory (Layer
 - No executable code, workflows, or scripts
 - No CI/CD or automation changes
 - **Gate 3B does NOT authorize execution**
-- Execution activation requires separate governance authorization
+- **Execution activation requires separate governance authorization**
 
 **Separation of Concerns:**
 - **Gate 3A:** WHAT is authorized (scope and boundaries)

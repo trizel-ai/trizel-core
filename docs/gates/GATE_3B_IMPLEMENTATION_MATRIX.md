@@ -22,7 +22,7 @@ This matrix provides a **deterministic mapping** of input sources, execution ste
 
 **Critical Constraint:**
 - This matrix is **CONCEPTUAL ONLY** and does NOT contain executable code
-- This matrix is **DESCRIPTIVE** and does not imply execution authorization
+- This matrix is **DESCRIPTIVE** and does NOT imply execution authorization
 - Implementation of this matrix requires separate governance authorization
 
 ---

@@ -29,7 +29,7 @@ This document constitutes a **formal implementation framework** issued exclusive
 **Status:**
 - This is a **DEFINITION-ONLY** implementation framework
 - This framework **does NOT enable execution** of any code, workflow, or automation
-- This framework defines HOW execution SHALL be implemented in the future
+- This framework defines HOW execution SHALL be implemented when authorized
 - Execution activation requires separate governance authorization under subsequent gates
 
 **Critical Separation:**
@@ -43,7 +43,7 @@ This document constitutes a **formal implementation framework** issued exclusive
 
 ### 2.1 Framework Purpose
 
-Gate 3B defines the **deterministic implementation model** for Laboratory (Layer-3) execution to produce DERIVED artifacts from SNAPSHOT inputs under the authorization constraints established by Gate 3A.
+Gate 3B defines the **deterministic implementation model** for Laboratory (Layer-3) execution to produce DERIVED artifacts from SNAPSHOT inputs when authorized, under the authorization constraints established by Gate 3A.
 
 **Scope of Framework:**
 - **Implementation Structure:** HOW analytical transformations SHALL be implemented

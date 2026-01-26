@@ -343,7 +343,7 @@ _[To be filled by Human Governance Authority]_
 - [ ] All documents use institutional English (no informal language)
 - [ ] All documents are technical and unambiguous
 - [ ] All documents avoid speculative content
-- [ ] All documents use constraint language appropriately ("SHALL", "MUST")
+- [ ] All documents use constraint language appropriately ("SHALL")
 - [ ] All documents include version numbers and dates
 - [ ] All documents are committed to git with full history
 - [ ] All documents have appropriate headers (Repository, ID, Type, Date, Status)
