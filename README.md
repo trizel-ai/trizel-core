@@ -5,6 +5,18 @@
 
 ---
 
+## ⚠️ EXECUTION STATE: CLOSED (Pre-Gate-5)
+
+**No execution or analysis is authorized** unless Gate-5 `START_EXECUTION = TRUE` and owner authorization is signed in Layer-0 governance artifacts.
+
+**Gate-5 Document Reference:**  
+`docs/gates/GATE_5_EXECUTION_AUTHORIZATION.md` (within this repository)
+
+This repository is **governance-only** and contains **no executable logic**.  
+Execution authorization is controlled exclusively through Gate-5 protocol.
+
+---
+
 ## 1. Purpose
 
 `trizel-core` is the **canonical governance and charter repository** of the TRIZEL scientific platform.
