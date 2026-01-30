@@ -2,6 +2,21 @@
 
 This directory contains formal governance authorization documents for the TRIZEL framework.
 
+## Gate Index (0–6)
+
+- **Gate 0:** Foundation governance (not yet documented)
+- **Gate 1:** Initial authorization (not yet documented)
+- **Gate 2:** Data flow authorization (not yet documented)
+- **Gate 3A:** Lab Execution Authorization
+- **Gate 3B:** Lab Execution Implementation
+- **Gate 4:** Presentation authorization (not yet documented)
+- **Gate 5:** Execution Authorization (OFF BY DEFAULT)
+- **Gate 6:** Interpretation & Publication (not yet documented)
+
+**Note:** Gate-5 remains CLOSED unless START_EXECUTION = TRUE is explicitly signed by the owner.
+
+---
+
 ## Gate 3A — Lab Execution Authorization
 
 Gate 3A authorizes controlled execution of analytical workflows within Layer-3 (Laboratory/Analysis) to produce DERIVED artifacts from SNAPSHOT inputs under strict non-interpretive constraints.
