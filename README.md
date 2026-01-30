@@ -254,3 +254,26 @@ It is **descriptive only** and carries **no analytical or interpretive function*
 > **License clarification**  
 > The MIT license applies to this repository as a distributable **governance and documentation text corpus**.  
 > It does **not** imply endorsement, validation, or authorization of any derived scientific interpretations.
+
+---
+
+## Governance References
+
+This section provides canonical citation anchors for institutional governance materials related to TRIZEL Layer-0 framework.
+
+### TRIZEL Institutional White Paper (Zenodo)
+
+**DOI:** [https://doi.org/10.5281/zenodo.18424196](https://doi.org/10.5281/zenodo.18424196)
+
+**Status:** Institutional, non-executing governance reference
+
+**Purpose:**  
+This Zenodo White Paper serves as a **canonical citation anchor** for Layer-0 governance documentation only.
+
+**Explicit Non-Execution Declaration:**
+- This reference does **NOT** modify, override, or activate any governance rule
+- This reference does **NOT** open any Gate or execution phase
+- This reference does **NOT** introduce new policies, enforcement logic, or contracts
+- This reference is **purely informational** and carries no structural authority
+
+The DOI above is provided solely for academic citation and institutional traceability.
