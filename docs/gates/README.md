@@ -166,6 +166,65 @@ Gate 3B defines the deterministic implementation framework for Laboratory (Layer
 
 ---
 
+## Gate 5 — Execution Authorization (OFF BY DEFAULT)
+
+Gate 5 is an explicit ON/OFF authorization switch that permits controlled execution inside Layer-1 for a bounded topic under a declared methodological contract.
+
+**Status:** DRAFT (NON-EXECUTING)  
+**Document ID:** TRIZEL-G5-AUTH-0001  
+**Effective State:** CLOSED  
+**Created:** 2026-01-30
+
+### Document
+
+1. **[GATE_5_EXECUTION_AUTHORIZATION.md](GATE_5_EXECUTION_AUTHORIZATION.md)**
+   - Execution switch (START_EXECUTION = FALSE)
+   - Topic and scope lock (moving-target prevention)
+   - Allowed inputs (evidence + provenance only)
+   - Allowed tools, repositories, and execution boundary
+   - Owner authorization requirements
+   - Methodological contract (verification-first)
+   - Forbidden operations
+   - Traceability requirements
+   - Gate-6 reminder (interpretation & publication)
+
+### Key Features
+
+**Execution Control:**
+- Default state: CLOSED (START_EXECUTION = FALSE)
+- Requires explicit owner authorization and signature
+- Execution only allowed in Layer-1
+- Layer-0 (Governance) and Layer-2 (Presentation) never execute
+
+**Scope Lock:**
+- Prevents moving-target drift
+- Explicit IN SCOPE / OUT OF SCOPE boundaries
+- No new topic IDs, sources, observables, or thresholds without new Gate-5 document
+
+**Evidence Provenance:**
+- Only immutable references allowed (DOI / hash / archived package)
+- Explicit RAW ledger sources
+- No non-declared data sources, web scraping, or ad-hoc datasets
+
+**Methodological Contract:**
+- Verification-first (no exploratory inference)
+- Explicit claims list (bounded, finite)
+- Pre-declared thresholds
+- AUTO-DZ-ACT state model: (0/0), (DO/DZ), (DZ), (∞/∞)
+
+**Audit-Readiness:**
+- Deterministic run identifiers
+- Complete traceability chain
+- Linkage to Gate-5 Document ID
+- Execution log artifact naming convention
+
+### External References
+
+- TRIZEL Layer-0 Governance Framework
+- AUTO-DZ-ACT verification engine family
+
+---
+
 **Repository:** trizel-ai/trizel-core  
 **Document Type:** Governance Authorization Index  
-**Last Updated:** 2026-01-25
+**Last Updated:** 2026-01-30
