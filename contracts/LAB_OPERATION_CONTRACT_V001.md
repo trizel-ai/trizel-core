@@ -47,7 +47,7 @@ Interpretation: Any explanatory narrative, causal hypothesis, or scientific conc
 This contract binds the following input classes:
 
 A) RAW Repositories (Owner-Originated)
-- Example: AUTO-DZ-ACT-3I-ATLAS-DAILY (hashed snapshots; provenance manifests)
+- Example: AUTO DZ ACT 3I ATLAS DAILY (hashed snapshots; provenance manifests)
 
 B) Instrument Feeds (Read-Only)
 - Direct instrument telemetry or measurement registries, where applicable
