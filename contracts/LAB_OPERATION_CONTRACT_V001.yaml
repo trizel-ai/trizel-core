@@ -1,0 +1,98 @@
+version: "V001"
+artifact_class: "layer0_governance_contract"
+name: "LAB_OPERATION_CONTRACT"
+status: "ACTIVE"
+authority: "owner_layer0"
+executing: false
+
+gate_binding:
+  gate5_required: true
+  gate6_closed: true
+
+principles:
+  - "governance_precedes_execution"
+  - "verification_precedes_interpretation"
+  - "no_global_permissions"
+  - "read_only_default"
+  - "fail_closed"
+
+time_window_binding:
+  required: true
+  timezone: "UTC"
+  fields:
+    - "start_date"
+    - "end_date"
+
+data_channels:
+  - channel_id: "raw_repositories"
+    class: "owner_originated"
+    access_mode: "read_only"
+    allow_list_required: true
+  - channel_id: "instrument_feeds"
+    class: "external_instruments"
+    access_mode: "read_only"
+    allow_list_required: true
+  - channel_id: "agency_datasets"
+    class: "external_agencies"
+    access_mode: "read_only"
+    allow_list_required: true
+  - channel_id: "tools"
+    class: "execution_utilities"
+    access_mode: "restricted"
+    allow_list_required: true
+
+access_policy:
+  prohibit_secrets_in_repo: true
+  prohibit_global_scopes: true
+  require_allow_lists: true
+  require_claim_binding: true
+  require_time_window_binding: true
+
+integrity_and_provenance:
+  require_ingress_records: true
+  hash_algorithm: "sha256"
+  required_ingress_fields:
+    - "timestamp_utc"
+    - "source_id"
+    - "retrieval_method"
+    - "pointer"
+    - "hash_sha256"
+  require_manifest_alignment_when_available: true
+  chronological_constraints_required_when_applicable: true
+
+logging_model:
+  allow_audit_metadata_only: true
+  prohibit_full_dataset_mirroring_without_separate_authorization: true
+  allowed_records:
+    - "hashes"
+    - "manifests"
+    - "retrieval_receipts"
+    - "normalized_pointers"
+    - "deterministic_verification_outputs"
+
+execution_boundary:
+  allowed_outputs:
+    - "verification_states"
+    - "deterministic_pass_fail"
+    - "coverage_metrics"
+  prohibited_outputs:
+    - "interpretations"
+    - "explanatory_narratives"
+    - "causal_claims"
+    - "publication_artifacts"
+
+layer1_minimum_deliverables:
+  required: true
+  items:
+    - "channel_registry_matching_allow_lists"
+    - "append_only_ingress_ledger"
+    - "deterministic_verification_runners"
+    - "reproducible_execution_manifest_format"
+    - "policy_violation_denial_mode"
+
+violation_handling:
+  default_mode: "fail_closed"
+  on_violation:
+    - "invalidate_execution"
+    - "mark_state_non_compliant"
+    - "require_remediation_reexecution"
