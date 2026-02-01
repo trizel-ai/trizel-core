@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TRIZEL LAB_OPERATION_CONTRACT V001",
+  "type": "object",
+  "required": [
+    "version",
+    "artifact_class",
+    "name",
+    "status",
+    "authority",
+    "executing",
+    "gate_binding",
+    "principles",
+    "time_window_binding",
+    "data_channels",
+    "access_policy",
+    "integrity_and_provenance",
+    "logging_model",
+    "execution_boundary",
+    "layer1_minimum_deliverables",
+    "violation_handling"
+  ],
+  "properties": {
+    "version": { "type": "string", "pattern": "^V[0-9]{3}$" },
+    "artifact_class": { "type": "string", "const": "layer0_governance_contract" },
+    "name": { "type": "string", "const": "LAB_OPERATION_CONTRACT" },
+    "status": { "type": "string", "enum": ["ACTIVE", "ARCHIVED", "DRAFT"] },
+    "authority": { "type": "string", "minLength": 1 },
+    "executing": { "type": "boolean", "const": false },
+    "gate_binding": {
+      "type": "object",
+      "required": ["gate5_required", "gate6_closed"],
+      "properties": {
+        "gate5_required": { "type": "boolean" },
+        "gate6_closed": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "principles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "time_window_binding": {
+      "type": "object",
+      "required": ["required", "timezone", "fields"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "timezone": { "type": "string", "const": "UTC" },
+        "fields": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string", "enum": ["start_date", "end_date"] }
+        }
+      },
+      "additionalProperties": false
+    },
+    "data_channels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["channel_id", "class", "access_mode", "allow_list_required"],
+        "properties": {
+          "channel_id": { "type": "string", "minLength": 1 },
+          "class": { "type": "string", "minLength": 1 },
+          "access_mode": { "type": "string", "enum": ["read_only", "restricted"] },
+          "allow_list_required": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "access_policy": {
+      "type": "object",
+      "required": [
+        "prohibit_secrets_in_repo",
+        "prohibit_global_scopes",
+        "require_allow_lists",
+        "require_claim_binding",
+        "require_time_window_binding"
+      ],
+      "properties": {
+        "prohibit_secrets_in_repo": { "type": "boolean" },
+        "prohibit_global_scopes": { "type": "boolean" },
+        "require_allow_lists": { "type": "boolean" },
+        "require_claim_binding": { "type": "boolean" },
+        "require_time_window_binding": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "integrity_and_provenance": {
+      "type": "object",
+      "required": [
+        "require_ingress_records",
+        "hash_algorithm",
+        "required_ingress_fields",
+        "require_manifest_alignment_when_available",
+        "chronological_constraints_required_when_applicable"
+      ],
+      "properties": {
+        "require_ingress_records": { "type": "boolean" },
+        "hash_algorithm": { "type": "string", "const": "sha256" },
+        "required_ingress_fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "require_manifest_alignment_when_available": { "type": "boolean" },
+        "chronological_constraints_required_when_applicable": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "logging_model": {
+      "type": "object",
+      "required": [
+        "allow_audit_metadata_only",
+        "prohibit_full_dataset_mirroring_without_separate_authorization",
+        "allowed_records"
+      ],
+      "properties": {
+        "allow_audit_metadata_only": { "type": "boolean" },
+        "prohibit_full_dataset_mirroring_without_separate_authorization": { "type": "boolean" },
+        "allowed_records": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "execution_boundary": {
+      "type": "object",
+      "required": ["allowed_outputs", "prohibited_outputs"],
+      "properties": {
+        "allowed_outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "prohibited_outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "layer1_minimum_deliverables": {
+      "type": "object",
+      "required": ["required", "items"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "violation_handling": {
+      "type": "object",
+      "required": ["default_mode", "on_violation"],
+      "properties": {
+        "default_mode": { "type": "string", "const": "fail_closed" },
+        "on_violation": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
