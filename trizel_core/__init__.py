@@ -1,1 +1,0 @@
-# trizel_core package
