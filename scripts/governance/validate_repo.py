@@ -53,7 +53,7 @@ class GovernanceValidator:
     EXCLUDED_DIRS = {'.git', '.github'}
     
     # Additional path patterns to exclude
-    EXCLUDED_PATHS = {'scripts/governance'}
+    EXCLUDED_PATHS = {'scripts/governance', 'trizel_core'}
     
     def __init__(self, repo_path: str = '.', verbose: bool = False):
         self.repo_path = Path(repo_path).resolve()

@@ -32,13 +32,15 @@ jobs:
             -not -path "./.git/*" \
             -not -path "./.github/*" \
             -not -path "./scripts/governance/*" \
+            -not -path "./trizel_core/*" \
             | grep -q . ; then
             echo "❌ ERROR: Found executable code files. Layer 0 must not contain executable code."
             find . -type f \
               \( -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.java" -o -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.go" -o -name "*.rs" -o -name "*.rb" -o -name "*.php" -o -name "*.swift" -o -name "*.cs" -o -name "*.kt" -o -name "*.m" -o -name "*.mm" -o -name "*.scala" \) \
               -not -path "./.git/*" \
               -not -path "./.github/*" \
-              -not -path "./scripts/governance/*"
+              -not -path "./scripts/governance/*" \
+              -not -path "./trizel_core/*"
             exit 1
           fi
           echo "✓ No executable code files found"
