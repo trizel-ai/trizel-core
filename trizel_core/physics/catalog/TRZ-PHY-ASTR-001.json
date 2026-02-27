@@ -1,0 +1,16 @@
+{
+    "const_id": "TRZ-PHY-ASTR-001",
+    "name": "TRIZEL PHY_ASTR RATIO",
+    "definition": "TT tropical year (days) / 12 synodic months (days)",
+    "units": "dimensionless",
+    "inputs": {
+        "Y_SOLAR_TT_DAYS": "365.24219",
+        "Y_LUNAR_12_SYNODIC_DAYS": "354.367066"
+    },
+    "derived_expression": "Y_SOLAR_TT_DAYS / Y_LUNAR_12_SYNODIC_DAYS",
+    "approved_rational_forms": {
+        "fast": [403, 391],
+        "stable": [3157, 3063]
+    },
+    "governance_rule": "Input change requires recomputation + version bump + Layer-1 validation."
+}
