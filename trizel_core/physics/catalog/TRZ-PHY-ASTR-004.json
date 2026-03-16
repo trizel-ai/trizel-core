@@ -1,0 +1,30 @@
+{
+  "id": "TRZ-PHY-ASTR-004",
+  "type": "CONTINUED_FRACTION_DECLARATION",
+  "layer": 0,
+  "status": "CANONICAL_DECLARATION",
+
+  "name": "TRIZEL SOLAR_LUNAR_RATIO_CONTINUED_FRACTION",
+  "definition": "Continued-fraction structure for the canonical Solar–Lunar year ratio R = Y_SOLAR_TT_DAYS / Y_LUNAR_12_SYNODIC_DAYS",
+  "units": "dimensionless",
+
+  "references": {
+    "decimal_source": "TRZ-PHY-ASTR-002",
+    "rational_ladder_source": "TRZ-PHY-ASTR-003"
+  },
+
+  "continued_fraction": {
+    "expression": "R = Y_SOLAR_TT_DAYS / Y_LUNAR_12_SYNODIC_DAYS",
+    "coefficients": [1, 32, 1, 1, 2, 2, 3, 1, 1, 189],
+    "coefficient_type": "integer"
+  },
+
+  "determinism_rule": "If TRZ-PHY-ASTR-001 inputs change, this artifact must receive a version bump and a new Layer-1 validation artifact.",
+
+  "governance": {
+    "no_runtime_logic": true,
+    "no_interpretation": true,
+    "no_cosmology_claim": true,
+    "no_gate6_activation": true
+  }
+}
