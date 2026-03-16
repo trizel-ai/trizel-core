@@ -1,0 +1,11 @@
+{
+  "const_id": "TRZ-PHY-ASTR-002",
+  "name": "TRIZEL SOLAR_LUNAR_RATIO_DECIMAL",
+  "definition": "Decimal recomputation of the Solar–Lunar year ratio from declared inputs",
+  "units": "dimensionless",
+  "inputs_reference": "TRZ-PHY-ASTR-001",
+  "expression": "Y_SOLAR_TT_DAYS / Y_LUNAR_12_SYNODIC_DAYS",
+  "deterministic_decimal": "1.0306888676838834678841176510460483932217335343459936539362266808394660467685787",
+  "precision_rule": "Decimal must always be recomputed from canonical inputs in TRZ-PHY-ASTR-001",
+  "governance_rule": "Any modification requires version bump and Layer-1 validation."
+}
