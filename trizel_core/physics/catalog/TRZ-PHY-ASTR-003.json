@@ -1,0 +1,23 @@
+{
+  "const_id": "TRZ-PHY-ASTR-003",
+  "name": "TRIZEL SOLAR_LUNAR_RATIO_RATIONAL_LADDER",
+  "definition": "Rational approximation ladder for the Solar–Lunar year ratio",
+  "units": "dimensionless",
+  "inputs_reference": "TRZ-PHY-ASTR-001",
+  "decimal_reference": "TRZ-PHY-ASTR-002",
+
+  "rational_ladder": [
+    {
+      "tier": "fast",
+      "p": 403,
+      "q": 391
+    },
+    {
+      "tier": "stable",
+      "p": 3157,
+      "q": 3063
+    }
+  ],
+
+  "governance_rule": "Any modification requires version bump and Layer-1 validation artifact."
+}
