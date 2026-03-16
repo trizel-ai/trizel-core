@@ -1,0 +1,49 @@
+{
+  "id": "TRZ-PHY-ASTR-005",
+  "type": "EPOCH_DRIFT_RESONANCE_DECLARATION",
+  "layer": 0,
+  "status": "CANONICAL_DECLARATION",
+
+  "name": "TRIZEL EPOCH_DRIFT_RESONANCE_STRUCTURE",
+  "definition": "Epoch drift and resonance structure for the Solar–Lunar calendar cycle, derived from canonical inputs in TRZ-PHY-ASTR-001 and the rational ladder in TRZ-PHY-ASTR-003",
+  "units": "days",
+
+  "references": {
+    "inputs_source": "TRZ-PHY-ASTR-001",
+    "rational_ladder_source": "TRZ-PHY-ASTR-003"
+  },
+
+  "epoch_drift": {
+    "expression": "Y_SOLAR_TT_DAYS - Y_LUNAR_12_SYNODIC_DAYS",
+    "annual_excess_days": "10.875124",
+    "description": "Excess of one TT tropical year over twelve synodic months; accumulated drift per solar cycle"
+  },
+
+  "resonance_structure": [
+    {
+      "tier": "fast",
+      "solar_years": 391,
+      "lunar_12_years": 403,
+      "expression": "391 * Y_SOLAR_TT_DAYS - 403 * Y_LUNAR_12_SYNODIC_DAYS",
+      "residual_days": "-0.231308",
+      "description": "Residual drift after 391 solar years against 403 lunar-12 cycles; derived from the fast rational approximation 403/391"
+    },
+    {
+      "tier": "stable",
+      "solar_years": 3063,
+      "lunar_12_years": 3157,
+      "expression": "3063 * Y_SOLAR_TT_DAYS - 3157 * Y_LUNAR_12_SYNODIC_DAYS",
+      "residual_days": "0.000608",
+      "description": "Residual drift after 3063 solar years against 3157 lunar-12 cycles; derived from the stable rational approximation 3157/3063"
+    }
+  ],
+
+  "determinism_rule": "If TRZ-PHY-ASTR-001 inputs change, this artifact must receive a version bump and a new Layer-1 validation artifact.",
+
+  "governance": {
+    "no_runtime_logic": true,
+    "no_interpretation": true,
+    "no_cosmology_claim": true,
+    "no_gate6_activation": true
+  }
+}
